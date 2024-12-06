@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 1</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/robotica.png">
+</head>
+<body class="light-theme"> <!-- Inicia con el tema claro -->
+  <div id="chat-container">
+    <h1>ChatAmigo</h1>
+    <div id="messages"></div>
+    <div id="typing-indicator"></div>
+
+    <!-- Campo de entrada con íconos -->
+    <div id="input-container">
+      <img src="img/adjuntar.png" alt="Adjuntar archivo" id="attach-icon" class="input-icon" />
+      <input id="user-input" type="text" placeholder="Escribe tu mensaje..." />
+      <img src="img/enviar.png" alt="Enviar mensaje" id="send-icon" class="input-icon" />
+      <img src="img/registro.png" alt="Grabar audio" id="audio-icon" class="input-icon" />
+    </div>
+  </div>
+
+  <!-- Menú de temas con íconos -->
+  <div id="theme-toggle-menu">
+    <img src="img/menu.png" alt="Menú" id="menu-icon" />
+    <div id="theme-menu">
+      <div class="theme-option" id="ia-theme-option">
+        <img src="img/modo-oscuro.png" alt="IA" />
+        <span>Oscuro</span>
+      </div>
+      <div class="theme-option" id="light-theme-option">
+        <img src="img/modo-claro.png" alt="Claro" />
+        <span>Claro</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
