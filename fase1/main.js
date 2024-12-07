@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 // Capturar elementos del DOM
 const themeToggleMenu = document.getElementById("theme-toggle-menu");
 const themeMenu = document.getElementById("theme-menu");
@@ -8,6 +9,15 @@ const sendIcon = document.getElementById("send-icon");
 const audioIcon = document.getElementById("audio-icon");
 const userInput = document.getElementById("user-input");
 const messagesDiv = document.getElementById("messages");
+
+let modelo; // Variable para almacenar el modelo cargado
+
+// Cargar el modelo de TensorFlow.js
+async function cargarModelo() {
+  modelo = await tf.loadLayersModel('./model_js/model.json');
+  console.log("Modelo cargado exitosamente");
+}
+cargarModelo();
 
 // Manejar el clic en el ícono de menú para desplegar el menú
 themeToggleMenu.addEventListener("click", () => {
@@ -55,15 +65,36 @@ function agregarMensaje(mensaje, tipo) {
   messagesDiv.scrollTop = messagesDiv.scrollHeight; // Desplazar hacia abajo
 }
 
+// Procesar texto del usuario con el modelo
+async function procesarMensaje(mensaje) {
+  if (!modelo) {
+    agregarMensaje("El modelo no está listo aún. Por favor, inténtalo más tarde.", "ia");
+    return;
+  }
+
+  // Preprocesar el texto (tokenización y padding)
+  const tokens = mensaje.split(' ').map((word) => word.toLowerCase().charCodeAt(0));
+  const max_len = 10; // Longitud máxima definida durante el entrenamiento
+  const padded = Array(max_len).fill(0).map((_, i) => tokens[i] || 0);
+
+  // Crear tensor y predecir
+  const inputTensor = tf.tensor([padded]);
+  const prediction = modelo.predict(inputTensor);
+
+  // Obtener la palabra de salida más probable
+  const outputIndex = prediction.argMax(-1).dataSync()[0];
+  const respuesta = `Respuesta predicha: ${outputIndex}`; // Cambiar por mapeo de índice a palabra
+
+  agregarMensaje(respuesta, "ia");
+}
+
 // Manejar ícono de enviar mensaje
 sendIcon.addEventListener("click", () => {
   const mensaje = userInput.value.trim();
   if (mensaje) {
     agregarMensaje(mensaje, "usuario");
     userInput.value = ""; // Limpiar el campo de texto
-    setTimeout(() => {
-      agregarMensaje("Procesando tu mensaje...", "ia");
-    }, 1000);
+    procesarMensaje(mensaje);
   }
 });
 
