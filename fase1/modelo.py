@@ -1,94 +1,64 @@
-import re
+import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, LSTM, Dense
 import numpy as np
-from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
-from keras.layers import Dense, Embedding, LSTM, Input
-from keras.models import Model
 
-# Carga de datos
-lines = open('C:/Users/Natal/OneDrive/Documentos/Inteligencia Artificial/Laboratorio/IA1_Proyecto_11/fase1/movie_lines_es.txt', encoding='UTF-8', errors='ignore').read().split('\n')
-convers = open('C:/Users/Natal/OneDrive/Documentos/Inteligencia Artificial/Laboratorio/IA1_Proyecto_11/fase1/movie_conversations_es.txt', encoding='UTF-8', errors='ignore').read().split('\n')
+# Configuración básica
+latent_dim = 256  # Tamaño del vector latente (dimensión LSTM)
 
-# Preprocesamiento
-exchn = [conver.split(' +++$+++ ')[-1][1:-1].replace("'", "").replace(",", "").split() for conver in convers]
-diag = {line.split(' +++$+++ ')[0]: line.split(' +++$+++ ')[-1] for line in lines}
+# Datos de entrada y salida (ejemplo simplificado)
+input_texts = ["Hola", "¿Cómo estás?", "¿Qué haces?"]
+target_texts = ["Hola", "Estoy bien, gracias.", "Nada, aquí trabajando."]
 
-questions = []
-answers = []
-for conver in exchn:
-    for i in range(len(conver) - 1):
-        questions.append(diag.get(conver[i], ""))
-        answers.append(diag.get(conver[i + 1], ""))
+# Crear diccionarios para tokenización
+input_characters = sorted(set("".join(input_texts)))
+target_characters = sorted(set("".join(target_texts)))
 
-sorted_ques, sorted_ans = zip(*[(q, a) for q, a in zip(questions, answers) if len(q.split()) < 13 and len(a.split()) < 13])
+input_token_index = {char: i for i, char in enumerate(input_characters)}
+target_token_index = {char: i for i, char in enumerate(target_characters)}
 
-# Función para limpiar texto en español
-def clean_text(txt):
-    txt = txt.lower()
-    txt = re.sub(r"¿", "", txt)
-    txt = re.sub(r"¡", "", txt)
-    txt = re.sub(r"á", "a", txt)
-    txt = re.sub(r"é", "e", txt)
-    txt = re.sub(r"í", "i", txt)
-    txt = re.sub(r"ó", "o", txt)
-    txt = re.sub(r"ú", "u", txt)
-    txt = re.sub(r"ü", "u", txt)
-    txt = re.sub(r"ñ", "n", txt)
-    txt = re.sub(r"\'", "", txt)
-    txt = re.sub(r"[^\w\s]", "", txt)
-    return txt
+num_encoder_tokens = len(input_characters)
+num_decoder_tokens = len(target_characters)
+max_encoder_seq_length = max(len(text) for text in input_texts)
+max_decoder_seq_length = max(len(text) for text in target_texts)
 
-clean_ques = [clean_text(q) for q in sorted_ques]
-clean_ans = ['<SOS> ' + ' '.join(clean_text(a).split()[:11]) + ' <EOS>' for a in sorted_ans]
+# Preparar datos para el modelo
+encoder_input_data = np.zeros((len(input_texts), max_encoder_seq_length, num_encoder_tokens), dtype="float32")
+decoder_input_data = np.zeros((len(input_texts), max_decoder_seq_length, num_decoder_tokens), dtype="float32")
+decoder_target_data = np.zeros((len(input_texts), max_decoder_seq_length, num_decoder_tokens), dtype="float32")
 
-# Creación del vocabulario
-word2count = {}
-for line in clean_ques + clean_ans:
-    for word in line.split():
-        word2count[word] = word2count.get(word, 0) + 1
+for i, (input_text, target_text) in enumerate(zip(input_texts, target_texts)):
+    for t, char in enumerate(input_text):
+        encoder_input_data[i, t, input_token_index[char]] = 1.0
+    for t, char in enumerate(target_text):
+        decoder_input_data[i, t, target_token_index[char]] = 1.0
+        if t > 0:
+            decoder_target_data[i, t - 1, target_token_index[char]] = 1.0
 
-vocab = {word: idx for idx, (word, count) in enumerate(word2count.items()) if count >= 5}
-tokens = ['<PAD>', '<EOS>', '<OUT>', '<SOS>']
-for token in tokens:
-    vocab[token] = len(vocab)
+# Definir el modelo
+encoder_inputs = Input(shape=(None, num_encoder_tokens))
+encoder = LSTM(latent_dim, return_state=True)
+encoder_outputs, state_h, state_c = encoder(encoder_inputs)
+encoder_states = [state_h, state_c]
 
-inv_vocab = {idx: word for word, idx in vocab.items()}
+decoder_inputs = Input(shape=(None, num_decoder_tokens))
+decoder_lstm = LSTM(latent_dim, return_sequences=True, return_state=True)
+decoder_outputs, _, _ = decoder_lstm(decoder_inputs, initial_state=encoder_states)
+decoder_dense = Dense(num_decoder_tokens, activation="softmax")
+decoder_outputs = decoder_dense(decoder_outputs)
 
-# Conversión a índices
-encoder_inp = [[vocab.get(word, vocab['<OUT>']) for word in line.split()] for line in clean_ques]
-decoder_inp = [[vocab.get(word, vocab['<OUT>']) for word in line.split()] for line in clean_ans]
+model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 
-# Padding de secuencias
-encoder_inp = pad_sequences(encoder_inp, 13, padding='post', truncating='post')
-decoder_inp = pad_sequences(decoder_inp, 13, padding='post', truncating='post')
+# Forzar el uso de la CPU si no se necesita GPU
+# Descomentar las siguientes dos líneas si no deseas usar la GPU:
+# tf.config.set_visible_devices([], 'GPU')  # Desactiva el uso de la GPU
 
-decoder_final_output = [seq[1:] for seq in decoder_inp]
-decoder_final_output = pad_sequences(decoder_final_output, 13, padding='post', truncating='post')
-decoder_final_output = to_categorical(decoder_final_output, len(vocab))
-
-# Definición del modelo
-enc_inp = Input(shape=(13,))
-dec_inp = Input(shape=(13,))
-VOCAB_SIZE = len(vocab)
-
-embed = Embedding(VOCAB_SIZE, output_dim=50, input_length=13, trainable=True)
-enc_embed = embed(enc_inp)
-enc_lstm = LSTM(400, return_sequences=True, return_state=True)
-enc_op, h, c = enc_lstm(enc_embed)
-enc_states = [h, c]
-
-dec_embed = embed(dec_inp)
-dec_lstm = LSTM(400, return_sequences=True, return_state=True)
-dec_op, _, _ = dec_lstm(dec_embed, initial_state=enc_states)
-
-dense = Dense(VOCAB_SIZE, activation='softmax')
-dense_op = dense(dec_op)
-
-model = Model([enc_inp, dec_inp], dense_op)
-model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
-
-# Entrenamiento
-model.fit([encoder_inp, decoder_inp], decoder_final_output, epochs=10, batch_size=64)
-
-# Guardar el modelo
-model.save('seq2seq_chatbot_es.keras')
+# Compilar y entrenar el modelo
+model.compile(optimizer="rmsprop", loss="categorical_crossentropy", metrics=["accuracy"])
+model.fit(
+    [encoder_input_data, decoder_input_data],
+    decoder_target_data,
+    batch_size=64,
+    epochs=100,
+    validation_split=0.2,
+)
