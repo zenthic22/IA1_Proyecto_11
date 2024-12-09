@@ -1,0 +1,102 @@
+[
+    {
+      "entrada": "¿qué géneros de anime existen?",
+      "respuesta": "Algunos géneros de anime incluyen acción, aventura, comedia, drama, fantasía, horror, ciencia ficción, romance, slice of life, y más.",
+      "intenciones": ["anime", "género"]
+    },
+    {
+      "entrada": "¿quién es Goku?",
+      "respuesta": "Goku es el protagonista principal de la serie de anime 'Dragon Ball'. Es un guerrero Saiyan conocido por su gran poder y su deseo de siempre mejorar.",
+      "intenciones": ["anime", "personaje"]
+    },
+    {
+      "entrada": "recomiéndame un anime de acción",
+      "respuesta": "Te recomendaría 'Attack on Titan', 'My Hero Academia' o 'Demon Slayer', son excelentes animes de acción con historias emocionantes.",
+      "intenciones": ["anime", "recomendación", "acción"]
+    },
+    {
+      "entrada": "¿qué es el anime 'Naruto'?",
+      "respuesta": "'Naruto' es un anime basado en la historia de Naruto Uzumaki, un ninja joven que aspira a convertirse en el líder de su aldea, el Hokage. La serie trata sobre su crecimiento, luchas y amistades.",
+      "intenciones": ["anime", "serie"]
+    },
+    {
+      "entrada": "¿quién es el director de 'Spirited Away'?",
+      "respuesta": "'Spirited Away' fue dirigido por Hayao Miyazaki y es una de las películas más famosas del Studio Ghibli, ganadora de un Óscar como Mejor Película de Animación.",
+      "intenciones": ["película", "director"]
+    },
+    {
+      "entrada": "recomiéndame una película de comedia",
+      "respuesta": "Te recomiendo 'The Hangover' o 'Superbad', son comedias muy divertidas que seguro disfrutarás.",
+      "intenciones": ["película", "recomendación", "comedia"]
+    },
+    {
+      "entrada": "¿quién es el protagonista de 'Stranger Things'?",
+      "respuesta": "El protagonista principal de 'Stranger Things' es Eleven, una niña con poderes psíquicos que se une a un grupo de amigos para enfrentar fenómenos paranormales.",
+      "intenciones": ["serie", "personaje"]
+    },
+    {
+      "entrada": "¿de qué trata 'Breaking Bad'?",
+      "respuesta": "'Breaking Bad' es una serie sobre Walter White, un profesor de química que se convierte en fabricante de metanfetamina tras ser diagnosticado con cáncer. La serie explora su caída moral y las consecuencias de sus decisiones.",
+      "intenciones": ["serie", "sinopsis"]
+    },
+    {
+      "entrada": "recomiéndame una película de ciencia ficción",
+      "respuesta": "Te recomendaría 'Inception', 'Interstellar' o 'Blade Runner 2049', son películas de ciencia ficción muy bien valoradas por su trama y efectos visuales.",
+      "intenciones": ["película", "recomendación", "ciencia ficción"]
+    },
+    {
+      "entrada": "¿quién es el villano de 'The Dark Knight'?",
+      "respuesta": "El villano principal de 'The Dark Knight' es el Joker, interpretado por Heath Ledger. Es un criminal psicópata que busca sumergir a Gotham en el caos.",
+      "intenciones": ["película", "villano"]
+    },
+    {
+      "entrada": "¿qué significa 'shounen' en el anime?",
+      "respuesta": "'Shounen' es un término utilizado para referirse a los animes dirigidos principalmente a un público joven masculino, con historias llenas de acción, aventura y superación personal.",
+      "intenciones": ["anime", "género"]
+    },
+    {
+      "entrada": "¿qué es 'One Piece'?",
+      "respuesta": "'One Piece' es un anime y manga creado por Eiichiro Oda. La historia sigue a Monkey D. Luffy y su tripulación de piratas mientras buscan el tesoro legendario conocido como el 'One Piece'.",
+      "intenciones": ["anime", "serie"]
+    },
+    {
+      "entrada": "¿cuál es la película más taquillera de todos los tiempos?",
+      "respuesta": "Hasta ahora, la película más taquillera de todos los tiempos es 'Avatar', dirigida por James Cameron, aunque 'Avengers: Endgame' la ha superado brevemente en taquilla mundial.",
+      "intenciones": ["película", "taquilla"]
+    },
+    {
+      "entrada": "¿quiénes son los personajes principales de 'Attack on Titan'?",
+      "respuesta": "Los personajes principales de 'Attack on Titan' son Eren Jaeger, Mikasa Ackerman y Armin Arlert. Juntos luchan contra los titanes para proteger a la humanidad.",
+      "intenciones": ["anime", "personaje"]
+    },
+    {
+      "entrada": "¿cuál es tu anime favorito?",
+      "respuesta": "No tengo un anime favorito, pero muchos disfrutan de series como 'Naruto', 'Dragon Ball' y 'Attack on Titan'. ¿Cuál es tu favorito?",
+      "intenciones": ["anime", "preferencia"]
+    },
+    {
+      "entrada": "¿qué es el 'Studio Ghibli'?",
+      "respuesta": "El Studio Ghibli es un famoso estudio de animación japonés conocido por sus películas como 'Spirited Away', 'My Neighbor Totoro' y 'Princess Mononoke'. Sus películas son aclamadas por su animación detallada y sus emotivas historias.",
+      "intenciones": ["película", "estudio"]
+    },
+    {
+      "entrada": "recomiéndame un anime de aventura",
+      "respuesta": "Si te gustan los animes de aventura, te recomendaría 'Fullmetal Alchemist: Brotherhood', 'Hunter x Hunter' o 'One Piece'.",
+      "intenciones": ["anime", "recomendación", "aventura"]
+    },
+    {
+      "entrada": "¿de qué trata 'The Witcher'?",
+      "respuesta": "'The Witcher' es una serie basada en los libros de Andrzej Sapkowski. La historia sigue a Geralt de Rivia, un cazador de monstruos en un mundo medieval lleno de magia, criaturas y conflictos políticos.",
+      "intenciones": ["serie", "sinopsis"]
+    },
+    {
+      "entrada": "¿quién es el director de 'Inception'?",
+      "respuesta": "'Inception' fue dirigida por Christopher Nolan. Es una película de ciencia ficción que explora los sueños y la mente humana.",
+      "intenciones": ["película", "director"]
+    },
+    {
+      "entrada": "¿quién ganó el mundial de fútbol 2018?",
+      "respuesta": "El Mundial de Fútbol 2018 fue ganado por Francia, quienes derrotaron a Croacia 4-2 en la final.",
+      "intenciones": ["deporte", "fútbol", "mundial"]
+    }
+]  

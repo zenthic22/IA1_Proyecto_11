@@ -9,27 +9,59 @@ const audioIcon = document.getElementById("audio-icon");
 const userInput = document.getElementById("user-input");
 const messagesDiv = document.getElementById("messages");
 
-// Variable global para almacenar el modelo cargado
-let modeloIA = null;
+// Variables para almacenar los diferentes JSON
+let conversaciones = [];
+let chistes = [];
+let deportesData = [];
+let entretenimientoData = [];
+let correccionesVocabulario = [];
 
-// Manejar el clic en el ícono de menú para desplegar el menú
-themeToggleMenu.addEventListener("click", () => {
-  themeMenu.style.display = themeMenu.style.display === "block" ? "none" : "block";
+// Cargar los diferentes JSON
+fetch('data/conversaciones.json')
+  .then(response => response.json())
+  .then(data => {
+    conversaciones = data;
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON de conversaciones:', error);
+  });
+
+fetch('data/chistes.json')
+  .then(response => response.json())
+  .then(data => {
+    chistes = data;
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON de conversaciones:', error);
 });
 
-// Cambiar a tema IA
-iaThemeOption.addEventListener("click", () => {
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("ia-theme");
-  themeMenu.style.display = "none"; // Ocultar el menú después de elegir
+fetch('data/deportes.json')
+  .then(response => response.json())
+  .then(data => {
+    deportesData = data;
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON de conversaciones:', error);
 });
 
-// Cambiar a tema Claro
-lightThemeOption.addEventListener("click", () => {
-  document.body.classList.remove("ia-theme");
-  document.body.classList.add("light-theme");
-  themeMenu.style.display = "none"; // Ocultar el menú después de elegir
-});
+fetch('data/entretenimiento.json')
+  .then(response => response.json())
+  .then(data => {
+    entretenimientoData = data;
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON de conversaciones:', error);
+  });
+
+// Cargar el archivo JSON de correcciones de vocabulario
+fetch('data/vocabulario.json')
+  .then(response => response.json())
+  .then(data => {
+    correccionesVocabulario = data.correcciones_vocabulario;
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON de correcciones de vocabulario:', error);
+  });
 
 // Función para agregar mensajes al chat con íconos y burbujas
 function agregarMensaje(mensaje, tipo) {
@@ -58,58 +90,79 @@ function agregarMensaje(mensaje, tipo) {
   messagesDiv.scrollTop = messagesDiv.scrollHeight; // Desplazar hacia abajo
 }
 
-// Manejar ícono de adjuntar archivo para cargar el modelo
-attachIcon.addEventListener("click", async () => {
-  const input = document.createElement("input");
-  input.type = "file";
-  input.accept = ".keras,.json"; // Aceptar archivos .keras o .json (formato TensorFlow.js)
+// Función para normalizar el texto (convertir a minúsculas y eliminar espacios extra)
+function normalizarTexto(texto) {
+  return texto.toLowerCase().trim();
+}
 
-  input.addEventListener("change", async (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      try {
-        agregarMensaje("Cargando modelo, por favor espera...", "ia");
+// Función para corregir errores ortográficos y añadir tildes
+function corregirVocabulario(texto) {
+  // Corregir errores ortográficos
+  const palabras = texto.split(' ');
+  const palabrasCorregidas = palabras.map(palabra => {
+    let palabraCorregida = correccionesVocabulario.errores_ortograficos[palabra.toLowerCase()] || palabra;
+    palabraCorregida = correccionesVocabulario.faltan_tildes[palabraCorregida.toLowerCase()] || palabraCorregida;
+    return palabraCorregida;
+  }).join(' ');
 
-        // Cargar el modelo con TensorFlow.js
-        modeloIA = await tf.loadLayersModel(tf.io.browserFiles([file]));
+  // Añadir signos de puntuación para preguntas
+  const textoConSignos = correccionesVocabulario.faltan_signos_puntuacion[palabrasCorregidas.toLowerCase()] || palabrasCorregidas;
 
-        agregarMensaje("Modelo cargado exitosamente. ¡Listo para procesar mensajes!", "ia");
-      } catch (error) {
-        agregarMensaje("Error al cargar el modelo. Asegúrate de que sea un archivo válido.", "ia");
-        console.error(error);
-      }
+  return textoConSignos;
+}
+
+// Función para obtener la respuesta de los diferentes JSON según el tipo de entrada
+function obtenerRespuesta(input) {
+  const mensajeCorregido = corregirVocabulario(input);
+  const mensajeNormalizado = normalizarTexto(mensajeCorregido).trim();
+
+  for (const conversacion of conversaciones) {
+    if (normalizarTexto(conversacion.entrada).toLowerCase() === mensajeNormalizado) {
+      return conversacion.respuesta;
     }
-  });
+  }
 
-  input.click(); // Simula el clic en el input para abrir el selector de archivos
-});
+  // Buscar en los chistes
+  for (const chiste of chistes) {
+    if (chiste.entrada.toLowerCase() === mensajeNormalizado) {
+      return chiste.respuesta;
+    }
+  }
+
+  // Buscar en los deportes
+  for (const deporte of deportesData) {
+    if (deporte.entrada.toLowerCase() === mensajeNormalizado) {
+      return deporte.respuesta;
+    }
+  }
+
+  // Buscar en el entretenimiento
+  for (const entr of entretenimientoData) {
+    if (entr.entrada.toLowerCase() === mensajeNormalizado) {
+      return entr.respuesta;
+    }
+  }
+
+  // Si no se encuentra ninguna respuesta
+  return "Lo siento, no entendí eso.";
+}
 
 // Manejar ícono de enviar mensaje
-sendIcon.addEventListener("click", async () => {
+sendIcon.addEventListener("click", () => {
   const mensaje = userInput.value.trim();
   if (mensaje) {
     agregarMensaje(mensaje, "usuario");
     userInput.value = ""; // Limpiar el campo de texto
-
-    if (modeloIA) {
-      agregarMensaje("Procesando tu mensaje...", "ia");
-
-      try {
-        // Preprocesar el mensaje: convertir el texto a un tensor (aquí es un ejemplo simplificado)
-        const inputTensor = tf.tensor([[...mensaje].map(c => c.charCodeAt(0) / 255)]); // Normalizar caracteres
-        const outputTensor = modeloIA.predict(inputTensor); // Predicción con el modelo
-        const respuestaArray = await outputTensor.array(); // Convertir la salida a un array
-        const respuesta = respuestaArray[0].join(" "); // Combinar la salida en una cadena
-
-        agregarMensaje("Respuesta de la IA: " + respuesta, "ia");
-      } catch (error) {
-        agregarMensaje("Error procesando el mensaje con la IA.", "ia");
-        console.error(error);
-      }
-    } else {
-      agregarMensaje("Por favor, carga un modelo antes de enviar mensajes.", "ia");
-    }
+    setTimeout(() => {
+      const respuesta = obtenerRespuesta(mensaje); // Usar la función para obtener la respuesta
+      agregarMensaje(respuesta, "ia");
+    }, 1000);
   }
+});
+
+// Manejar ícono de adjuntar archivo
+attachIcon.addEventListener("click", () => {
+  alert("Función de adjuntar archivo no implementada aún.");
 });
 
 // Manejar ícono de grabar audio

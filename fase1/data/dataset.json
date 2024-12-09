@@ -1,0 +1,7 @@
+[
+  { "entrada": "hola", "respuesta": "¡Hola! ¿Cómo puedo ayudarte?", "intenciones": ["saludo"] },
+  { "entrada": "¿cómo estás?", "respuesta": "Estoy bien, gracias por preguntar.", "intenciones": ["saludo"] },
+  { "entrada": "adiós", "respuesta": "¡Hasta luego! Vuelve pronto.", "intenciones": ["despedida"] },
+  { "entrada": "¿qué es la inteligencia artificial?", "respuesta": "La inteligencia artificial es una rama de la informática que busca crear máquinas capaces de realizar tareas que requieren inteligencia humana.", "intenciones": ["definición", "pregunta"] },
+  { "entrada": "cuéntame un chiste", "respuesta": "¿Por qué los programadores confunden Halloween con Navidad? Porque Oct 31 == Dec 25.", "intenciones": ["humor"] }
+]

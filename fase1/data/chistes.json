@@ -1,0 +1,67 @@
+[
+    {
+        "entrada": "cuéntame un chiste",
+        "respuesta": "¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "dime algo gracioso",
+        "respuesta": "¿Cómo se llama un boomerang que no vuelve? Un palo.",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "me cuentas un chiste",
+        "respuesta": "¿Por qué los programadores confunden Halloween con Navidad? Porque Oct 31 == Dec 25.",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "chiste",
+        "respuesta": "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "cuéntame un buen chiste",
+        "respuesta": "¿Cómo se llama un perro sin patas? No importa cómo lo llames, ¡no va a venir!",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "dime un chiste corto",
+        "respuesta": "¿Cuál es el colmo de un electricista? No encontrar su corriente de trabajo.",
+        "intenciones": ["humor"]
+    },
+    {
+        "entrada": "chiste de programación",
+        "respuesta": "¿Por qué el programa no podía salir? Porque se quedó atrapado en un bucle infinito.",
+        "intenciones": ["humor", "programación"]
+    },
+    {
+        "entrada": "dime un chiste de animales",
+        "respuesta": "¿Qué le dice un gusano a otro gusano? ¡Voy a dar una vuelta a la manzana!",
+        "intenciones": ["humor", "animales"]
+    },
+    {
+        "entrada": "chiste de matemáticas",
+        "respuesta": "¿Por qué el libro de matemáticas se deprimió? Porque tenía demasiados problemas.",
+        "intenciones": ["humor", "matemáticas"]
+    },
+    {
+        "entrada": "cuéntame un chiste de tecnología",
+        "respuesta": "¿Por qué el ordenador fue al doctor? Porque tenía un virus.",
+        "intenciones": ["humor", "tecnología"]
+    },
+    {
+        "entrada": "chiste de programación",
+        "respuesta": "¿Cómo se llama un programador sin amigos? Un solo-bit.",
+        "intenciones": ["humor", "programación"]
+    },
+    {
+        "entrada": "chiste de informática",
+        "respuesta": "¿Por qué los informáticos nunca tienen miedo? Porque siempre están en un entorno controlado.",
+        "intenciones": ["humor", "informática"]
+    },
+    {
+        "entrada": "chiste de matemáticas",
+        "respuesta": "¿Qué hace una persona cuando no entiende un chiste de matemáticas? Lo integra.",
+        "intenciones": ["humor", "matemáticas"]
+    }
+]

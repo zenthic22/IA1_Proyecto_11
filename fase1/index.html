@@ -7,13 +7,11 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="img/robotica.png">
 </head>
-<body class="light-theme"> <!-- Inicia con el tema claro -->
+<body class="light-theme">
   <div id="chat-container">
     <h1>ChatAmigo</h1>
     <div id="messages"></div>
     <div id="typing-indicator"></div>
-
-    <!-- Campo de entrada con íconos -->
     <div id="input-container">
       <img src="img/adjuntar.png" alt="Adjuntar archivo" id="attach-icon" class="input-icon" />
       <input id="user-input" type="text" placeholder="Escribe tu mensaje..." />
@@ -37,7 +35,7 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/compromise@13.1.1/builds/compromise.min.js"></script>
   <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </body>
 </html>

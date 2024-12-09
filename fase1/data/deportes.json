@@ -1,0 +1,97 @@
+[
+    {
+        "entrada": "¿qué es el fútbol?",
+        "respuesta": "El fútbol es un deporte de equipo jugado entre dos conjuntos de 11 jugadores cada uno. Se juega con una pelota esférica en un campo rectangular y el objetivo es marcar goles en la portería contraria.",
+        "intenciones": ["deporte", "fútbol"]
+    },
+    {
+        "entrada": "¿quién ganó la Copa del Mundo 2018?",
+        "respuesta": "Francia ganó la Copa del Mundo de la FIFA 2018, derrotando a Croacia 4-2 en la final que se jugó en Moscú, Rusia.",
+        "intenciones": ["mundiales", "fútbol"]
+    },
+    {
+        "entrada": "¿quién es Lionel Messi?",
+        "respuesta": "Lionel Messi es un futbolista argentino considerado uno de los mejores jugadores de fútbol de la historia. Ha jugado la mayor parte de su carrera en el FC Barcelona y actualmente juega en el Paris Saint-Germain.",
+        "intenciones": ["jugadores", "fútbol"]
+    },
+    {
+        "entrada": "¿qué equipos han ganado más Mundiales?",
+        "respuesta": "Brasil es el país con más títulos de la Copa del Mundo de la FIFA, con un total de 5 victorias. Le siguen Alemania e Italia con 4 títulos cada uno.",
+        "intenciones": ["mundiales", "fútbol"]
+    },
+    {
+        "entrada": "¿qué es el baloncesto?",
+        "respuesta": "El baloncesto es un deporte de equipo jugado entre dos conjuntos de cinco jugadores. El objetivo es marcar puntos lanzando la pelota a través de un aro que está suspendido a 3.05 metros del suelo.",
+        "intenciones": ["deporte", "baloncesto"]
+    },
+    {
+        "entrada": "¿quién ganó la NBA en 2023?",
+        "respuesta": "En 2023, los Denver Nuggets ganaron el campeonato de la NBA, derrotando a los Miami Heat en la final.",
+        "intenciones": ["nba", "baloncesto"]
+    },
+    {
+        "entrada": "¿quién es LeBron James?",
+        "respuesta": "LeBron James es un jugador de baloncesto estadounidense considerado uno de los mejores de todos los tiempos. Ha jugado en los Cleveland Cavaliers, Miami Heat y Los Angeles Lakers.",
+        "intenciones": ["jugadores", "baloncesto"]
+    },
+    {
+        "entrada": "¿qué es el béisbol?",
+        "respuesta": "El béisbol es un deporte en el que se enfrentan dos equipos de nueve jugadores cada uno. El objetivo es anotar carreras golpeando una pelota con un bate y corriendo entre bases.",
+        "intenciones": ["deporte", "béisbol"]
+    },
+    {
+        "entrada": "¿quién ganó la Serie Mundial en 2022?",
+        "respuesta": "Los Houston Astros ganaron la Serie Mundial de 2022, derrotando a los Philadelphia Phillies en seis juegos.",
+        "intenciones": ["serie mundial", "béisbol"]
+    },
+    {
+        "entrada": "¿quién es Babe Ruth?",
+        "respuesta": "Babe Ruth es uno de los jugadores más famosos de la historia del béisbol. Jugó para los Boston Red Sox, los New York Yankees y los Boston Braves, y es conocido por su gran poder al bate.",
+        "intenciones": ["jugadores", "béisbol"]
+    },
+    {
+        "entrada": "¿cuál es el equipo más exitoso en la historia del fútbol?",
+        "respuesta": "El Real Madrid es considerado el equipo más exitoso en la historia del fútbol, con múltiples títulos de La Liga, la Copa del Rey y la Liga de Campeones de la UEFA.",
+        "intenciones": ["equipos", "fútbol"]
+    },
+    {
+        "entrada": "¿qué es el Super Bowl?",
+        "respuesta": "El Super Bowl es el campeonato de la NFL (National Football League) en Estados Unidos, jugado anualmente entre los campeones de la Conferencia Nacional (NFC) y la Conferencia Americana (AFC).",
+        "intenciones": ["super bowl", "fútbol americano"]
+    },
+    {
+        "entrada": "¿quién ganó el Super Bowl en 2023?",
+        "respuesta": "Los Kansas City Chiefs ganaron el Super Bowl LVII en 2023, derrotando a los Philadelphia Eagles con un marcador de 38-35.",
+        "intenciones": ["super bowl", "fútbol americano"]
+    },
+    {
+        "entrada": "¿quién es Michael Jordan?",
+        "respuesta": "Michael Jordan es considerado uno de los mejores jugadores de baloncesto de todos los tiempos. Jugó en los Chicago Bulls, donde ganó seis campeonatos de la NBA.",
+        "intenciones": ["jugadores", "baloncesto"]
+    },
+    {
+        "entrada": "¿cuál es el récord de goles de Cristiano Ronaldo?",
+        "respuesta": "Cristiano Ronaldo tiene el récord de más goles marcados en la historia de la UEFA Champions League y es uno de los máximos goleadores internacionales de todos los tiempos.",
+        "intenciones": ["jugadores", "fútbol"]
+    },
+    {
+        "entrada": "¿quién ganó la Copa América 2021?",
+        "respuesta": "Argentina ganó la Copa América 2021, derrotando a Brasil 1-0 en la final que se jugó en el Estadio Maracaná.",
+        "intenciones": ["competición", "fútbol"]
+    },
+    {
+        "entrada": "¿qué es la UEFA Champions League?",
+        "respuesta": "La UEFA Champions League es el torneo de clubes más prestigioso de Europa, donde los mejores equipos de fútbol compiten por el título de campeones europeos.",
+        "intenciones": ["competición", "fútbol"]
+    },
+    {
+        "entrada": "¿quién es Tom Brady?",
+        "respuesta": "Tom Brady es un exjugador de fútbol americano, considerado uno de los mejores mariscales de campo de la historia de la NFL. Ganó siete Super Bowls a lo largo de su carrera.",
+        "intenciones": ["jugadores", "fútbol americano"]
+    },
+    {
+        "entrada": "¿qué es el tenis?",
+        "respuesta": "El tenis es un deporte individual o de parejas en el que los jugadores usan una raqueta para golpear una pelota sobre una red. El objetivo es marcar puntos enviando la pelota a la cancha contraria.",
+        "intenciones": ["deporte", "tenis"]
+    }
+]

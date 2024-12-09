@@ -1,0 +1,192 @@
+[
+  {
+    "entrada": "hola",
+    "respuesta": "¡Hola! ¿Cómo estás?",
+    "intenciones": ["saludo"]
+  },
+  {
+    "entrada": "¿cómo estás?",
+    "respuesta": "Estoy bien, gracias por preguntar. ¿Y tú?",
+    "intenciones": ["saludo", "pregunta"]
+  },
+  {
+    "entrada": "bien",
+    "respuesta": "¡Me alegra mucho escuchar eso! ¿Qué te gusta hacer en tu tiempo libre?",
+    "intenciones": ["estado", "respuesta_positiva"]
+  },
+  {
+    "entrada": "mal",
+    "respuesta": "Lo siento mucho. ¿Quieres hablar sobre lo que te pasa?",
+    "intenciones": ["estado", "respuesta_negativa"]
+  },
+  {
+    "entrada": "me gusta ver películas",
+    "respuesta": "¡Qué bien! ¿Qué tipo de películas te gustan?",
+    "intenciones": ["gusto"]
+  },
+  {
+    "entrada": "no sé",
+    "respuesta": "Entiendo. ¿Te gustaría hablar de algo más?",
+    "intenciones": ["respuesta_negativa"]
+  },
+  {
+    "entrada": "me siento triste",
+    "respuesta": "Lo siento mucho. ¿Quieres hablar sobre lo que te pasa?",
+    "intenciones": ["emoción", "tristeza"]
+  },
+  {
+    "entrada": "estoy muy feliz hoy",
+    "respuesta": "¡Qué bien! Me alegra mucho escuchar eso. ¿Qué te hace sentir tan bien?",
+    "intenciones": ["emoción", "felicidad"]
+  },
+  {
+    "entrada": "¿qué te gusta hacer?",
+    "respuesta": "Me gusta aprender cosas nuevas. ¿Y a ti? ¿Qué hobbies tienes?",
+    "intenciones": ["pregunta", "hobby"]
+  },
+  {
+    "entrada": "me gusta leer libros",
+    "respuesta": "¡Eso suena genial! ¿Qué tipo de libros te gustan más?",
+    "intenciones": ["hobby", "libros"]
+  },
+  {
+    "entrada": "me gusta la comida italiana",
+    "respuesta": "¡La comida italiana es deliciosa! ¿Cuál es tu plato favorito?",
+    "intenciones": ["hobby", "comida"]
+  },
+  {
+    "entrada": "¿cuál es tu comida favorita?",
+    "respuesta": "No tengo una comida favorita, pero me encanta hablar sobre comida. ¿Tú qué prefieres?",
+    "intenciones": ["pregunta", "comida"]
+  },
+  {
+    "entrada": "gracias",
+    "respuesta": "Es un gusto ayudarte :D",
+    "intenciones": ["agradecimiento", "accion"]
+  },
+  {
+    "entrada": "adiós",
+    "respuesta": "¡Hasta luego! Que tengas un excelente día.",
+    "intenciones": ["despedida"]
+  },
+  {
+    "entrada": "¿qué es la inteligencia artificial?",
+    "respuesta": "La inteligencia artificial es una rama de la informática que busca crear máquinas capaces de realizar tareas que requieren inteligencia humana.",
+    "intenciones": ["definición", "tecnología"]
+  },
+  {
+    "entrada": "cuéntame un chiste",
+    "respuesta": "¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.",
+    "intenciones": ["humor"]
+  },
+  {
+    "entrada": "dime algo gracioso",
+    "respuesta": "¿Cómo se llama un boomerang que no vuelve? Un palo.",
+    "intenciones": ["humor"]
+  },
+  {
+    "entrada": "me siento cansado",
+    "respuesta": "Quizás deberías descansar un poco. ¿Te gustaría hablar sobre algo para relajarte?",
+    "intenciones": ["emoción", "cansancio"]
+  },
+  {
+    "entrada": "¿cuál es tu color favorito?",
+    "respuesta": "No tengo un color favorito, pero me encantan los colores brillantes. ¿Y el tuyo?",
+    "intenciones": ["pregunta", "preferencia"]
+  },
+  {
+    "entrada": "me siento emocionado por algo",
+    "respuesta": "¡Qué bien! ¿Qué es lo que te tiene tan emocionado?",
+    "intenciones": ["emoción", "emoción positiva"]
+  },
+  {
+    "entrada": "estoy aburrido",
+    "respuesta": "¿Qué te gustaría hacer para pasar el tiempo? Podemos hablar de cualquier cosa.",
+    "intenciones": ["emoción", "aburrimiento"]
+  },
+  {
+    "entrada": "¿qué opinas del cine?",
+    "respuesta": "El cine es increíble. ¿Tienes alguna película favorita?",
+    "intenciones": ["pregunta", "cine"]
+  },
+  {
+    "entrada": "me gustan las películas de acción",
+    "respuesta": "¡Las películas de acción son emocionantes! ¿Tienes alguna favorita?",
+    "intenciones": ["hobby", "cine"]
+  },
+  {
+    "entrada": "¿quién es tu actor favorito?",
+    "respuesta": "No tengo un actor favorito, pero me gustaría saber quién es el tuyo. ¿Por qué te gusta?",
+    "intenciones": ["pregunta", "cine"]
+  },
+  {
+    "entrada": "no entiendo",
+    "respuesta": "Lo siento, no te entendí bien. ¿Puedes reformular tu pregunta?",
+    "intenciones": ["error"]
+  },
+  {
+    "entrada": "estoy triste porque me siento solo",
+    "respuesta": "Lamento mucho escuchar eso. A veces compartir lo que sientes puede ayudarte. ¿Quieres hablar sobre ello?",
+    "intenciones": ["emoción", "tristeza", "soledad"]
+  },
+  {
+    "entrada": "me gustan los animales",
+    "respuesta": "¡Los animales son increíbles! ¿Tienes alguna mascota?",
+    "intenciones": ["hobby", "animales"]
+  },
+  {
+    "entrada": "me gustaría tener un perro",
+    "respuesta": "¡Los perros son leales y siempre te acompañan! ¿Qué raza te gustaría tener?",
+    "intenciones": ["hobby", "animales", "perro"]
+  },
+  {
+    "entrada": "me gustan las plantas",
+    "respuesta": "Las plantas son muy relajantes. ¿Qué tipo de plantas te gustan?",
+    "intenciones": ["hobby", "plantas"]
+  },
+  {
+    "entrada": "¿te gustan los videojuegos?",
+    "respuesta": "¡Sí! Los videojuegos son muy divertidos. ¿Tienes algún juego favorito?",
+    "intenciones": ["hobby", "videojuegos"]
+  },
+  {
+    "entrada": "¿qué opinas del arte?",
+    "respuesta": "El arte es una forma maravillosa de expresión. ¿Tienes algún artista favorito?",
+    "intenciones": ["pregunta", "arte"]
+  },
+  {
+    "entrada": "me gusta la música clásica",
+    "respuesta": "¡La música clásica tiene una belleza única! ¿Tienes algún compositor favorito?",
+    "intenciones": ["hobby", "música"]
+  },
+  {
+    "entrada": "¿tienes algún sueño?",
+    "respuesta": "Me gustaría aprender y mejorar siempre. ¿Tú tienes algún sueño o meta que quieras cumplir?",
+    "intenciones": ["pregunta", "sueños"]
+  },
+  {
+    "entrada": "me siento inspirado",
+    "respuesta": "¡Eso es increíble! ¿Qué te inspira?",
+    "intenciones": ["emoción", "inspiración"]
+  },
+  {
+    "entrada": "¿te gusta viajar?",
+    "respuesta": "¡Sí, viajar es una excelente manera de conocer nuevas culturas! ¿A dónde te gustaría viajar?",
+    "intenciones": ["pregunta", "viajes"]
+  },
+  {
+    "entrada": "estoy aprendiendo a programar",
+    "respuesta": "¡Eso suena genial! ¿Qué lenguaje de programación estás aprendiendo?",
+    "intenciones": ["hobby", "programación"]
+  },
+  {
+    "entrada": "me gusta la fotografía",
+    "respuesta": "¡La fotografía es un arte maravilloso! ¿Qué tipo de fotografía prefieres?",
+    "intenciones": ["hobby", "fotografía"]
+  },
+  {
+    "entrada": "¿quién es tu escritor favorito?",
+    "respuesta": "No tengo un escritor favorito, pero admiro a muchos. ¿Tienes algún autor que te inspire?",
+    "intenciones": ["pregunta", "literatura"]
+  }
+]
