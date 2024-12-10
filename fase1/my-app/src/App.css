@@ -1,0 +1,251 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Contenedor del chat */
+#chat-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Título */
+h1 {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Área de mensajes */
+#messages {
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Campo de entrada */
+#user-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Botón de enviar */
+#send-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Menu de cambio de tema */
+#theme-toggle-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#theme-toggle-menu #menu-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilos del menú de temas */
+#theme-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    display: none;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.theme-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.theme-option:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Animación para desplegar el menú */
+#theme-toggle-menu.active #theme-menu {
+    display: flex;
+}
+
+/* Estilos para el tema oscuro (IA) */
+body.ia-theme {
+    background-color: #141e30;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.ia-theme #chat-container {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.ia-theme #messages {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el tema claro */
+body.light-theme {
+    background-color: #ffffff;
+}
+
+body.light-theme #chat-container {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme #messages {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contenedor del campo de entrada y sus íconos */
+#input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* Íconos de entrada */
+.input-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.input-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Campo de entrada ajustado */
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+/* Mensajes del chat */
+.message-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Mensajes del usuario */
+.message-container.usuario {
+    justify-content: flex-end;
+}
+
+.message-container.ia {
+    justify-content: flex-start;
+}
+
+/* Íconos de usuario y bot */
+.message-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Burbuja de mensaje */
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.4s ease-out;
+}
+
+/* Burbuja del usuario */
+.message-container.usuario .chat-bubble {
+    background-color: #007BFF;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+/* Burbuja del bot */
+.message-container.ia .chat-bubble {
+    background-color: #32CD32;
+    color: white;
+    border-bottom-left-radius: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

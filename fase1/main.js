@@ -1,13 +1,16 @@
-// Cargar el modelo de TensorFlow.js
+// Cargar el modelo de QnA de TensorFlow.js
+import * as qna from '@tensorflow-models/qna';
+import * as tf from '@tensorflow/tfjs';
+
 let modelo;
+
+// Cargar el modelo QnA
 async function cargarModelo() {
   try {
-    // Cargar el modelo desde la carpeta donde está almacenado
-    modelo = await tf.loadLayersModel('modelo/model.json');
-    console.log('Modelo cargado correctamente');
-    modelo.summary();  // Esto imprimirá la estructura del modelo, incluyendo la capa de entrada
+    modelo = await qna.load();
+    console.log('Modelo QnA cargado correctamente');
   } catch (error) {
-    console.error('Error al cargar el modelo:', error);
+    console.error('Error al cargar el modelo QnA:', error);
   }
 }
 
@@ -46,7 +49,7 @@ function normalizarTexto(texto) {
   return texto.toLowerCase().trim();
 }
 
-// Función para predecir la respuesta utilizando el modelo cargado
+// Función para obtener la respuesta usando el modelo QnA
 async function obtenerRespuesta(input) {
   if (!modelo) {
     console.error('Modelo no cargado');
@@ -55,17 +58,22 @@ async function obtenerRespuesta(input) {
 
   const mensajeNormalizado = normalizarTexto(input);
 
-  // Preprocesar el mensaje de entrada (convertir a formato adecuado para el modelo)
-  const inputArray = mensajeNormalizado.split(' '); // Esto es solo un ejemplo; ajusta según tu modelo
-  const tensorInput = tf.tensor2d([inputArray.map(word => word.charCodeAt(0))]); // Este es un ejemplo básico
+  // Definir un contexto (puede ser un documento o un conjunto de datos)
+  const contexto = `
+    El sol es una estrella en el centro del sistema solar. Proporciona luz y calor a la Tierra, 
+    y sin él, no existiría vida en el planeta. El sol es principalmente una esfera de gas compuesto 
+    de hidrógeno y helio.
+  `;
 
-  // Realizar la predicción
-  const prediccion = modelo.predict(tensorInput);
+  // Realizar la predicción utilizando el contexto y la pregunta (mensaje)
+  const respuestas = await modelo.answer(contexto, mensajeNormalizado);
 
-  // Suponiendo que el modelo devuelve probabilidades para categorías (ajusta según tu modelo)
-  const categoriaIndex = prediccion.argMax(-1).dataSync()[0];
-  const categorias = ['Categoria1', 'Categoria2', 'Categoria3']; // Ajusta según tus categorías
-  return `Respuesta para ${categorias[categoriaIndex]}`;
+  // Obtener la mejor respuesta del modelo
+  if (respuestas && respuestas.length > 0) {
+    return respuestas[0].text; // Devuelve la respuesta más probable
+  } else {
+    return "Lo siento, no tengo suficiente información para responder a tu pregunta.";
+  }
 }
 
 // Manejar el envío de un mensaje

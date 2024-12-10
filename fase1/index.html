@@ -9,17 +9,19 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 <body class="light-theme">
-  <div id="chat-container">
-    <h1>ChatAmigo</h1>
-    <div id="messages"></div>
-    <div id="typing-indicator"></div>
-    <div id="input-container">
-      <img src="img/adjuntar.png" alt="Adjuntar archivo" id="attach-icon" class="input-icon" />
-      <input id="user-input" type="text" placeholder="Escribe tu mensaje..." />
-      <img src="img/enviar.png" alt="Enviar mensaje" id="send-icon" class="input-icon" />
-      <img src="img/registro.png" alt="Grabar audio" id="audio-icon" class="input-icon" />
-    </div>
+  <!-- Contenedor de los mensajes -->
+<div id="chat-container">
+  <h1>ChatAmigo</h1>
+  <div id="messages"></div>
+  <div id="typing-indicator"></div>
+  <div id="input-container">
+    <img src="img/adjuntar.png" alt="Adjuntar archivo" id="attach-icon" class="input-icon" />
+    <input id="user-input" type="text" placeholder="Escribe tu mensaje..." />
+    <img src="img/enviar.png" alt="Enviar mensaje" id="send-icon" class="input-icon" />
+    <img src="img/registro.png" alt="Grabar audio" id="audio-icon" class="input-icon" />
   </div>
+</div>
+
 
   <!-- Menú de temas con íconos -->
   <div id="theme-toggle-menu">
@@ -35,7 +37,9 @@
       </div>
     </div>
   </div>
-  <script src="main.js"></script>
+  <script type="module" src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
+
 </body>
 </html>
