@@ -1,0 +1,114 @@
+{
+    "datos": [
+        {
+            "entrada": "hola",
+            "categoria": "saludo",
+            "respuesta": "¡Hola! ¿Cómo te puedo ayudar?"
+        },
+        {
+            "entrada": "¿cómo estás?",
+            "categoria": "saludo",
+            "respuesta": "¡Hola! ¿Cómo te va?"
+        },
+        {
+            "entrada": "¿qué tal?",
+            "categoria": "saludo",
+            "respuesta": "¡Hola! ¿Cómo te va?"
+        },
+        {
+            "entrada": "¡buenos días!",
+            "categoria": "saludo",
+            "respuesta": "¡Buenos días! ¿En qué te puedo ayudar?"
+        },
+        {
+            "entrada": "buenas tardes",
+            "categoria": "saludo",
+            "respuesta": "¡Buenas tardes! ¿En qué puedo ayudarte?"
+        },
+        {
+            "entrada": "hasta luego",
+            "categoria": "despedida",
+            "respuesta": "¡Hasta luego!"
+        },
+        {
+            "entrada": "nos vemos luego",
+            "categoria": "despedida",
+            "respuesta": "¡Nos vemos pronto!"
+        },
+        {
+            "entrada": "gracias",
+            "categoria": "agradecimiento",
+            "respuesta": "De nada, estoy aquí para ayudarte."
+        },
+        {
+            "entrada": "muchas gracias",
+            "categoria": "agradecimiento",
+            "respuesta": "¡Qué amable!"
+        },
+        {
+            "entrada": "te lo agradezco",
+            "categoria": "agradecimiento",
+            "respuesta": "¡Con gusto!"
+        },
+        {
+            "entrada": "¿qué puedes hacer?",
+            "categoria": "info",
+            "respuesta": "Puedo responder preguntas básicas."
+        },
+        {
+            "entrada": "¿quién eres?",
+            "categoria": "info",
+            "respuesta": "Soy un chatbot sencillo en entrenamiento."
+        },
+        {
+            "entrada": "¿cómo funciona esto?",
+            "categoria": "info",
+            "respuesta": "Estoy diseñado para responder preguntas simples. Inténtalo."
+        },
+        {
+            "entrada": "tengo dolor de cabeza",
+            "categoria": "salud",
+            "respuesta": "Lo siento, no soy médico, pero descansar podría ayudarte."
+        },
+        {
+            "entrada": "me siento cansado",
+            "categoria": "salud",
+            "respuesta": "Descansar y tomar agua puede ser útil. Espero que te mejores."
+        },
+        {
+            "entrada": "me duele el estómago",
+            "categoria": "salud",
+            "respuesta": "Podría ayudarte comer algo ligero, pero consulta a un médico si el dolor persiste."
+        },
+        {
+            "entrada": "cuéntame un chiste",
+            "categoria": "humor",
+            "respuesta": "¿Por qué los pájaros no usan WhatsApp? Porque ya tienen Twitter."
+        },
+        {
+            "entrada": "dime algo gracioso",
+            "categoria": "humor",
+            "respuesta": "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!"
+        },
+        {
+            "entrada": "¿tienes un chiste?",
+            "categoria": "humor",
+            "respuesta": "¿Qué hace un perro con un taladro? ¡Taladrando!"
+        },
+        {
+            "entrada": "me aburro",
+            "categoria": "interacción",
+            "respuesta": "¿Por qué no intentas aprender algo nuevo? ¡Puedo ayudarte con información básica!"
+        },
+        {
+            "entrada": "¿qué me recomiendas hacer?",
+            "categoria": "interacción",
+            "respuesta": "Leer un libro o escuchar música podría ser una buena idea."
+        },
+        {
+            "entrada": "dame un consejo",
+            "categoria": "interacción",
+            "respuesta": "Siempre aprende algo nuevo cada día, por pequeño que sea."
+        }
+    ]
+}
