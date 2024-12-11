@@ -19,13 +19,16 @@ const prepareData = (intents) => {
     if (!labels.includes(intent.tag)) labels.push(intent.tag);
   });
 
+  // Eliminar palabras duplicadas y construir el vocabulario
   const uniqueWords = [...new Set(words)];
   const vocab = uniqueWords.reduce((acc, word, index) => ({ ...acc, [word]: index + 1 }), {});
 
+  // Convertir las entradas (patrones) a números
   const inputs = data.map((item) =>
     item.input.map((word) => vocab[word] || 0).concat(new Array(10).fill(0)).slice(0, 10)
   );
 
+  // Convertir las salidas a formato one-hot
   const outputs = data.map((item) => {
     const labelIndex = labels.indexOf(item.output);
     const oneHot = Array(labels.length).fill(0);
@@ -61,8 +64,8 @@ export const trainModel = async () => {
 
     console.log("Entrenando el modelo...");
     await model.fit(xs, ys, {
-      epochs: 200,
-      batchSize: 8,
+      epochs: 200, // Puedes reducir las épocas si tarda demasiado
+      batchSize: 8, // Tamaño de lote para el entrenamiento
     });
 
     console.log("Modelo entrenado");

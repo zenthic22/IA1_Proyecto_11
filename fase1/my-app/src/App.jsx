@@ -6,7 +6,6 @@ import './App.css';
 function App() {
   const [userInput, setUserInput] = useState('');
   const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado para indicar si el modelo está entrenando
 
   const agregarMensaje = (mensaje, tipo) => {
     setMessages((prevMessages) => [
@@ -15,44 +14,29 @@ function App() {
     ]);
   };
 
-  // Entrena el modelo una vez al montar el componente
   useEffect(() => {
     const entrenarModelo = async () => {
       try {
-        console.log("Entrenando el modelo...");
-        await trainModel();
-        console.log("Modelo entrenado con éxito.");
+        await trainModel(); // Entrena el modelo una vez
       } catch (error) {
         console.error("Error durante el entrenamiento del modelo:", error);
-      } finally {
-        setLoading(false); // Marca como listo después del entrenamiento
       }
     };
 
     entrenarModelo();
-  }, []); // Solo ejecuta una vez al montar
+  }, []); // Solo ejecuta al montar
 
   const enviarMensaje = () => {
-    if (loading) {
-      agregarMensaje("Por favor, espera. El modelo aún está cargando...", "ia");
-      return;
-    }
-
     if (userInput.trim()) {
       agregarMensaje(userInput, 'usuario');
       setUserInput('');
 
       setTimeout(() => {
-        try {
-          const intent = predict(userInput); // Realiza la predicción
-          const responses = intents.intents.find((i) => i.tag === intent).responses;
-          const response = responses[Math.floor(Math.random() * responses.length)];
-          agregarMensaje(response, 'ia');
-        } catch (error) {
-          console.error("Error durante la predicción:", error);
-          agregarMensaje("Lo siento, no entendí tu mensaje. ¿Puedes reformularlo?", "ia");
-        }
-      }, 1000); // Simula un pequeño retraso para la respuesta
+        const intent = predict(userInput);
+        const responses = intents.intents.find((i) => i.tag === intent).responses;
+        const response = responses[Math.floor(Math.random() * responses.length)];
+        agregarMensaje(response, 'ia');
+      }, 1000);
     }
   };
 
@@ -84,8 +68,7 @@ function App() {
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder={loading ? "Cargando modelo..." : "Escribe tu mensaje..."}
-            disabled={loading} // Deshabilitar el input mientras el modelo se entrena
+            placeholder="Escribe tu mensaje..."
           />
           <img
             src="img/enviar.png"
