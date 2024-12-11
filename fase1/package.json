@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@tensorflow-models/qna": "^1.0.2",
-    "@tensorflow/tfjs": "^4.22.0"
-  },
-  "devDependencies": {
-    "vite": "^6.0.3"
-  }
-}

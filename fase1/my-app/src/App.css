@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #141e30; /* Fondo oscuro fijo */
+    background: linear-gradient(135deg, #141e30, #243b55);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,7 +16,7 @@ body {
 #chat-container {
     width: 100%;
     max-width: 400px;
-    background: white;
+    background: rgba(255, 255, 255, 0.1); /* Fondo más oscuro para el chat */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -38,7 +39,7 @@ h1 {
     padding: 10px;
     height: 400px;
     overflow-y: auto;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente más claro para los mensajes */
 }
 
 /* Campo de entrada */
@@ -48,6 +49,20 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
+    color: #333; /* Color del texto (oscuro por defecto) */
+}
+
+/* Estilos para el tema oscuro (IA) */
+body.ia-theme {
+    background-color: #141e30;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Campo de entrada en el tema oscuro */
+body.ia-theme #user-input {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border: 1px solid #444; /* Borde oscuro */
 }
 
 /* Botón de enviar */
@@ -63,84 +78,6 @@ h1 {
 
 #send-button:hover {
     background-color: #0056b3;
-}
-
-/* Menu de cambio de tema */
-#theme-toggle-menu {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-#theme-toggle-menu #menu-icon {
-    width: 40px;
-    height: 40px;
-}
-
-/* Estilos del menú de temas */
-#theme-menu {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    display: none;
-    flex-direction: column;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.theme-option {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    cursor: pointer;
-}
-
-.theme-option img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.theme-option:hover {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-}
-
-/* Animación para desplegar el menú */
-#theme-toggle-menu.active #theme-menu {
-    display: flex;
-}
-
-/* Estilos para el tema oscuro (IA) */
-body.ia-theme {
-    background-color: #141e30;
-    background: linear-gradient(135deg, #141e30, #243b55);
-}
-
-body.ia-theme #chat-container {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-body.ia-theme #messages {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Estilos para el tema claro */
-body.light-theme {
-    background-color: #ffffff;
-}
-
-body.light-theme #chat-container {
-    background: rgba(255, 255, 255, 0.9);
-}
-
-body.light-theme #messages {
-    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Contenedor del campo de entrada y sus íconos */
@@ -173,6 +110,7 @@ body.light-theme #messages {
     border-radius: 5px;
     font-size: 1rem;
     background-color: #ffffff;
+    color: #333; /* Color de texto visible en el modo claro */
 }
 
 /* Mensajes del chat */
