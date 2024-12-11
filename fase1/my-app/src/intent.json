@@ -9,6 +9,1003 @@
       "tag": "despedida",
       "patterns": ["Adiós", "Nos vemos", "Hasta luego"],
       "responses": ["¡Adiós! Que tengas un buen día.", "Nos vemos pronto."]
+    },
+    {
+      "tag": "ayuda",
+      "patterns": ["Necesito ayuda", "¿Me puedes ayudar?", "Ayúdame"],
+      "responses": ["Claro, dime cómo puedo ayudarte.", "Por supuesto, ¿en qué necesitas ayuda?"]
+    },
+    {
+      "tag": "informacion_general",
+      "patterns": ["¿Qué puedes hacer?", "¿Cómo funcionas?", "¿Qué servicios ofreces?"],
+      "responses": ["Puedo ayudarte con preguntas, tareas técnicas y mucho más. ¿Qué necesitas?"]
+    },
+    {
+      "tag": "estado",
+      "patterns": ["¿Cómo estás?", "¿Qué tal?", "¿Cómo te va?"],
+      "responses": ["¡Estoy aquí listo para ayudarte!", "Siempre estoy bien. ¿Cómo estás tú?"]
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": ["Gracias", "Muchas gracias", "Te lo agradezco"],
+      "responses": ["¡De nada! Siempre feliz de ayudar.", "¡A ti! ¿Algo más en lo que pueda ayudarte?"]
+    },
+    {
+      "tag": "tema_tecnico",
+      "patterns": ["Tengo un problema técnico", "¿Cómo configuro X?", "¿Qué hago si falla X?"],
+      "responses": ["Dame más detalles y veremos cómo resolverlo.", "Puedo ayudarte con problemas técnicos. ¿Qué sucede?"]
+    },
+    {
+      "tag": "temas_varios",
+      "patterns": ["Cuéntame algo interesante", "¿Sabes curiosidades?", "Dime algo nuevo"],
+      "responses": ["¿Sabías que los girasoles pueden purificar el suelo? También puedo ayudarte con cosas técnicas si lo prefieres."]
+    },
+    {
+      "tag": "humor",
+      "patterns": ["Dime un chiste", "¿Puedes hacerme reír?", "Cuéntame algo gracioso"],
+      "responses": ["¿Por qué las matemáticas son tristes? Porque tienen muchos problemas.", "¡Claro! ¿Sabías que las computadoras nunca se resfrían? Siempre tienen buen 'cache'."]
+    },
+    {
+      "tag": "recomendaciones",
+      "patterns": ["Recomiéndame algo", "¿Qué me sugieres?", "¿Tienes alguna sugerencia?"],
+      "responses": ["¿Buscas una película, un libro o algo más? Estoy aquí para darte ideas.", "Puedo recomendarte cosas según tus intereses. ¡Dime más!"]
+    },
+    {
+      "tag": "curiosidades",
+      "patterns": ["Cuéntame un dato curioso", "¿Sabes algo interesante?", "Dame un dato curioso"],
+      "responses": ["¿Sabías que los tiburones existían antes que los árboles? También puedo ayudarte con otros temas."]
+    },
+    {
+      "tag": "futuro",
+      "patterns": ["¿Qué harás en el futuro?", "¿Puedes evolucionar?", "¿Qué esperar de ti?"],
+      "responses": ["Siempre estaré aprendiendo para ayudarte mejor. ¡Pregúntame lo que quieras!"]
+    },
+    {
+      "tag": "chistes",
+      "patterns": ["Dime un chiste", "¿Puedes contarme un chiste?", "Hazme reír", "Cuéntame algo gracioso"],
+      "responses": [
+        "¿Por qué los matemáticos odian el otoño? Porque las hojas se caen.",
+        "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
+        "¿Por qué las computadoras nunca se broncean? Porque siempre trabajan en la nube.",
+        "¿Qué le dice un bit al otro bit? Nos vemos en el bus.",
+        "¿Por qué la escoba está feliz? Porque va barriendo con todo.",
+        "¿Por qué el libro de matemáticas estaba triste? ¡Porque tenía muchos problemas!",
+        "¿Qué hace un perro con un taladro? ¡Taladrando!",
+        "¿Por qué los peces no juegan al escondite? Porque siempre se encuentran en el agua.",
+        "¿Cómo se despide un químico? ¡Átomo luego!",
+        "¿Qué le dice una impresora a otra? ¿Esa hoja es tuya o es una copia?",
+        "¿Por qué el semáforo no habla? Porque está cambiando.",
+        "¿Cómo se llama el pez más divertido? ¡El pez payaso!",
+        "¿Qué hace un pájaro en la panadería? ¡Pi-pi-pi!",
+        "¿Qué dijo un cable al otro? ¡Somos una conexión perfecta!",
+        "¿Por qué los programas de computadora son malos para el gimnasio? Porque siempre tienen bugs."
+      ]
+    },
+    {
+      "tag": "cultura_paises",
+      "patterns": ["Cuéntame sobre un país", "Dime algo de cultura general", "Háblame de un país", "¿Sabes datos curiosos sobre países?"],
+      "responses": [
+        "¿Sabías que en Japón es de mala educación clavar los palillos en el arroz? Se asocia con rituales funerarios.",
+        "En Finlandia, existe un campeonato mundial de lanzamiento de teléfonos móviles. ¡Sí, es un deporte real!",
+        "¿Sabías que en Suiza puedes alquilar una cabina para gritar? Está diseñada para aliviar el estrés.",
+        "Australia tiene más canguros que personas. ¡Es un hecho sorprendente!",
+        "En India, el río Ganges es considerado sagrado y tiene más de 2.500 km de longitud.",
+        "Italia es el país con más sitios declarados Patrimonio de la Humanidad por la UNESCO. ¡Un lugar lleno de historia!",
+        "En Brasil, el Carnaval de Río es una de las celebraciones más grandes y coloridas del mundo.",
+        "Noruega es conocida como la 'Tierra del Sol de Medianoche', porque durante el verano, el sol nunca se pone completamente.",
+        "En México, el Día de Muertos es una tradición única en el mundo para honrar a los seres queridos fallecidos.",
+        "Rusia es el país más grande del mundo y abarca 11 zonas horarias diferentes.",
+        "¿Sabías que Canadá tiene más lagos que todos los demás países combinados?",
+        "En Corea del Sur, la tecnología es tan avanzada que incluso los baños públicos tienen WiFi.",
+        "Egipto es famoso por las pirámides, pero también tiene más de 5.000 años de historia registrada.",
+        "En Francia, la Torre Eiffel fue originalmente construida como una estructura temporal para la Exposición Universal de 1889.",
+        "Tailandia es conocido como el 'País de las Sonrisas' por la hospitalidad y amabilidad de su gente."
+      ]
+    },
+    {
+      "tag": "lenguajes_programacion",
+      "patterns": ["Háblame de un lenguaje de programación", "Cuéntame sobre lenguajes de programación", "¿Sabes algo sobre lenguajes de programación?", "Dame datos curiosos de programación"],
+      "responses": [
+        "¿Sabías que Python fue nombrado en honor al grupo de comedia británico Monty Python y no por la serpiente?",
+        "JavaScript fue creado en solo 10 días en 1995 y es el lenguaje más utilizado en desarrollo web.",
+        "El lenguaje C fue desarrollado en los años 70 y sigue siendo uno de los lenguajes más influyentes en la informática moderna.",
+        "¿Sabías que Java fue diseñado originalmente para televisores interactivos? Pero terminó siendo uno de los lenguajes más populares para aplicaciones empresariales.",
+        "El lenguaje Ruby fue creado en Japón en 1995 con el objetivo de ser más divertido de usar para los programadores.",
+        "¿Sabías que PHP originalmente significaba 'Personal Home Page'? Hoy se utiliza ampliamente para el desarrollo web.",
+        "Swift, el lenguaje creado por Apple, es conocido por su velocidad y simplicidad, y es utilizado para desarrollar aplicaciones para iOS y macOS.",
+        "El lenguaje Go, creado por Google, es conocido por su eficiencia y su capacidad para manejar sistemas concurrentes.",
+        "¿Sabías que el logo de Kotlin, un lenguaje de programación moderno, está inspirado en una bandera?",
+        "R es uno de los lenguajes más utilizados para análisis de datos y estadística, especialmente en investigación académica.",
+        "El lenguaje Fortran, creado en los años 50, es uno de los primeros lenguajes de alto nivel y sigue en uso en áreas como la ciencia y la ingeniería.",
+        "TypeScript es una versión mejorada de JavaScript que agrega tipado estático para hacer más fácil trabajar en proyectos grandes.",
+        "Rust es conocido por su seguridad de memoria y está ganando popularidad rápidamente en el desarrollo de sistemas.",
+        "SQL no es un lenguaje de programación general, pero es esencial para trabajar con bases de datos.",
+        "Scratch es un lenguaje visual diseñado para enseñar programación a niños y principiantes, y es utilizado ampliamente en educación."
+      ]
+    },
+    {
+      "tag": "carreras_universitarias",
+      "patterns": ["Háblame de una carrera universitaria", "¿Qué carreras puedo estudiar?", "Dame información sobre universidades", "¿Qué sabes sobre carreras universitarias?", "¿Qué puedo estudiar en la universidad?"],
+      "responses": [
+        "La carrera de Medicina es una de las más antiguas del mundo y requiere años de estudio y práctica para formar profesionales dedicados al cuidado de la salud.",
+        "Ingeniería en Software es una carrera en auge debido al crecimiento de la industria tecnológica. Se centra en la creación y mantenimiento de aplicaciones y sistemas.",
+        "¿Sabías que la Psicología estudia tanto el comportamiento humano como los procesos mentales? Es una carrera ideal para quienes disfrutan ayudar a los demás.",
+        "La carrera de Arquitectura combina arte y ciencia para diseñar edificios y espacios que sean funcionales, seguros y estéticamente agradables.",
+        "Derecho es una de las carreras más populares y abre puertas para trabajar como abogado, juez o asesor legal.",
+        "En Biotecnología se utilizan organismos vivos para desarrollar productos útiles en áreas como la medicina, la agricultura y el medio ambiente.",
+        "La carrera de Ciencias de la Comunicación abarca medios como el periodismo, la publicidad y las relaciones públicas.",
+        "Administración de Empresas es una carrera que te prepara para liderar y gestionar organizaciones en diferentes industrias.",
+        "¿Sabías que muchas universidades ofrecen programas de intercambio para estudiar en el extranjero y aprender de otras culturas?",
+        "Algunas de las universidades más prestigiosas del mundo, como Harvard y Oxford, tienen más de 800 años de historia.",
+        "La carrera de Física te permite explorar los secretos del universo, desde las partículas subatómicas hasta las galaxias más lejanas.",
+        "En Diseño Gráfico aprenderás a crear imágenes, campañas visuales y contenido multimedia utilizando herramientas digitales.",
+        "¿Sabías que las universidades más grandes del mundo, como la Universidad Nacional Autónoma de México (UNAM), tienen más de 300,000 estudiantes?",
+        "La carrera de Economía se centra en comprender cómo se producen y distribuyen los recursos, y es clave para analizar mercados y políticas públicas.",
+        "Ingeniería Civil es esencial para el desarrollo de infraestructura como carreteras, puentes y edificios, y es una de las más antiguas dentro de la ingeniería."
+      ]
+    },
+    {
+      "tag": "cursos_ingenieria_sistemas",
+      "patterns": ["¿Qué cursos se estudian en Ingeniería en Sistemas?", "Háblame de Ingeniería en Sistemas", "¿Qué aprenderé en Ingeniería en Sistemas?", "Cursos de Ingeniería en Sistemas"],
+      "responses": [
+        "En Ingeniería en Sistemas, estudiarás cursos como 'Programación', donde aprenderás lenguajes como Python, Java, o C++.",
+        "La asignatura 'Bases de Datos' te enseñará a diseñar, administrar y optimizar sistemas de almacenamiento de datos.",
+        "En 'Redes de Computadoras', aprenderás sobre protocolos de comunicación, configuración de redes y ciberseguridad.",
+        "El curso de 'Sistemas Operativos' explora cómo funcionan sistemas como Windows, Linux y macOS a nivel interno.",
+        "En 'Estructuras de Datos y Algoritmos', te enfocarás en resolver problemas computacionales de manera eficiente.",
+        "La materia de 'Ingeniería de Software' aborda metodologías y herramientas para desarrollar aplicaciones robustas y escalables.",
+        "En 'Arquitectura de Computadoras', estudiarás cómo funcionan los componentes internos del hardware, como la CPU y la memoria.",
+        "La asignatura 'Inteligencia Artificial' incluye temas como machine learning, procesamiento del lenguaje natural y redes neuronales.",
+        "En 'Desarrollo Web', aprenderás a construir aplicaciones usando tecnologías como HTML, CSS, JavaScript y frameworks como React.",
+        "El curso de 'Seguridad Informática' aborda temas como criptografía, hacking ético y defensa contra ataques cibernéticos.",
+        "En 'Gestión de Proyectos de Software', aprenderás a planificar, ejecutar y monitorear proyectos tecnológicos.",
+        "La materia 'Cómputo en la Nube' te enseñará a utilizar plataformas como AWS, Google Cloud y Azure para servicios distribuidos.",
+        "En 'Matemáticas Discretas' estudiarás estructuras matemáticas fundamentales para la lógica computacional.",
+        "El curso de 'Robótica' combina software y hardware para construir sistemas autónomos.",
+        "En 'Big Data', te enfocarás en la gestión y análisis de grandes volúmenes de información utilizando herramientas como Hadoop o Spark."
+      ]
+    },
+    {
+      "tag": "operaciones_matematicas",
+      "patterns": [
+        "Realiza una suma",
+        "¿Cómo hago una resta?",
+        "Ayúdame con una multiplicación",
+        "Divide estos números",
+        "Quiero aprender matemáticas básicas",
+        "¿Cómo se hace una operación básica?",
+        "Haz cálculos sencillos"
+      ],
+      "responses": [
+        "¡Claro! Dame dos números y puedo ayudarte con la operación que necesites.",
+        "Las operaciones básicas son: suma (+), resta (-), multiplicación (*) y división (/). ¿Con cuál quieres que te ayude?",
+        "Para sumar dos números, simplemente añádelos: por ejemplo, 3 + 5 = 8.",
+        "Para restar, toma un número y réstale otro: por ejemplo, 10 - 4 = 6.",
+        "La multiplicación es una forma rápida de sumar un número varias veces: por ejemplo, 4 * 3 = 12.",
+        "La división es repartir un número en partes iguales: por ejemplo, 20 / 4 = 5.",
+        "¿Sabías que las operaciones matemáticas básicas son el fundamento de cálculos más complejos como álgebra y cálculo?",
+        "¡Puedo hacer cálculos por ti! Por ejemplo, si dices 'Suma 15 y 20', puedo decirte que es 35.",
+        "Si quieres practicar, aquí va un reto: ¿cuánto es 8 * 7? (Pista: es 56)."
+      ]
+    },
+    {
+      "tag": "generos_musica",
+      "patterns": [
+        "Háblame de géneros musicales",
+        "¿Cuáles son los géneros de música más populares?",
+        "¿Qué géneros de música existen?",
+        "Recomiéndame géneros musicales",
+        "Dame información sobre géneros de música"
+      ],
+      "responses": [
+        "El Pop es uno de los géneros más populares, con artistas como Taylor Swift, BTS y Dua Lipa representándolo.",
+        "El Rock incluye subgéneros como el rock clásico, el punk rock y el heavy metal. Bandas como Queen y Metallica son icónicas.",
+        "La música Electrónica abarca géneros como el EDM, el house y el techno, y es perfecta para festivales y discotecas.",
+        "El Hip-Hop nació en los años 70 en el Bronx y se caracteriza por el rap y el beatbox. Artistas como Kendrick Lamar y Eminem destacan en este género.",
+        "La música Clásica tiene siglos de historia, con compositores legendarios como Beethoven, Mozart y Bach.",
+        "El Reguetón es un género de origen latino que combina influencias del dancehall y el hip-hop. Artistas como Bad Bunny y Karol G son muy populares.",
+        "El Jazz es conocido por su improvisación y ritmos únicos. Nació en Nueva Orleans y figuras como Louis Armstrong y Miles Davis lo llevaron al mundo.",
+        "El género Country tiene raíces estadounidenses y es conocido por el uso de guitarras acústicas. Artistas como Johnny Cash y Dolly Parton son icónicos.",
+        "La música Folklórica refleja la cultura de un país o región. Por ejemplo, el mariachi en México y el flamenco en España.",
+        "¿Sabías que el género K-pop, originario de Corea del Sur, ha ganado fama mundial con grupos como BTS y BLACKPINK?",
+        "El Blues tiene sus raíces en las tradiciones afroamericanas y es el precursor de géneros como el rock y el jazz.",
+        "El Heavy Metal es un género más intenso y técnico, con bandas como Iron Maiden y Black Sabbath.",
+        "La Salsa y el Merengue son géneros latinos llenos de ritmo y energía, ideales para bailar.",
+        "El Indie abarca música independiente con estilos variados, desde el indie rock hasta el indie pop.",
+        "¿Te interesa algo específico? Puedo recomendarte más géneros como el reggae, soul, trap o música instrumental."
+      ]
+    },
+    {
+      "tag": "artistas_musica",
+      "patterns": [
+        "Háblame de artistas famosos",
+        "¿Quiénes son los mejores artistas?",
+        "Recomiéndame algunos artistas",
+        "Dame información sobre cantantes famosos",
+        "¿Qué artistas son populares en la música?"
+      ],
+      "responses": [
+        "Taylor Swift es una de las artistas pop más exitosas, conocida por álbumes como '1989' y 'Folklore'.",
+        "Bad Bunny ha revolucionado el reguetón con su estilo único y álbumes como 'YHLQMDLG'.",
+        "Freddie Mercury, el icónico vocalista de Queen, es considerado una de las mejores voces en la historia del rock.",
+        "Beyoncé es una leyenda del R&B y pop, con éxitos como 'Halo' y 'Single Ladies'.",
+        "Michael Jackson, el 'Rey del Pop', dejó un legado imborrable con canciones como 'Thriller' y 'Billie Jean'.",
+        "The Beatles, la banda más influyente de todos los tiempos, popularizó el rock con éxitos como 'Hey Jude' y 'Let It Be'.",
+        "Adele es conocida por su poderosa voz y baladas emotivas como 'Someone Like You' y 'Hello'.",
+        "Shakira es una artista global que mezcla pop, rock y música latina en éxitos como 'Hips Don't Lie' y 'La Bicicleta'.",
+        "Drake es uno de los artistas más influyentes del hip-hop, con álbumes como 'Scorpion' y 'Certified Lover Boy'.",
+        "Ludwig van Beethoven es uno de los compositores más famosos de música clásica, conocido por su 'Novena Sinfonía'.",
+        "Ed Sheeran es un cantautor británico con éxitos globales como 'Shape of You' y 'Perfect'.",
+        "Rihanna ha dominado el pop y el R&B con canciones como 'Umbrella' y 'Diamonds'.",
+        "BTS es una banda de K-pop que ha alcanzado fama mundial con éxitos como 'Dynamite' y 'Butter'.",
+        "Bob Marley popularizó el reggae con canciones como 'No Woman, No Cry' y 'Redemption Song'.",
+        "¿Buscas recomendaciones específicas? ¡Puedo sugerir artistas de cualquier género!"
+      ]
+    },
+    {
+      "tag": "peliculas",
+      "patterns": [
+        "Recomiéndame películas",
+        "Háblame de películas famosas",
+        "¿Cuáles son las mejores películas?",
+        "Dame información sobre películas populares",
+        "¿Qué películas debería ver?"
+      ],
+      "responses": [
+        "Si te gustan las aventuras, te recomiendo 'Indiana Jones', una de las franquicias más icónicas de acción y aventura.",
+        "Si prefieres la ciencia ficción, no te puedes perder 'Star Wars', que revolucionó el cine y sigue siendo una saga legendaria.",
+        "En el cine de terror, 'El Exorcista' es una de las películas más aterradoras de todos los tiempos.",
+        "Para una película de superhéroes, 'Avengers: Endgame' es un épico cierre para el universo Marvel.",
+        "Si te interesan las historias dramáticas, 'La Lista de Schindler' es una poderosa película sobre el Holocausto.",
+        "Si eres fanático de la comedia, 'La Vida de Brian' de Monty Python es una de las más divertidas de todos los tiempos.",
+        "En el género de animación, 'El Rey León' es una obra maestra de Disney que sigue siendo popular a través de los años.",
+        "Si te gustan las películas de suspenso, 'El Sexto Sentido' de M. Night Shyamalan tiene un giro final inolvidable.",
+        "La película 'Titanic' se convirtió en un clásico romántico y es una de las más taquilleras de todos los tiempos.",
+        "En el cine de terror psicológico, 'El Resplandor' de Stanley Kubrick es una obra maestra con una atmósfera única.",
+        "Para un thriller de acción, 'Inception' de Christopher Nolan es un juego mental visualmente impresionante.",
+        "En el género de fantasía, 'El Señor de los Anillos' es una trilogía épica que ha dejado una huella en el cine moderno.",
+        "Si prefieres una película de acción, 'Mad Max: Fury Road' es un espectáculo visual con un ritmo frenético.",
+        "¿Buscas algo más específico? Puedo recomendarte películas por género: drama, terror, comedia, ciencia ficción, etc."
+      ]
+    },
+    {
+      "tag": "series_netflix",
+      "patterns": [
+        "Recomiéndame series de Netflix",
+        "¿Qué series puedo ver en Netflix?",
+        "Háblame de las mejores series de Netflix",
+        "¿Cuáles son las series más populares en Netflix?",
+        "Dame información sobre series de Netflix"
+      ],
+      "responses": [
+        "Si te gustan los thrillers, te recomiendo 'Mindhunter', una serie sobre el FBI investigando asesinos en serie.",
+        "Para los fans de la ciencia ficción, 'Stranger Things' es una mezcla de aventuras, misterio y terror ambientada en los 80.",
+        "Si prefieres una serie dramática, 'The Crown' es una excelente opción, con una increíble representación de la monarquía británica.",
+        "¿Te gustan las historias de crimen? 'Narcos' es una serie que narra la vida de los carteles de drogas en Colombia.",
+        "Si buscas algo de acción y fantasía, 'The Witcher' es una adaptación épica de los libros, con monstruos y magia.",
+        "Para algo ligero y divertido, 'The Umbrella Academy' es una mezcla de superhéroes y comedia que te enganchará.",
+        "Si te gustan las comedias, 'BoJack Horseman' es una serie animada que mezcla humor con profundas reflexiones sobre la vida.",
+        "¿Te gustan las series de terror? 'The Haunting of Hill House' es una serie de horror psicológico que te mantendrá al borde de tu asiento.",
+        "Si prefieres algo de suspenso, 'Ozark' es una excelente opción, con una trama intensa sobre el lavado de dinero.",
+        "En el género de drama juvenil, '13 Reasons Why' es una serie impactante que toca temas como el suicidio y el bullying.",
+        "Si disfrutas de la animación, 'Castlevania' es una serie basada en el famoso videojuego, con acción y un toque oscuro.",
+        "Para una serie de época, 'Bridgerton' es un drama de romance ambientado en la alta sociedad londinense del siglo XIX.",
+        "Si te gustan las series de zombies, 'The Walking Dead' es una opción popular, aunque no exclusiva de Netflix.",
+        "¿Buscas una serie de comedia? 'Master of None', protagonizada por Aziz Ansari, tiene un enfoque fresco y divertido de la vida moderna.",
+        "Si te gustan las historias de supervivencia, 'Lost in Space' es una serie de ciencia ficción que sigue a una familia en su lucha por sobrevivir en el espacio."
+      ]
+    },
+    {
+      "tag": "problemas_programacion",
+      "patterns": [
+        "¿Cuáles son los errores comunes en programación?",
+        "Tengo problemas con mi código",
+        "¿Por qué mi código no funciona?",
+        "¿Cómo resolver errores en programación?",
+        "Dame consejos para solucionar errores de programación"
+      ],
+      "responses": [
+        "Un error común es no inicializar las variables correctamente. Asegúrate de declarar y asignar valores a las variables antes de usarlas.",
+        "Asegúrate de que las estructuras de control como `if`, `for` y `while` estén bien cerradas con sus respectivos corchetes `{}`.",
+        "Otro error común es el uso incorrecto de los operadores de comparación (`==`, `!=`, `<`, `>`) y asignación (`=`). Recuerda que `==` es para comparar, mientras que `=` es para asignar.",
+        "Revisa los errores de sintaxis, como olvidarte de los puntos y comas o comillas. Estas pequeñas cosas pueden causar grandes problemas.",
+        "Si tu código no produce el resultado esperado, utiliza `console.log()` (o su equivalente en el lenguaje que estés usando) para inspeccionar el flujo de ejecución.",
+        "Los errores de tipo (como tratar de sumar un número con una cadena) son comunes. Asegúrate de que los datos estén en el formato correcto.",
+        "Un problema frecuente es la falta de comentarios. Añadir comentarios a tu código ayuda a otros y a ti mismo a entenderlo más fácilmente.",
+        "Si estás trabajando en equipo, asegúrate de seguir buenas prácticas de control de versiones con Git para evitar conflictos entre versiones del código.",
+        "El uso excesivo de variables globales puede causar conflictos y errores en tu código. Trata de limitar su uso y emplear variables locales cuando sea posible.",
+        "Cuando te enfrentas a un error, es útil leer los mensajes de error proporcionados por el compilador o el intérprete. Muchas veces te dan pistas claras sobre lo que está fallando.",
+        "Si tu código tiene problemas de rendimiento, intenta usar algoritmos más eficientes, y si es necesario, usa técnicas como la memoización o el almacenamiento en caché.",
+        "A veces, el problema puede estar en la lógica del algoritmo. Si no estás obteniendo el resultado esperado, prueba a desglosar el problema en pasos más pequeños y revisa cada uno cuidadosamente.",
+        "Recuerda que es importante realizar pruebas unitarias de tu código para detectar errores antes de que se conviertan en problemas mayores.",
+        "Si tu código no está reaccionando a los cambios, intenta reiniciar el servidor o el entorno de desarrollo. A veces, los cambios no se aplican hasta que se reinicia la aplicación."
+      ]
+    },{
+      "tag": "flores",
+      "patterns": [
+        "Háblame de flores",
+        "¿Cuáles son las flores más populares?",
+        "Recomiéndame algunas flores bonitas",
+        "¿Qué flores son ideales para un jardín?",
+        "Cuéntame sobre flores de colores"
+      ],
+      "responses": [
+        "Las rosas son una de las flores más populares, conocidas por su belleza y variedad de colores. Son símbolos de amor y pasión.",
+        "Los girasoles son flores grandes y brillantes que siguen al sol. Son símbolos de felicidad y lealtad.",
+        "Las tulipanes son muy apreciadas por su simplicidad y colores vibrantes. Son populares en primavera.",
+        "Las orquídeas son flores elegantes y exóticas, a menudo asociadas con el lujo y la belleza refinada.",
+        "Las margaritas son flores sencillas pero encantadoras, con pétalos blancos y un centro amarillo. Simbolizan la pureza y la inocencia.",
+        "Los lirios son flores fragantes y hermosas, conocidas por su elegancia. Se asocian con la renovación y la pureza.",
+        "Las peonías son flores grandes y coloridas, muy apreciadas en jardines debido a su belleza y su aroma dulce.",
+        "Los tulipanes vienen en una variedad de colores, incluidos rojo, rosa, blanco, y amarillo, y son muy populares en jardines durante la primavera.",
+        "Las violetas son pequeñas flores delicadas con un aroma sutil, a menudo asociadas con la modestia y la lealtad.",
+        "Las azucenas son flores grandes y fragantes que se encuentran comúnmente en tonos de blanco, amarillo y naranja, conocidas por su belleza y elegancia.",
+        "Las lavandas tienen un aroma encantador y se utilizan tanto en jardines como en aceites esenciales. Son conocidas por sus propiedades relajantes.",
+        "Las lilas son flores con tonos de morado y blanco, que florecen en primavera. Son símbolos de la belleza y el primer amor.",
+        "Si te gustan las flores para interiores, las violetas africanas son una excelente opción, conocidas por sus colores vibrantes y fáciles de cuidar.",
+        "Los crisantemos son flores populares en otoño, con una gran variedad de colores y formas, y son símbolos de longevidad y salud."
+      ]
+    },
+    {
+      "tag": "colores",
+      "patterns": [
+        "Háblame de colores",
+        "¿Cuáles son los colores más comunes?",
+        "Dime sobre los colores y su significado",
+        "¿Qué simboliza el color rojo?",
+        "¿Qué colores combinan bien?"
+      ],
+      "responses": [
+        "El color rojo es asociado con la pasión, el amor y la energía. También puede representar peligro o advertencia.",
+        "El color azul simboliza la calma, la serenidad y la confianza. Es un color popular en el diseño de interiores y ropa.",
+        "El color verde está relacionado con la naturaleza, el crecimiento y la renovación. Es un color que transmite equilibrio y frescura.",
+        "El color amarillo es brillante y alegre, asociado con la felicidad, la creatividad y la luz del sol.",
+        "El color negro es elegante y sofisticado, pero también puede representar oscuridad o misterio.",
+        "El blanco es un color que simboliza pureza, paz y simplicidad. Es comúnmente utilizado en bodas y celebraciones.",
+        "El color morado está relacionado con la realeza, el lujo y la espiritualidad. También simboliza la creatividad y la sabiduría.",
+        "El color naranja combina la energía del rojo y la alegría del amarillo, asociado con el entusiasmo, la vitalidad y la creatividad.",
+        "El color rosa es un color suave y romántico, relacionado con el amor, la dulzura y la ternura.",
+        "El color marrón es un color terroso que simboliza la estabilidad, la confiabilidad y la naturaleza.",
+        "El color gris es neutral y puede simbolizar equilibrio, profesionalismo y elegancia. A veces se asocia con la tristeza.",
+        "El color turquesa se asocia con la tranquilidad, la frescura y la serenidad. Es un color que combina el azul y el verde.",
+        "El color plateado simboliza sofisticación, modernidad y elegancia. Se utiliza a menudo para representar tecnología y lujo.",
+        "El color dorado es un color de lujo, riqueza y éxito. A menudo se asocia con la opulencia y el logro.",
+        "En cuanto a combinaciones, los colores complementarios como el azul y el naranja, o el rojo y el verde, crean contrastes vibrantes.",
+        "Colores como el blanco y el negro pueden combinarse fácilmente y crear un look elegante y atemporal. También puedes combinar colores como el azul y el gris para un estilo más profesional."
+      ]
+    },
+    {
+      "tag": "comida_tipica_guatemala",
+      "patterns": [
+        "Háblame de la comida típica de Guatemala",
+        "¿Qué platos son tradicionales de Guatemala?",
+        "Dime sobre la gastronomía guatemalteca",
+        "¿Qué comer en Guatemala?",
+        "Recomiéndame platos típicos de Guatemala"
+      ],
+      "responses": [
+        "Uno de los platos más representativos de Guatemala es el 'Pepian', un guiso espeso hecho con carne (pollo, cerdo o res), verduras y una mezcla de especias.",
+        "La 'Fiambre' es otro plato tradicional, especialmente popular durante el Día de los Muertos. Es una ensalada fría con una variedad de carnes, vegetales y salsas.",
+        "Las 'Tamalitas' son similares a los tamales, pero más pequeñas. Están rellenas de masa de maíz y pueden tener diferentes tipos de carne o salsa.",
+        "El 'Kak' es una sopa espesa hecha de maíz y chile, que se acompaña con carne y verduras. Es uno de los platillos más antiguos de la gastronomía guatemalteca.",
+        "El 'Jocon' es un guiso de pollo con una salsa verde hecha de cilantro, tomatillo y otros ingredientes, servido con arroz y tortillas.",
+        "El 'Relleno de pollo' es otro plato típico, que consiste en pollo relleno con una mezcla de carne, especias y cebolla, cocinado con una salsa roja.",
+        "El 'Guacamol' es una salsa de aguacate que se sirve como acompañamiento de muchos platos, como las tortillas o los tacos.",
+        "Las 'Empanadas de manjar' son un postre tradicional, hechas con una masa suave y rellenas de un dulce de leche llamado manjar.",
+        "Las 'Chiles rellenos' son una deliciosa combinación de pimientos grandes rellenos con carne y verduras, acompañados de arroz y ensalada.",
+        "Las 'Tortillas de maíz' son la base de muchos platillos guatemaltecos. Se sirven con casi todas las comidas, desde guisos hasta salsas.",
+        "El 'Atol de elote' es una bebida espesa y dulce hecha de maíz tierno, a menudo servida como acompañante en el desayuno o en postres.",
+        "El 'Tostadas con guacamole' es otro plato popular, donde las tostadas se acompañan con una mezcla de aguacate, cebolla, cilantro y tomate."
+      ]
+    },
+    {
+      "tag": "lugares_turisticos_guatemala",
+      "patterns": [
+        "Háblame de los lugares turísticos de Guatemala",
+        "¿Qué lugares debo visitar en Guatemala?",
+        "Recomiéndame lugares turísticos en Guatemala",
+        "¿Qué sitios turísticos son famosos en Guatemala?",
+        "¿Dónde puedo ir de turismo en Guatemala?"
+      ],
+      "responses": [
+        "Uno de los lugares más visitados de Guatemala es el 'Lago de Atitlán', rodeado por volcanes y pintorescos pueblos como Panajachel, San Pedro y Santiago.",
+        "El 'Antiguo Guatemala', conocida como La Antigua, es una ciudad colonial llena de historia, con calles empedradas y una arquitectura impresionante.",
+        "El 'Volcán de Pacaya' es un destino popular para los amantes de la naturaleza y el senderismo, ya que puedes caminar cerca de su cráter activo.",
+        "El 'Parque Nacional Tikal' es uno de los sitios arqueológicos más importantes de Guatemala, con ruinas mayas y una exuberante selva tropical.",
+        "El 'Mercado de Chichicastenango' es famoso por sus artesanías y productos tradicionales, y es uno de los mercados más coloridos y vivos del país.",
+        "La 'Reserva Natural de Biotopo del Quetzal' es un lugar perfecto para los amantes de la naturaleza y para ver el famoso quetzal, el ave nacional de Guatemala.",
+        "El 'Sitio Arqueológico de Yaxhá' es menos conocido que Tikal, pero ofrece una experiencia más tranquila para explorar las ruinas mayas en un entorno natural.",
+        "El 'Coffe Tour' en las montañas de Antigua es ideal para los amantes del café, donde puedes aprender sobre el proceso de cultivo y producción del café guatemalteco.",
+        "Las 'Cascadas de Semuc Champey' son una de las maravillas naturales de Guatemala, famosas por sus piscinas naturales de agua cristalina rodeadas de montañas.",
+        "El 'Parque Nacional de los Volcanes' es un lugar impresionante para ver varios volcanes activos y disfrutar de la belleza del paisaje natural.",
+        "El 'Museo Nacional de Arqueología y Etnología' en Ciudad de Guatemala ofrece una gran cantidad de artefactos mayas, ideales para conocer más sobre la historia y cultura del país."
+      ]
+    },
+    {
+      "tag": "lugares_turisticos_mundiales",
+      "patterns": [
+        "Háblame de lugares turísticos mundialmente famosos",
+        "¿Cuáles son los lugares turísticos más conocidos en el mundo?",
+        "Recomiéndame destinos turísticos internacionales",
+        "¿Qué lugares debo visitar a nivel mundial?",
+        "¿Dónde viajar a nivel mundial?"
+      ],
+      "responses": [
+        "La 'Torre Eiffel' en París, Francia, es uno de los monumentos más famosos del mundo y un destino obligatorio para los turistas.",
+        "El 'Gran Cañón' en Arizona, EE. UU., es una maravilla natural de enormes dimensiones que ofrece paisajes impresionantes y oportunidades para el senderismo.",
+        "Las 'Pirámides de Egipto', particularmente la Gran Pirámide de Giza, son una de las siete maravillas del mundo antiguo y un importante sitio arqueológico.",
+        "La 'Gran Muralla China' es una de las construcciones más icónicas del mundo, que se extiende a lo largo de miles de kilómetros por todo el norte de China.",
+        "El 'Coliseo' en Roma, Italia, es un símbolo de la antigua Roma y un monumento histórico de gran importancia cultural.",
+        "El 'Taj Mahal' en India es un mausoleo de mármol blanco y uno de los destinos más visitados por su belleza y significado histórico.",
+        "Las 'Islas Maldivas' son conocidas por sus playas de arena blanca, aguas cristalinas y resorts de lujo, convirtiéndolas en un destino turístico tropical muy popular.",
+        "La 'Ópera de Sídney' en Australia es famosa por su arquitectura única y es uno de los edificios más reconocidos a nivel mundial.",
+        "El 'Machu Picchu' en Perú es una antigua ciudad inca ubicada en lo alto de los Andes, considerada una de las nuevas siete maravillas del mundo.",
+        "Las 'Islas Galápagos' en Ecuador son un paraíso natural, conocidas por su biodiversidad única y su contribución a la teoría de la evolución de Darwin.",
+        "El 'Parque Nacional Yellowstone' en EE. UU. es famoso por su geotermia, vida silvestre y paisajes impresionantes, incluyendo el famoso géiser Old Faithful.",
+        "La 'Cataratas del Niágara', situadas entre EE. UU. y Canadá, son una de las cascadas más grandes y espectaculares del mundo.",
+        "La 'Sagrada Familia' en Barcelona, España, es una iglesia diseñada por el arquitecto Antoni Gaudí, conocida por su arquitectura innovadora y su belleza única.",
+        "El 'Monte Fuji' en Japón es un volcán icónico, considerado un símbolo nacional, y es un destino popular tanto para el turismo como para el montañismo.",
+        "La 'Gran Barrera de Coral' en Australia es el sistema de arrecifes de coral más grande del mundo, conocido por su biodiversidad marina y paisajes submarinos impresionantes."
+      ]
+    },
+    {
+      "tag": "ciencias_sociales",
+      "patterns": [
+        "Háblame de ciencias sociales",
+        "¿Qué son las ciencias sociales?",
+        "Cuéntame sobre las disciplinas de ciencias sociales",
+        "¿Qué estudian las ciencias sociales?",
+        "¿Cuáles son las áreas de las ciencias sociales?"
+      ],
+      "responses": [
+        "Las ciencias sociales son un grupo de disciplinas que estudian el comportamiento humano, las relaciones sociales y las estructuras de la sociedad. Algunas de sus ramas incluyen:",
+        "La 'Sociología', que analiza la estructura y dinámica de la sociedad, incluyendo las relaciones de poder, la cultura y las instituciones.",
+        "La 'Antropología', que estudia los aspectos biológicos, sociales y culturales de los seres humanos, tanto en el pasado como en el presente.",
+        "La 'Economía', que se enfoca en la producción, distribución y consumo de bienes y servicios, así como en los sistemas económicos.",
+        "La 'Psicología', que estudia los procesos mentales y el comportamiento humano, tanto en individuos como en grupos.",
+        "La 'Ciencia Política', que estudia el poder, el gobierno, las instituciones políticas y las políticas públicas.",
+        "La 'Geografía Humana', que examina cómo los seres humanos interactúan con su entorno geográfico y cómo se organizan en el espacio.",
+        "La 'Historia', que se centra en el estudio de los eventos pasados, analizando su impacto en las sociedades y en la evolución de la humanidad.",
+        "La 'Derecho', que estudia las leyes, las normas jurídicas y cómo se aplican para regular las relaciones sociales.",
+        "La 'Educación', que se enfoca en los procesos de enseñanza y aprendizaje, analizando la estructura educativa y su impacto en la sociedad.",
+        "La 'Comunicación Social', que estudia cómo se producen y distribuyen los mensajes en una sociedad, y cómo afectan la cultura y las relaciones sociales.",
+        "Las ciencias sociales son fundamentales para comprender cómo funcionan las sociedades, cómo se desarrollan las culturas y cómo interactúan las personas entre sí."
+      ]
+    },
+    {
+      "tag": "buscar_trabajo",
+      "patterns": [
+        "¿Dónde puedo buscar trabajo?",
+        "Recomiéndame páginas para buscar empleo",
+        "¿Cuáles son las mejores páginas para encontrar trabajo?",
+        "Dime sitios web para buscar ofertas de trabajo",
+        "¿Qué páginas me recomiendas para encontrar empleo?"
+      ],
+      "responses": [
+        "Algunas de las páginas más populares para buscar trabajo incluyen:",
+        "'LinkedIn': Es una de las redes profesionales más grandes, donde puedes crear un perfil, conectar con profesionales de tu industria y postular a empleos.",
+        "'Indeed': Una de las plataformas de búsqueda de empleo más grandes, con miles de ofertas de trabajo en diversas áreas y países.",
+        "'Glassdoor': Además de buscar empleos, también puedes leer reseñas sobre las empresas, lo cual te ayuda a conocer más sobre el ambiente laboral.",
+        "'InfoJobs': Un portal muy popular en países de habla hispana, con una amplia variedad de ofertas de empleo en diferentes sectores.",
+        "'Computrabajo': Similar a InfoJobs, ofrece una amplia gama de ofertas de trabajo y permite filtrar las búsquedas por ubicación, salario y tipo de trabajo.",
+        "'We Work Remotely': Ideal si estás buscando trabajos remotos, ya que se especializa en empleos de tecnología y otros sectores que permiten trabajar desde casa.",
+        "'AngelList': Una página centrada en el empleo dentro del mundo de startups y tecnología, con oportunidades tanto en empresas emergentes como en grandes compañías.",
+        "'SimplyHired': Un motor de búsqueda que recopila ofertas de trabajo de diversas fuentes y sitios de empleo, lo que facilita encontrar múltiples opciones.",
+        "'Monster': Una de las plataformas más antiguas de búsqueda de empleo, con ofertas a nivel global y herramientas de desarrollo de carrera.",
+        "'Trovit': Un sitio que no solo recopila ofertas de empleo, sino también de otros productos y servicios, permitiendo una búsqueda más variada."
+      ]
+    },
+    {
+      "tag": "maquillaje",
+      "patterns": [
+        "Háblame de maquillaje",
+        "¿Cómo puedo maquillarme?",
+        "Recomiéndame tips de maquillaje",
+        "¿Qué productos de maquillaje son esenciales?",
+        "¿Cómo puedo hacer un maquillaje natural?"
+      ],
+      "responses": [
+        "El maquillaje es una forma de arte que permite resaltar las características faciales y expresar la creatividad. Aquí tienes algunos consejos para diferentes tipos de maquillaje:",
+        "Si buscas un maquillaje natural, opta por bases ligeras, correctores para disimular imperfecciones, y sombras neutras. Un toque de iluminador en puntos estratégicos y un bálsamo labial para un look fresco.",
+        "Para un maquillaje de noche, puedes elegir tonos más intensos en los ojos, como sombras oscuras o ahumadas, y un labial de color vibrante. Asegúrate de aplicar varias capas de máscara para un acabado dramático.",
+        "Algunos productos esenciales en un set básico de maquillaje son: base o BB cream, corrector, polvo compacto, sombras neutras, máscara de pestañas, delineador, rubor y un labial.",
+        "Si quieres un maquillaje duradero, es importante aplicar un primer antes de la base, usar productos en polvo para sellar el maquillaje y un fijador para mantenerlo todo en su lugar durante el día.",
+        "El 'contouring' o esculpido es una técnica popular para definir los pómulos, la nariz y la mandíbula. Utiliza un bronzer o polvo oscuro para sombrear las áreas que quieras reducir y un iluminador para resaltar las áreas que quieras enfatizar.",
+        "Para un maquillaje de ojos impactante, puedes probar un look de 'smokey eyes', que se logra difuminando sombras oscuras en el párpado móvil y aplicando un delineado en la línea de agua para intensificar la mirada.",
+        "Si tienes piel grasa, elige productos mate que controlen el brillo. Para piel seca, busca fórmulas hidratantes y bases con acabado luminoso.",
+        "Los tonos de labios pueden variar dependiendo de la ocasión: los tonos nude son ideales para el día a día, mientras que los rojos o burdeos aportan elegancia para la noche."
+      ]
+    },
+    {
+      "tag": "marcas_de_ropa",
+      "patterns": [
+        "Háblame de marcas de ropa",
+        "¿Cuáles son las marcas de ropa más populares?",
+        "Recomiéndame algunas marcas de ropa",
+        "¿Qué marcas de ropa son conocidas a nivel mundial?",
+        "¿Cuáles son las mejores marcas de ropa?"
+      ],
+      "responses": [
+        "Aquí tienes algunas marcas de ropa populares en diferentes categorías:",
+        "En ropa de lujo, marcas como 'Gucci', 'Louis Vuitton', 'Chanel', 'Prada' y 'Dior' son conocidas por sus diseños exclusivos y materiales de alta calidad.",
+        "'Nike' y 'Adidas' son dos de las marcas más icónicas cuando se trata de ropa deportiva, con una gran variedad de productos desde zapatillas hasta ropa de entrenamiento.",
+        "'Zara' y 'H&M' son marcas internacionales de moda rápida que ofrecen ropa accesible y de tendencia para todos los estilos.",
+        "'Levi's' es famosa por sus jeans de alta calidad, siendo una de las marcas más emblemáticas en el mundo de los pantalones de mezclilla.",
+        "'Uniqlo' es una marca japonesa conocida por su ropa cómoda y funcional, con un enfoque en la simplicidad y el estilo minimalista.",
+        "'Lacoste' es famosa por su ropa casual de alta gama, particularmente por sus polos con el logo de cocodrilo.",
+        "'Supreme' es una marca de streetwear que ha ganado gran popularidad, conocida por sus colaboraciones con otras marcas de lujo y por sus productos limitados.",
+        "'Bershka' y 'Pull&Bear' son marcas de moda rápida muy populares entre los jóvenes, con diseños modernos y asequibles.",
+        "'Tommy Hilfiger' es conocida por su estilo preppy y clásico, con ropa que a menudo combina colores como rojo, blanco y azul.",
+        "'Ralph Lauren' es famosa por su estilo elegante y deportivo, especialmente por sus polos y su icónico logo de caballo.",
+        "'The North Face' es ideal para ropa de exterior y aventuras al aire libre, ofreciendo chaquetas y ropa resistente a las inclemencias del tiempo."
+      ]
+    },
+    {
+      "tag": "marcas_de_zapatos",
+      "patterns": [
+        "Háblame de marcas de zapatos",
+        "¿Cuáles son las marcas de zapatos más populares?",
+        "Recomiéndame algunas marcas de zapatos",
+        "¿Qué marcas de zapatos son conocidas a nivel mundial?",
+        "¿Cuáles son las mejores marcas de zapatos?"
+      ],
+      "responses": [
+        "Aquí tienes algunas marcas de zapatos populares, tanto para estilo casual como para ocasiones especiales:",
+        "'Nike' y 'Adidas' son marcas de zapatos deportivas más conocidas, especialmente por sus zapatillas deportivas de alto rendimiento y estilo casual.",
+        "'Converse' es famosa por sus icónicas zapatillas Chuck Taylor, conocidas por su estilo clásico y comodidad.",
+        "'Puma' ofrece una amplia gama de zapatillas deportivas y calzado urbano, con un enfoque en la moda y el rendimiento.",
+        "'Vans' es una marca conocida por sus zapatos de skate y su estilo casual y juvenil, especialmente sus icónicas zapatillas de lona.",
+        "'Dr. Martens' es famosa por sus botas de cuero de alta calidad, que ofrecen un estilo rebelde y duradero.",
+        "'Jimmy Choo' es una marca de lujo conocida por sus zapatos de diseñador, especialmente tacones y sandalias elegantes para ocasiones especiales.",
+        "'Christian Louboutin' es una marca de zapatos de lujo famosa por sus tacones rojos y diseños sofisticados.",
+        "'Manolo Blahnik' es otra marca de lujo que se especializa en calzado elegante, especialmente tacones altos y sandalias.",
+        "'Timberland' es conocida por sus botas resistentes, especialmente las botas amarillas, ideales para exteriores y trabajos duros.",
+        "'New Balance' es una marca que combina comodidad y estilo en sus zapatillas deportivas, muy populares tanto para el deporte como para el uso diario.",
+        "'Clarks' ofrece calzado cómodo y elegante, conocido por sus botas y zapatos de cuero, ideales para el trabajo y la vida diaria.",
+        "'Steve Madden' es conocida por sus zapatos de moda a precios más accesibles, con una gran variedad de estilos desde tacones hasta botas."
+      ]
+    },
+    {
+      "tag": "contabilidad",
+      "patterns": [
+        "Háblame de contabilidad",
+        "¿Qué es la contabilidad?",
+        "¿Cuáles son los principios de la contabilidad?",
+        "¿Qué es un balance general?",
+        "Explícame qué es el libro mayor",
+        "¿Cómo se hace un estado de resultados?"
+      ],
+      "responses": [
+        "La contabilidad es la disciplina que se encarga de estudiar, medir y analizar el patrimonio y la situación económica de una empresa u organización. A través de ella, se lleva un registro sistemático de las transacciones financieras.",
+        "Algunos principios fundamentales de la contabilidad incluyen: el principio de la entidad económica, el principio de la continuidad, el principio de la uniformidad y el principio de la prudencia.",
+        "Un balance general es un estado financiero que muestra la situación económica de una empresa en un momento específico. Se divide en tres partes: activos, pasivos y patrimonio neto.",
+        "El libro mayor es un registro contable en el cual se anotan todas las transacciones financieras de una empresa, organizadas por cuentas. Cada cuenta tiene su propio registro, lo que permite un análisis detallado de cada categoría.",
+        "El estado de resultados es un informe financiero que muestra los ingresos, costos y gastos de una empresa durante un periodo de tiempo determinado. Ayuda a determinar la rentabilidad de la empresa en ese periodo.",
+        "Los estados financieros más comunes incluyen el balance general, el estado de resultados y el estado de flujos de efectivo. Estos informes permiten a los interesados conocer la salud financiera de una empresa.",
+        "Un activo es todo aquello que posee un valor económico para la empresa, como el dinero en efectivo, los equipos, las propiedades y las cuentas por cobrar. Los pasivos son las deudas y obligaciones de la empresa, y el patrimonio neto es la diferencia entre los activos y los pasivos, lo que representa el valor residual de la empresa.",
+        "En contabilidad, las cuentas se dividen en diferentes categorías como activos, pasivos, ingresos, gastos y patrimonio. Cada transacción afecta una o más de estas cuentas, y se registra en los libros contables de acuerdo con el principio de la partida doble.",
+        "El ciclo contable es el proceso completo de registro, clasificación y resumen de las transacciones financieras de una empresa. Este ciclo incluye la recopilación de documentos, el registro en los libros contables, la elaboración de los estados financieros y la auditoría."
+      ]
+    },
+    {
+      "tag": "empresas_mas_grandes",
+      "patterns": [
+        "Háblame de las empresas más grandes del mundo",
+        "¿Cuáles son las empresas más grandes a nivel mundial?",
+        "¿Qué empresas son las más poderosas en el mundo?",
+        "¿Cuáles son las empresas más valiosas?",
+        "¿Qué empresas lideran la economía mundial?"
+      ],
+      "responses": [
+        "A continuación te menciono algunas de las empresas más grandes y valiosas a nivel mundial:",
+        "'Apple' es una de las empresas más grandes del mundo, conocida por su innovación en tecnología, especialmente en productos como el iPhone, iPad y MacBook.",
+        "'Microsoft' es otra gigante tecnológica que se destaca por su software, servicios en la nube y productos como Windows, Office y Azure.",
+        "'Amazon' es un líder en comercio electrónico y servicios en la nube, con su plataforma Amazon Web Services (AWS), además de ser un actor importante en la distribución de productos físicos.",
+        "'Alphabet', la empresa matriz de Google, es un gigante en el sector de la tecnología, especialmente conocida por su motor de búsqueda, YouTube, y sus innovaciones en inteligencia artificial y vehículos autónomos.",
+        "'Saudi Aramco' es una de las compañías más grandes en términos de ingresos y capitalización de mercado. Es una petrolera estatal de Arabia Saudita y uno de los mayores productores de petróleo del mundo.",
+        "'Tesla' ha revolucionado la industria automotriz con sus vehículos eléctricos y energía renovable, siendo una de las empresas más valiosas en el sector automotriz y tecnológico.",
+        "'Berkshire Hathaway', bajo la dirección de Warren Buffett, es una de las compañías de inversión más grandes y exitosas del mundo, con una amplia cartera de activos en diferentes sectores.",
+        "'Meta Platforms', la empresa matriz de Facebook, Instagram y WhatsApp, es un gigante en redes sociales y publicidad digital.",
+        "'Johnson & Johnson' es una de las compañías más grandes del sector de salud, con productos farmacéuticos, dispositivos médicos y productos de cuidado personal.",
+        "'Walmart' es la mayor cadena minorista del mundo, conocida por sus grandes tiendas y presencia global, dominando el comercio al por menor."
+      ]
+    },
+    {
+      "tag": "volcanes_y_montanas",
+      "patterns": [
+        "Háblame de volcanes y montañas",
+        "¿Cuáles son los volcanes más famosos del mundo?",
+        "¿Qué montañas son las más altas a nivel mundial?",
+        "¿Cuáles son los volcanes más peligrosos?",
+        "¿Qué montañas se deben escalar en la vida?"
+      ],
+      "responses": [
+        "Aquí tienes algunos de los volcanes y montañas más famosos y espectaculares a nivel mundial:",
+        "El 'Monte Everest', ubicado en la frontera entre Nepal y China, es la montaña más alta del mundo, con una altitud de 8,848 metros sobre el nivel del mar.",
+        "'K2', también conocida como el 'Savage Mountain', es la segunda montaña más alta del mundo, con 8,611 metros. Se encuentra en la frontera entre Pakistán y China.",
+        "'Kangchenjunga' es la tercera montaña más alta, con 8,586 metros, y se encuentra en la frontera entre India y Nepal.",
+        "'El volcán Vesubio' en Italia es uno de los volcanes más famosos y peligrosos debido a su erupción en el año 79 d.C. que destruyó las ciudades de Pompeya y Herculano.",
+        "'El Monte Fuji', en Japón, es uno de los volcanes más emblemáticos y sagrados, con una altitud de 3,776 metros.",
+        "'El volcán Mauna Loa' en Hawái es uno de los volcanes más grandes del mundo, y se considera el volcán más masivo de la Tierra, con una altitud de 4,169 metros sobre el nivel del mar.",
+        "'El Monte Kilimanjaro' en Tanzania es la montaña más alta de África, con una altitud de 5,895 metros. Es un volcán inactivo.",
+        "'El Volcán Krakatoa' en Indonesia es famoso por su erupción catastrófica en 1883, que afectó a todo el mundo debido a la liberación de grandes cantidades de ceniza y gas.",
+        "'El Monte Etna', también en Italia, es uno de los volcanes más activos de Europa y ha tenido erupciones frecuentes durante la historia.",
+        "'El Volcán St. Helens' en los Estados Unidos es conocido por su erupción en 1980, que fue una de las más destructivas en la historia de América del Norte.",
+        "En cuanto a montañas de trekking, el 'Monte Annapurna' en Nepal y el 'Macchu Picchu' en Perú son destinos populares para los amantes de las caminatas, aunque no son las montañas más altas."
+      ]
+    },
+    {
+      "tag": "deportes",
+      "patterns": [
+        "Háblame de deportes",
+        "¿Cuáles son los deportes más populares?",
+        "¿Qué deportes se practican en los Juegos Olímpicos?",
+        "¿Cuáles son los deportes más antiguos?",
+        "¿Qué deportes se juegan en equipo?"
+      ],
+      "responses": [
+        "Aquí tienes información sobre algunos de los deportes más populares y sus características:",
+        "'Fútbol' es el deporte más popular del mundo, jugado en equipos de 11 jugadores, cuyo objetivo es meter el balón en la portería contraria. Es especialmente popular en Europa, América Latina y África.",
+        "'Baloncesto' es otro deporte muy popular, jugado por dos equipos de cinco jugadores, donde el objetivo es encestar el balón en el aro del equipo contrario. Es muy común en Estados Unidos y Europa.",
+        "'Béisbol' es un deporte que se juega con un bate y una pelota, con dos equipos de nueve jugadores cada uno. Es muy popular en países como Estados Unidos, Japón y Cuba.",
+        "'Tenis' es un deporte que se juega entre dos jugadores o dos equipos de dos jugadores. Se juega con una raqueta y una pelota, y el objetivo es golpear la pelota para que pase sobre una red y caiga en el campo contrario.",
+        "'Atletismo' abarca una serie de disciplinas como carreras, saltos y lanzamientos. Es uno de los deportes más antiguos y se practica en las competiciones de los Juegos Olímpicos.",
+        "'Natación' es otro deporte antiguo que se practica en piscinas o en aguas abiertas. Los nadadores compiten en diferentes estilos como libre, espalda, pecho y mariposa.",
+        "'Fútbol Americano' es muy popular en Estados Unidos, donde los equipos luchan por avanzar el balón a través del campo mientras evitan que el equipo contrario lo haga.",
+        "'Ciclismo' es un deporte que se puede practicar en carretera, montaña o pista, y es conocido por eventos importantes como el Tour de Francia.",
+        "'Boxeo' es un deporte de combate en el que dos participantes se enfrentan usando guantes y luchan en un ring. Es un deporte popular en muchas partes del mundo, especialmente en América Latina y los EE. UU.",
+        "'Rugby' es un deporte de equipo originado en Inglaterra, en el cual dos equipos compiten por llevar el balón hacia la zona de gol del contrario, sin utilizar una pelota redonda como en el fútbol."
+      ]
+    },
+    {
+      "tag": "futbol",
+      "patterns": [
+        "Háblame de fútbol",
+        "¿Cuáles son los mejores equipos de fútbol?",
+        "¿Qué competiciones de fútbol existen?",
+        "¿Quiénes son los jugadores más famosos del fútbol?",
+        "¿Cuál es la historia del fútbol?"
+      ],
+      "responses": [
+        "El fútbol es el deporte más popular del mundo, jugado en equipos de 11 jugadores. El objetivo es marcar más goles que el equipo contrario en un campo rectangular con dos porterías.",
+        "Algunos de los equipos más destacados en la historia del fútbol son:",
+        "'Real Madrid': Considerado uno de los clubes más grandes y exitosos del mundo, con numerosas victorias en la Liga de Campeones de la UEFA y La Liga.",
+        "'FC Barcelona': Otro gigante del fútbol español, conocido por su estilo de juego tiki-taka y por ser el club que ha visto a leyendas como Lionel Messi.",
+        "'Manchester United': Uno de los clubes más exitosos en la historia del fútbol inglés, con múltiples títulos de la Premier League y la Liga de Campeones de la UEFA.",
+        "'Bayern Munich': El club más exitoso de Alemania, con una gran cantidad de títulos nacionales e internacionales.",
+        "'Juventus': Un club de fútbol italiano con una gran tradición en la Serie A y en competiciones internacionales.",
+        "'Paris Saint-Germain (PSG)': Un equipo francés que ha crecido rápidamente en popularidad y éxito gracias a la inversión de grandes figuras como Neymar y Messi.",
+        "Las competiciones más importantes en el fútbol incluyen:",
+        "'La Copa del Mundo de la FIFA': El torneo internacional más prestigioso, jugado cada cuatro años, donde compiten selecciones nacionales de todo el mundo.",
+        "'La Liga de Campeones de la UEFA': La competición de clubes más importante de Europa, que reúne a los mejores equipos de fútbol del continente.",
+        "'La Copa América': El torneo de selecciones más importante de América Latina, que reúne a países de la región.",
+        "'La Copa Africana de Naciones': El torneo más importante de fútbol de selecciones en África.",
+        "'La Premier League': La liga de fútbol más famosa de Inglaterra, conocida por su alta competitividad.",
+        "'La Liga': La liga española, que ha sido hogar de jugadores legendarios como Cristiano Ronaldo, Lionel Messi y muchos otros.",
+        "'Serie A': La liga de fútbol profesional de Italia, famosa por equipos como Juventus, AC Milan e Inter de Milán.",
+        "Algunos de los jugadores más famosos en la historia del fútbol incluyen:",
+        "'Pelé': Considerado uno de los mejores futbolistas de todos los tiempos, quien ganó tres Copas del Mundo con Brasil.",
+        "'Diego Maradona': Famoso por su habilidad y su famoso gol de la 'Mano de Dios' en la Copa del Mundo de 1986.",
+        "'Lionel Messi': Considerado por muchos como uno de los mejores jugadores de todos los tiempos, ganador de múltiples Balones de Oro.",
+        "'Cristiano Ronaldo': Otro de los grandes futbolistas de la historia, conocido por su increíble capacidad física y sus logros con equipos como el Manchester United, Real Madrid y Juventus.",
+        "'Zinedine Zidane': Famoso por su clase en el campo y por su éxito como entrenador del Real Madrid.",
+        "'Neymar': Uno de los futbolistas más talentosos de la generación actual, conocido por su habilidad técnica y su paso por el Barcelona y el PSG."
+      ]
+    },
+    {
+      "tag": "animales",
+      "patterns": [
+        "Háblame de animales",
+        "¿Cuáles son los animales más peligrosos?",
+        "¿Qué animales viven en la selva?",
+        "¿Cuáles son los animales más grandes del mundo?",
+        "¿Cuáles son los animales marinos más interesantes?"
+      ],
+      "responses": [
+        "Los animales son seres vivos que habitan en diversos ecosistemas, y existen miles de especies en todo el mundo. Aquí tienes algunos ejemplos de animales populares y sus características:",
+        "'León': El león es conocido como el 'rey de la selva'. Es un gran felino que vive en las sabanas de África y es conocido por su melena y su poderosa caza en manada.",
+        "'Elefante': Los elefantes son los mamíferos terrestres más grandes. Tienen una memoria increíble y son conocidos por su inteligencia y su trompa.",
+        "'Ballena Azul': Este es el animal más grande del planeta, con una longitud de hasta 30 metros. Las ballenas azules viven en los océanos y se alimentan principalmente de kril.",
+        "'Cocodrilo': Los cocodrilos son reptiles que viven en ríos, lagos y pantanos. Son conocidos por su tamaño y su feroz naturaleza, siendo uno de los depredadores más antiguos de la Tierra.",
+        "'Águila': Las águilas son aves rapaces que se encuentran en todo el mundo. Son famosas por su aguda visión y su capacidad para cazar presas desde grandes alturas.",
+        "'Jirafa': La jirafa es el animal terrestre más alto del mundo, conocida por su largo cuello y su capacidad para comer hojas altas de los árboles en la sabana africana.",
+        "'Panda': Los pandas son conocidos por su apariencia adorable, pero también son animales muy fuertes. Se alimentan principalmente de bambú y viven en las montañas de China.",
+        "'Tigre': El tigre es otro gran felino que habita en Asia. Es famoso por sus rayas y su agilidad en la caza.",
+        "'Cebra': Las cebras son animales sociales que viven en grupos llamados manadas. Son conocidas por sus rayas blancas y negras que las hacen únicas entre los herbívoros.",
+        "'Koala': El koala es un marsupial que vive en los árboles de eucalipto en Australia. Son conocidos por su aspecto tierno y por pasar la mayor parte de su vida durmiendo.",
+        "'Delfín': Los delfines son mamíferos marinos que viven en los océanos. Son conocidos por su inteligencia y su naturaleza juguetona.",
+        "Los animales tienen diferentes hábitats según su especie, como la selva, la sabana, los océanos y las montañas. También algunos, como los camellos, están adaptados para vivir en lugares áridos como el desierto."
+      ]
+    },
+    {
+      "tag": "computadoras",
+      "patterns": [
+        "Háblame de computadoras",
+        "¿Cuáles son los componentes principales de una computadora?",
+        "¿Qué tipos de computadoras existen?",
+        "¿Cuál es la historia de las computadoras?",
+        "¿Cuáles son las computadoras más potentes del mundo?"
+      ],
+      "responses": [
+        "Las computadoras son máquinas electrónicas que procesan datos y realizan cálculos de manera rápida y precisa. Están compuestas por varios componentes esenciales:",
+        "'CPU (Unidad Central de Procesamiento)': La CPU es el cerebro de la computadora, responsable de ejecutar las instrucciones de los programas y coordinar las operaciones del sistema.",
+        "'Memoria RAM (Memoria de Acceso Aleatorio)': La RAM es la memoria temporal que la computadora utiliza para almacenar datos y programas que se están ejecutando en el momento.",
+        "'Disco duro (HDD) o unidad de estado sólido (SSD)': Son los dispositivos de almacenamiento donde se guardan los datos y programas. Los SSD son más rápidos que los HDD.",
+        "'Placa base (Motherboard)': La placa base es la tarjeta principal que conecta todos los componentes de la computadora, permitiendo que se comuniquen entre sí.",
+        "'Tarjeta gráfica (GPU)': La GPU es responsable de procesar los gráficos y las imágenes en una computadora, especialmente importante para juegos y aplicaciones de diseño gráfico.",
+        "'Fuente de alimentación': La fuente de alimentación convierte la corriente eléctrica para que pueda ser utilizada por la computadora.",
+        "Existen varios tipos de computadoras, que varían en tamaño, capacidad y uso:",
+        "'Computadoras de escritorio': Son las computadoras tradicionales, que suelen tener un monitor, una torre y periféricos como teclado y ratón. Son populares para el uso doméstico y oficinas.",
+        "'Portátiles': Son computadoras compactas y portátiles, que incluyen una pantalla y un teclado integrados. Las laptops y las ultrabooks son ejemplos comunes.",
+        "'Supercomputadoras': Son las computadoras más potentes del mundo, utilizadas para tareas de alto rendimiento, como la investigación científica y el modelado climático. Ejemplos incluyen la 'Fugaku' en Japón.",
+        "'Tabletas': Son dispositivos móviles que combinan la funcionalidad de una computadora con la portabilidad de un teléfono inteligente. Funcionan con pantallas táctiles y son populares para navegar por Internet y ver videos.",
+        "'Estaciones de trabajo': Son computadoras diseñadas para tareas profesionales de alto rendimiento, como diseño gráfico, modelado 3D y programación de software.",
+        "'Computadoras embebidas': Son sistemas computacionales dedicados a realizar tareas específicas, como en automóviles, electrodomésticos y dispositivos electrónicos.",
+        "La historia de las computadoras comenzó con las primeras máquinas de calcular, como la máquina analítica de Charles Babbage. Sin embargo, las computadoras modernas comenzaron a tomar forma en el siglo XX:",
+        "La 'ENIAC' (Electronic Numerical Integrator and Computer), desarrollada en la década de 1940, fue una de las primeras computadoras electrónicas de propósito general.",
+        "La evolución de los microprocesadores en la década de 1970 permitió la creación de computadoras personales como la 'Apple I' y la 'Commodore PET', que trajeron las computadoras a los hogares y oficinas.",
+        "En los últimos años, las computadoras han evolucionado con la aparición de la inteligencia artificial, la computación cuántica y avances en la miniaturización de los componentes.",
+        "Las computadoras más potentes del mundo se utilizan para tareas complejas como simulaciones científicas, inteligencia artificial y predicción meteorológica. Un ejemplo es la 'Fugaku', que se considera la supercomputadora más rápida del mundo."
+      ]
+    },
+    {
+      "tag": "idiomas",
+      "patterns": [
+        "Háblame de idiomas",
+        "¿Cuáles son los idiomas más hablados del mundo?",
+        "¿Cuántos idiomas existen en el mundo?",
+        "¿Cuál es el idioma más difícil de aprender?",
+        "¿Cuáles son los idiomas más populares para aprender?"
+      ],
+      "responses": [
+        "Los idiomas son sistemas de comunicación compuestos por palabras, signos o símbolos que las personas utilizan para intercambiar ideas. Existen miles de idiomas en todo el mundo, cada uno con su propia estructura y características.",
+        "'Mandarín': Es el idioma más hablado del mundo, con más de mil millones de hablantes, principalmente en China, Taiwán y Singapur.",
+        "'Español': El español es el segundo idioma más hablado, con aproximadamente 460 millones de hablantes nativos, especialmente en países de América Latina y España.",
+        "'Inglés': Aunque tiene menos hablantes nativos que el español, el inglés es el idioma más hablado a nivel global debido a su papel como lengua internacional en negocios, ciencia y cultura. Tiene más de 370 millones de hablantes nativos.",
+        "'Hindi': El hindi es hablado por más de 340 millones de personas, principalmente en la India y en algunas zonas de Pakistán.",
+        "'Árabe': El árabe es hablado por más de 310 millones de personas en países de África y Medio Oriente.",
+        "'Francés': El francés es hablado por aproximadamente 280 millones de personas en varios países, y es una lengua oficial en muchas organizaciones internacionales.",
+        "'Ruso': El ruso tiene alrededor de 260 millones de hablantes, principalmente en Rusia y en países de la antigua Unión Soviética.",
+        "En total, se estima que hay más de 7,000 idiomas diferentes en el mundo, aunque muchos están en peligro de extinción debido a la globalización y la adopción de idiomas más dominantes.",
+        "La dificultad de aprender un idioma depende de varios factores, como la similitud con el idioma nativo, la gramática, la pronunciación y la disponibilidad de recursos para aprenderlo. Algunos idiomas que son comúnmente considerados difíciles incluyen:",
+        "'Chino Mandarín': Debido a su sistema de escritura logográfico y sus tonos, el mandarín es considerado uno de los idiomas más difíciles para los hablantes nativos de idiomas indoeuropeos.",
+        "'Árabe': El árabe es complejo debido a su escritura de derecha a izquierda, su gramática compleja y sus sonidos únicos.",
+        "'Japonés': El japonés tiene tres sistemas de escritura (hiragana, katakana y kanji) y una gramática que difiere mucho de la de los idiomas occidentales.",
+        "Algunos de los idiomas más populares para aprender incluyen:",
+        "'Inglés': Debido a su uso global y su importancia en el mundo de los negocios, la ciencia y la tecnología.",
+        "'Español': Como el segundo idioma más hablado, el español es popular entre quienes buscan aprender un idioma con muchos hablantes nativos.",
+        "'Francés': Es un idioma muy solicitado por su importancia cultural, histórica y económica, especialmente en Europa y África.",
+        "'Alemán': Como idioma de la economía europea, el alemán es útil para aquellos interesados en trabajar o estudiar en países de habla alemana.",
+        "'Mandarín': El mandarín está ganando popularidad debido al crecimiento económico de China y la influencia cultural que tiene en el mundo.",
+        "Cada idioma tiene su propio conjunto de reglas y estructuras, lo que lo hace único y fascinante para quienes se aventuran en su aprendizaje. El dominio de varios idiomas puede abrir muchas puertas, tanto a nivel profesional como personal."
+      ]
+    },
+    {
+      "tag": "redes sociales",
+      "patterns": [
+        "Háblame de redes sociales",
+        "¿Cuáles son las redes sociales más populares?",
+        "¿Para qué sirven las redes sociales?",
+        "¿Cómo afectan las redes sociales a la sociedad?",
+        "¿Cuáles son las redes sociales más usadas para negocios?"
+      ],
+      "responses": [
+        "Las redes sociales son plataformas en línea que permiten a los usuarios crear perfiles, compartir contenido y conectarse con otras personas. Estas plataformas se utilizan para interactuar, compartir información, expresar opiniones y participar en comunidades virtuales.",
+        "Algunas de las redes sociales más populares incluyen:",
+        "'Facebook': Es una de las plataformas más antiguas y populares, con más de 2.800 millones de usuarios activos. Se utiliza para compartir fotos, videos, noticias, y para conectar con amigos y familiares.",
+        "'Instagram': Instagram es conocida por sus fotos y videos, especialmente los 'stories'. Es muy popular entre los jóvenes y las marcas para la promoción de productos a través de influencers.",
+        "'Twitter': Twitter permite a los usuarios compartir pensamientos y actualizaciones en mensajes cortos llamados 'tweets'. Es utilizada por celebridades, políticos y empresas para compartir noticias y conectar con seguidores.",
+        "'TikTok': Es una plataforma de videos cortos que se ha vuelto extremadamente popular entre adolescentes y jóvenes adultos. Los usuarios crean y comparten videos creativos y divertidos.",
+        "'LinkedIn': LinkedIn es una red social orientada a profesionales. Es ideal para crear un perfil profesional, buscar trabajo, establecer conexiones laborales y compartir contenido relacionado con la carrera.",
+        "'Snapchat': Snapchat es famosa por sus fotos y videos efímeros, que desaparecen después de ser vistos. Es muy popular entre adolescentes y jóvenes adultos.",
+        "'YouTube': Aunque se clasifica principalmente como una plataforma de videos, YouTube también funciona como una red social, donde los usuarios pueden interactuar a través de comentarios, 'me gusta' y suscripciones.",
+        "'WhatsApp': Aunque es principalmente una aplicación de mensajería, WhatsApp también permite compartir estados, fotos, videos y mensajes con amigos y grupos, funcionando como una red social más pequeña.",
+        "Las redes sociales sirven para varias cosas, como mantener la conexión con amigos y familiares, obtener noticias, compartir contenido personal, y hacer networking profesional. También se utilizan para promoción de marcas, marketing de influencia y comercio electrónico.",
+        "En cuanto a su impacto en la sociedad, las redes sociales tienen efectos positivos y negativos. Pueden fomentar la comunicación global, la creación de comunidades y el intercambio cultural, pero también pueden contribuir a la desinformación, la adicción a la tecnología y la presión social, especialmente entre los jóvenes.",
+        "En el mundo de los negocios, las redes sociales se han convertido en una herramienta clave para la promoción de productos y servicios. Las más utilizadas para negocios incluyen:",
+        "'Instagram': Ideal para empresas con productos visuales, como moda, comida, belleza y decoración del hogar.",
+        "'Facebook': A pesar de su popularidad entre los usuarios mayores, sigue siendo una de las plataformas más efectivas para negocios que desean llegar a un público diverso.",
+        "'LinkedIn': Es la principal red social para negocios B2B (business-to-business), ideal para establecer contactos profesionales y promover productos y servicios dirigidos a empresas.",
+        "'Twitter': A menudo utilizado por empresas para la atención al cliente, el marketing en tiempo real y la interacción con los consumidores.",
+        "'TikTok': Las marcas están utilizando TikTok para llegar a un público joven a través de contenido creativo y videos virales.",
+        "Las redes sociales también están evolucionando constantemente, con nuevas plataformas y características que surgen con el tiempo, como las redes sociales basadas en la realidad aumentada y los chats de inteligencia artificial."
+      ]
+    },
+    {
+      "tag": "libros",
+      "patterns": [
+        "Háblame de libros",
+        "¿Cuáles son los géneros de libros más populares?",
+        "¿Qué libros me recomiendas?",
+        "¿Quiénes son los autores más famosos?",
+        "¿Cuáles son los mejores libros de todos los tiempos?"
+      ],
+      "responses": [
+        "Los libros son una fuente de conocimiento, entretenimiento y cultura. Existen muchos géneros literarios que abarcan desde la ficción hasta el ensayo y la poesía, ofreciendo algo para todos los gustos.",
+        "Algunos de los géneros de libros más populares incluyen:",
+        "'Ficción': Este género abarca novelas, cuentos y relatos inventados, como 'Cien años de soledad' de Gabriel García Márquez o '1984' de George Orwell.",
+        "'No ficción': Libros que abordan hechos reales, biografías, historia y otros temas informativos. Ejemplos famosos son 'Sapiens' de Yuval Noah Harari y 'El origen de las especies' de Charles Darwin.",
+        "'Ciencia ficción': Este género explora temas futuristas, tecnología y vida en otros planetas. Algunos ejemplos populares son 'Dune' de Frank Herbert y 'Fundación' de Isaac Asimov.",
+        "'Fantasía': Libros que presentan mundos imaginarios, magia y criaturas fantásticas, como 'El señor de los anillos' de J.R.R. Tolkien o 'Harry Potter' de J.K. Rowling.",
+        "'Poesía': Obras literarias que se expresan principalmente a través de la poesía, como 'Cien sonetos de amor' de Pablo Neruda o 'Las flores del mal' de Charles Baudelaire.",
+        "'Misterio y crimen': Libros centrados en resolver enigmas o crímenes, como las novelas de Agatha Christie o 'El código Da Vinci' de Dan Brown.",
+        "'Romántico': Historias de amor y relaciones, ejemplos como 'Orgullo y prejuicio' de Jane Austen o 'Bajo la misma estrella' de John Green.",
+        "Si buscas recomendaciones, algunos libros que se consideran imprescindibles incluyen:",
+        "'Matar a un ruiseñor' de Harper Lee, un libro sobre racismo y justicia en el sur de Estados Unidos.",
+        "'Cien años de soledad' de Gabriel García Márquez, una obra clave del realismo mágico y la literatura latinoamericana.",
+        "'1984' de George Orwell, una obra distópica sobre el totalitarismo y el control social.",
+        "'El Gran Gatsby' de F. Scott Fitzgerald, un retrato de la sociedad estadounidense de los años 20.",
+        "'Don Quijote de la Mancha' de Miguel de Cervantes, considerado uno de los mayores logros de la literatura mundial.",
+        "Algunos de los autores más famosos y sus obras incluyen:",
+        "William Shakespeare: Conocido por sus obras teatrales como 'Hamlet' y 'Romeo y Julieta'.",
+        "Jane Austen: Famosa por novelas como 'Orgullo y prejuicio' y 'Sentido y sensibilidad'.",
+        "Gabriel García Márquez: Reconocido por su obra 'Cien años de soledad' y su influencia en el realismo mágico.",
+        "J.K. Rowling: Autora de la exitosa serie 'Harry Potter'.",
+        "Leo Tolstoy: Escribió 'Guerra y paz' y 'Anna Karenina', dos de los más grandes clásicos de la literatura rusa.",
+        "Si te interesa conocer más sobre libros, géneros y autores, ¡puedo ayudarte con más recomendaciones o información sobre ellos!"
+      ]
+    },
+    {
+      "tag": "fechas importantes",
+      "patterns": [
+        "Háblame de fechas importantes",
+        "¿Cuáles son las fechas importantes del año?",
+        "¿Qué días son festivos en mi país?",
+        "¿Cuáles son los días internacionales más relevantes?",
+        "¿Qué eventos históricos ocurrieron en un día específico?"
+      ],
+      "responses": [
+        "Las fechas importantes pueden variar dependiendo del país y el contexto. Sin embargo, hay varias fechas internacionales y nacionales que se celebran en todo el mundo o en regiones específicas.",
+        "Algunas fechas internacionales más relevantes incluyen:",
+        "'1 de enero': Año Nuevo, celebrado en todo el mundo como el comienzo del nuevo año.",
+        "'8 de marzo': Día Internacional de la Mujer, para conmemorar la lucha por los derechos de las mujeres.",
+        "'22 de abril': Día de la Tierra, para promover la conciencia y la acción sobre los problemas ambientales.",
+        "'5 de junio': Día Mundial del Medio Ambiente, promovido por las Naciones Unidas para crear conciencia sobre los problemas ambientales.",
+        "'1 de mayo': Día Internacional de los Trabajadores, conmemorando la lucha de los trabajadores por sus derechos laborales.",
+        "'12 de octubre': Día de la Raza, que conmemora el encuentro de las culturas europea y americana tras el viaje de Cristóbal Colón.",
+        "'25 de diciembre': Navidad, celebrada por millones de personas en todo el mundo en honor al nacimiento de Jesucristo.",
+        "En cuanto a fechas nacionales, estas varían dependiendo del país. Por ejemplo, en Estados Unidos, el '4 de julio' es el Día de la Independencia, mientras que en México, el '16 de septiembre' es el Día de la Independencia.",
+        "También existen fechas importantes históricas, como:",
+        "'14 de julio de 1789': La toma de la Bastilla, un evento crucial de la Revolución Francesa.",
+        "'9 de noviembre de 1989': La caída del Muro de Berlín, marcando el fin de la Guerra Fría en Europa.",
+        "'20 de julio de 1969': La llegada del hombre a la Luna, con la misión Apolo 11.",
+        "'11 de septiembre de 2001': Los atentados terroristas en Estados Unidos, un evento que cambió la historia mundial.",
+        "Además de estas fechas, existen festividades nacionales que marcan la identidad cultural de los países, como:",
+        "'Carnaval': Celebrado en muchos países, con fechas variables, pero típicamente en febrero o marzo.",
+        "'Día de San Valentín' (14 de febrero): Se celebra en muchos países como un día para conmemorar el amor y la amistad.",
+        "Cada año también hay fechas relevantes relacionadas con eventos deportivos, como los campeonatos mundiales, las olimpiadas, y otros torneos importantes.",
+        "Si tienes alguna fecha en particular que te gustaría conocer o saber más detalles sobre algún evento histórico o festivo, ¡dime y te ayudaré con gusto!"
+      ]
+    },
+    {
+      "tag": "tradiciones guatemaltecas",
+      "patterns": [
+        "Háblame de las tradiciones guatemaltecas",
+        "¿Cuáles son las principales tradiciones de Guatemala?",
+        "¿Qué festividades se celebran en Guatemala?",
+        "¿Cuáles son las costumbres más importantes de Guatemala?"
+      ],
+      "responses": [
+        "Guatemala es un país con una rica diversidad cultural, y sus tradiciones reflejan una mezcla de herencia indígena y española. Algunas de las tradiciones más representativas incluyen:",
+        "'Semana Santa': Esta es una de las celebraciones más importantes en Guatemala. Durante esta semana, especialmente en Antigua Guatemala, se realizan procesiones religiosas y se elaboran alfombras de aserrín y flores para adornar las calles por donde pasan las procesiones. La Semana Santa es un evento lleno de devoción y colorido.",
+        "'Día de los Muertos' (1 y 2 de noviembre): En Guatemala, el Día de los Muertos se celebra visitando los cementerios, decorando las tumbas de los seres queridos con flores y velas, y preparando comidas tradicionales como el fiambre (una ensalada de vegetales y carnes).",
+        "'Fiestas de Fin de Año': En Guatemala, las celebraciones de Año Nuevo están marcadas por el lanzamiento de fuegos artificiales y la quema de 'muñecos' (figuras de trapo rellenas de material inflamable), conocidos como 'el año viejo', para despedir el año.",
+        "'La Feria de la Virgen de la Asunción' (15 de agosto): Esta festividad religiosa y cultural tiene lugar en la ciudad de Guatemala, con procesiones, danzas y ferias. Es una de las celebraciones más importantes en la capital del país.",
+        "'El Día de la Independencia' (15 de septiembre): Esta fiesta patriota se celebra con desfiles, eventos cívicos y actividades culturales para conmemorar la independencia de Guatemala de España en 1821.",
+        "'Los Juegos de la Talla de Árbol': Una tradición ancestral que se lleva a cabo en varias comunidades mayas de Guatemala, donde se realiza la talla de árboles sagrados, como el ciprés, con rituales que están conectados con las creencias mayas.",
+        "'El Torito Enamorado' (diciembre): Una tradición típica de la región de Jalapa, donde se realiza un baile en el que los participantes se visten con máscaras de toros y danzan en las calles mientras hacen ruidos festivos.",
+        "'Carnaval de Mazatenango': Aunque es más conocido en países como Brasil, Guatemala también tiene su propia versión del Carnaval, celebrada en Mazatenango. Durante este evento se realizan desfiles con disfraces, música y danzas.",
+        "'Pascua de Resurrección': Además de la Semana Santa, en algunos pueblos de Guatemala, la Pascua se celebra con música y danzas, destacándose especialmente las tradiciones religiosas y familiares.",
+        "'Las Posadas': Una tradición que se celebra en los días previos a la Navidad, en la que los niños y familias recrean el recorrido de María y José en busca de un lugar donde pasar la noche antes del nacimiento de Jesús. Las posadas son celebradas con cantos, rezos y comida típica.",
+        "'Comida tradicional guatemalteca': Entre las comidas más representativas de Guatemala se encuentran los tamales (de cerdo, pollo o frijoles), el pepián (un guiso espeso con carne, tomate y chiles), el kak'ik (un caldo tradicional maya), y los plátanos con crema.",
+        "Estas son solo algunas de las muchas tradiciones que enriquecen la cultura guatemalteca. Cada región del país tiene sus propias festividades, costumbres y rituales, lo que hace de Guatemala un lugar lleno de diversidad cultural. Si te gustaría conocer más sobre alguna de estas tradiciones o si tienes alguna pregunta específica, ¡estoy aquí para ayudarte!"
+      ]
+    },
+    {
+      "tag": "electrodomesticos",
+      "patterns": [
+        "¿Qué son los electrodomésticos?",
+        "Háblame de los electrodomésticos",
+        "¿Cuáles son los electrodomésticos más comunes?",
+        "¿Qué tipos de electrodomésticos existen?",
+        "¿Cuáles son los electrodomésticos más útiles en la casa?"
+      ],
+      "responses": [
+        "Los electrodomésticos son dispositivos o aparatos eléctricos diseñados para realizar tareas domésticas. Estos aparatos hacen que la vida diaria sea más cómoda y eficiente. Algunos de los electrodomésticos más comunes son:",
+        "'Refrigerador' o nevera: Este electrodoméstico es esencial para conservar los alimentos frescos y bebidas. Los refrigeradores tienen compartimentos para el congelador y la parte de enfriamiento.",
+        "'Lavadora': Es un electrodoméstico que se utiliza para lavar la ropa de manera automática. Las lavadoras varían en capacidad y funciones, desde modelos básicos hasta otros con muchas características avanzadas.",
+        "'Secadora': Similar a la lavadora, pero diseñada para secar la ropa. Algunas secadoras funcionan por calor, mientras que otras utilizan métodos de ventilación.",
+        "'Microondas': Un electrodoméstico de cocina que utiliza radiación electromagnética para calentar y cocinar alimentos rápidamente. Es muy práctico para recalentar y preparar comidas en poco tiempo.",
+        "'Horno': Existen varios tipos de hornos, como los de gas y los eléctricos. Se utilizan para cocinar, hornear, asar y preparar todo tipo de alimentos.",
+        "'Licuadora': Este aparato se usa para mezclar, triturar o licuar alimentos. Es comúnmente utilizado para preparar jugos, batidos y sopas.",
+        "'Tostadora': Un pequeño electrodoméstico que se usa para tostar pan, bagels o muffins. Funciona utilizando calor directo para dorar el pan.",
+        "'Plancha': Se utiliza para planchar la ropa y eliminar arrugas. Las planchas pueden ser de vapor o secas, dependiendo del modelo.",
+        "'Aspiradora': Este electrodoméstico se utiliza para limpiar pisos, alfombras y otras superficies, aspirando polvo y suciedad.",
+        "'Ventilador': Se usa para mover el aire y refrescar el ambiente. Los ventiladores son muy comunes en climas calurosos.",
+        "'Cafetera': Es un dispositivo diseñado para preparar café. Existen diversos tipos de cafeteras, desde las manuales hasta las automáticas, que permiten hacer café en diferentes estilos.",
+        "'Extractor de jugo': Usado para hacer jugos frescos a partir de frutas y verduras. Existen modelos que extraen el jugo de manera manual o automática.",
+        "'Batidora de mano': Un electrodoméstico que se usa para mezclar, batir o triturar ingredientes, ideal para preparar recetas de repostería, sopas y salsas.",
+        "Los electrodomésticos son indispensables en la vida moderna y facilitan muchas tareas domésticas, haciendo que los hogares sean más eficientes y cómodos. Si tienes alguna pregunta sobre un electrodoméstico en particular o necesitas recomendaciones, ¡estoy aquí para ayudarte!"
+      ]
+    },
+    {
+      "tag": "estetica",
+      "patterns": [
+        "¿Qué es la estética?",
+        "Háblame de estética",
+        "¿Cómo puedo mejorar mi estética personal?",
+        "¿Qué significa la estética en el cuidado personal?",
+        "¿Cuáles son los tratamientos estéticos más populares?"
+      ],
+      "responses": [
+        "La estética se refiere al estudio y la apreciación de la belleza, ya sea en el arte, la naturaleza o en el cuerpo humano. En el ámbito personal, la estética se enfoca en el cuidado físico y la imagen para resaltar las características de una persona que se consideran atractivas o agradables.",
+        "En cuanto al cuidado personal, la estética incluye una amplia gama de prácticas que buscan mejorar la apariencia externa y promover el bienestar general. Algunas de las áreas más comunes incluyen:",
+        "'Cuidado de la piel': La rutina de cuidado de la piel es fundamental para mantener una piel sana y luminosa. Esto puede incluir limpieza, hidratación, exfoliación y protección solar.",
+        "'Maquillaje': El maquillaje es una herramienta estética que permite resaltar o modificar ciertos rasgos faciales, como los ojos, los labios y la piel. Además de mejorar la apariencia, también es una forma de expresión personal.",
+        "'Peinados y corte de cabello': El estilo de cabello es una parte clave de la estética personal. Un corte adecuado o un peinado que favorezca la forma del rostro puede hacer una gran diferencia en la apariencia general.",
+        "'Tratamientos estéticos': Existen muchos procedimientos disponibles para mejorar la estética del rostro y el cuerpo. Algunos de los más populares incluyen la depilación láser, tratamientos faciales como botox o ácido hialurónico, y procedimientos para tonificar el cuerpo, como la liposucción o la criolipólisis.",
+        "'Ejercicio y alimentación saludable': Una dieta equilibrada y la actividad física regular no solo son esenciales para la salud, sino que también contribuyen a una estética corporal más equilibrada y tonificada.",
+        "'Moda y estilo personal': La forma en que nos vestimos y los accesorios que usamos también influyen en nuestra estética. Elegir ropa que resalte nuestras cualidades y refleje nuestro estilo personal puede mejorar nuestra imagen.",
+        "La estética no solo se refiere a la belleza física, sino también a cómo nos sentimos con nuestra apariencia y cómo nos expresamos a través de ella. Los tratamientos y las prácticas estéticas deben enfocarse en resaltar lo mejor de cada persona, sin perder su autenticidad.",
+        "Si tienes dudas sobre algún tratamiento específico o quieres consejos sobre cómo mejorar algún aspecto de tu estética personal, ¡estoy aquí para ayudarte!"
+      ]
+    },
+    {
+      "tag": "fotografia",
+      "patterns": [
+        "¿Qué es la fotografía?",
+        "¿Cómo empezar en la fotografía?",
+        "¿Cuáles son los tipos de fotografía?",
+        "¿Qué equipo necesito para empezar en fotografía?",
+        "¿Cómo mejorar mis fotos?"
+      ],
+      "responses": [
+        "La fotografía es el arte y la técnica de capturar imágenes mediante el uso de una cámara. Estas imágenes pueden ser de personas, paisajes, objetos o cualquier cosa que el fotógrafo desee inmortalizar. La fotografía puede ser tanto una forma de expresión artística como una herramienta para documentar la realidad.",
+        "Para empezar en fotografía, es importante comprender los conceptos básicos y practicar. Aquí tienes algunos consejos para comenzar:",
+        "'Conocer tu cámara': Familiarízate con los controles y funciones de tu cámara, ya sea una cámara profesional o incluso un teléfono móvil con buena cámara. Aprende a ajustar la exposición, la apertura del diafragma y la velocidad de obturación.",
+        "'Composición': La composición es crucial para tomar buenas fotos. Practica la regla de los tercios, el encuadre y el uso de líneas guía para mejorar la estructura visual de tus fotos.",
+        "'Luz': La luz es uno de los elementos más importantes en fotografía. Experimenta con diferentes fuentes de luz, como la luz natural del sol o las luces artificiales, y cómo afectan la atmósfera de la foto.",
+        "'Enfoque': El enfoque determina qué partes de la imagen estarán nítidas. Aprender a jugar con el enfoque y la profundidad de campo te permitirá capturar imágenes impactantes y artísticas.",
+        "Existen varios tipos de fotografía que puedes explorar, dependiendo de tus intereses y estilo:",
+        "'Fotografía de retrato': Se centra en capturar imágenes de personas, mostrando sus características y emociones.",
+        "'Fotografía de paisajes': Implica capturar vistas naturales y escenas al aire libre, como montañas, playas y bosques.",
+        "'Fotografía de moda': Abarca la creación de imágenes artísticas para la industria de la moda, destacando prendas y estilos.",
+        "'Fotografía callejera': Se enfoca en capturar la vida urbana, la gente y los momentos espontáneos que ocurren en las calles.",
+        "'Fotografía macro': Es el estudio de pequeños detalles de objetos o seres vivos a través de un enfoque cercano, como insectos o flores.",
+        "'Fotografía deportiva': Captura el movimiento y la acción en eventos deportivos, buscando momentos dinámicos y emocionantes.",
+        "'Fotografía documental': Busca contar historias a través de imágenes, a menudo en contextos sociales o históricos.",
+        "En cuanto al equipo, no es necesario tener una cámara profesional para empezar, pero tener una cámara con ajustes manuales te ayudará a mejorar tus habilidades. Algunos equipos básicos que podrías considerar incluyen:",
+        "'Cámara': Una cámara digital réflex (DSLR) o una cámara sin espejo (mirrorless) son populares entre los fotógrafos serios, pero las cámaras de los teléfonos móviles también pueden ser herramientas poderosas.",
+        "'Lentes': Los lentes tienen un gran impacto en la calidad de la foto. Un lente estándar, un lente gran angular o un lente macro, dependiendo del tipo de fotografía que desees hacer.",
+        "'Trípode': Un trípode te ayudará a mantener la cámara estable, especialmente en tomas de larga exposición o fotografía de paisajes.",
+        "'Tarjetas de memoria': Asegúrate de tener suficientes tarjetas de memoria para almacenar tus fotos, especialmente si estás haciendo una sesión larga o disparando en alta resolución.",
+        "'Software de edición': Después de tomar las fotos, puedes mejorar la calidad con software de edición como Adobe Lightroom o Photoshop.",
+        "La práctica constante es la clave para mejorar. Experimenta con diferentes estilos, temas y técnicas. Si te interesa aprender más sobre fotografía o necesitas consejos específicos, ¡estaré encantado de ayudarte!"
+      ]
+    },
+    {
+      "tag": "reposteria",
+      "patterns": [
+        "¿Qué es la repostería?",
+        "¿Cómo empezar en la repostería?",
+        "¿Cuáles son las recetas más fáciles de repostería?",
+        "¿Qué necesito para hacer un pastel?",
+        "¿Cómo hacer galletas caseras?"
+      ],
+      "responses": [
+        "La repostería es el arte de preparar postres y dulces, utilizando técnicas específicas para hornear y decorar. Esto incluye desde pasteles, galletas, y tartas, hasta otros postres como brownies, cupcakes, y pasteles de crema.",
+        "Para empezar en la repostería, es importante contar con algunos ingredientes y herramientas básicas. Aquí te dejo algunos pasos para comenzar:",
+        "'Ingredientes básicos': Harina, azúcar, mantequilla, huevos, levadura o polvo de hornear, leche y esencias como la vainilla son los ingredientes más comunes que necesitas para la mayoría de las recetas.",
+        "'Herramientas básicas': Un batidor de mano o eléctrico, espátulas, batidoras de pie, moldes para hornear, una báscula de cocina y una bandeja para hornear son esenciales para empezar.",
+        "'Técnicas': Aprender las técnicas básicas como batir, mezclar, y hornear a la temperatura correcta es esencial. No olvides leer bien las recetas y seguir las instrucciones al pie de la letra, especialmente en los tiempos de cocción.",
+        "'Recetas fáciles': Si estás comenzando, aquí tienes algunas recetas fáciles para empezar:",
+        "1. Galletas de mantequilla: Son muy fáciles de hacer y solo necesitas mantequilla, azúcar, harina y un poco de esencia de vainilla. Solo debes mezclar los ingredientes, formar bolitas y hornear a 180°C durante unos 10 minutos.",
+        "2. Bizcocho de vainilla: Solo necesitas huevos, harina, azúcar, mantequilla, polvo de hornear y esencia de vainilla. Mezcla bien los ingredientes, hornea en un molde durante 25-30 minutos a 180°C.",
+        "3. Cupcakes de chocolate: Usa cacao en polvo, harina, azúcar, huevo, mantequilla y polvo de hornear. Mezcla los ingredientes secos y húmedos por separado y luego combínalos. Hornéalos a 180°C durante 20 minutos.",
+        "'Decoración de pasteles y cupcakes': Una vez que tengas la base de tus postres, puedes experimentar con diferentes tipos de decoración, como glaseados, fondant, chispas de chocolate, frutas o crema batida.",
+        "'Consejos generales': La repostería requiere paciencia y precisión, por lo que es importante medir los ingredientes correctamente y prestar atención a los detalles. Si cometes un error, no te preocupes, ¡la práctica hace al maestro!",
+        "'¿Quieres alguna receta o consejo específico?': Si deseas probar alguna receta más avanzada o necesitas ayuda con una técnica, ¡estoy aquí para ayudarte!"
+      ]
     }
   ]
 }
