@@ -1,0 +1,97 @@
+/* Asegura que el body ocupe toda la pantalla y el contenido se centre */
+/* Fondo con imagen */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ocupa el 100% de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  font-family: Arial, sans-serif;
+  background: url('../assets/fondo.jpg') no-repeat center center fixed; 
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+}
+
+  
+  /* Contenedor de bienvenida */
+  .bienvenida-container {
+    width: 100%;
+    max-width: 500px; /* Ancho ajustado */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Contenedor del chat */
+  .chat-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+    height: auto;      /* Asegura que la altura del contenedor se ajuste al contenido */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo del cuerpo de la tarjeta */
+  .card-body {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    min-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  /* Estilo de los mensajes */
+  .message-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .bg-light {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  /* Avatares */
+  .chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Inputs y botones */
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .send-icon, .mic-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }  

@@ -1,0 +1,42 @@
+/* Estilo para el mensaje de bienvenida */
+.bienvenida-container {
+  height: auto; /* Se ajusta al contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Fondo suave para el contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+h1 {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  color: #007bff;
+  font-size: 1.5rem; /* Tamaño ajustado para mayor visibilidad */
+}
+
+p {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 1rem; /* Un poco más grande para mejorar la legibilidad */
+}
+
+button {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 10px 20px; /* Aumentado el tamaño del botón */
+  font-size: 1rem; /* Botón más legible */
+  border-radius: 5px;
+}
+
+/* Animación suave */
+h1, p, button {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Color de fondo cuando se pasa el cursor */
+}
