@@ -1,0 +1,112 @@
+/* Contenedor principal del chatbot */
+.chat-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;  /* Ancho ajustado */
+  margin: 0 auto;    /* Centrado en la pantalla */
+  height: auto;      /* Eliminar altura fija para que se ajuste al contenido */
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;  /* Espacio superior */
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.card-body {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  min-height: 50vh;  /* Altura mínima ajustada */
+  overflow-y: auto;  /* Permitir scroll solo en el área de los mensajes */
+  max-height: 400px; /* Altura máxima para que los mensajes puedan hacer scroll */
+}
+
+/* Estilizado de los mensajes */
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  display: inline-block;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatares */
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  opacity: 0; /* Inicialmente oculto */
+  animation: avatarSlideIn 0.6s ease-out forwards; /* Animación de entrada */
+}
+
+.message-bubble {
+  opacity: 0; /* Inicialmente oculto */
+  animation: slideInFade 0.6s ease-out forwards; /* Animación de aparición */
+}
+
+/* Animación para los avatares */
+@keyframes avatarSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación para los mensajes */
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Otros estilos */
+.bg-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.bg-light {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* Inputs y botones */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.send-icon, .mic-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Scroll de los mensajes */
+.card-body {
+  display: flex;
+  flex-direction: column-reverse; /* Hace que el scroll se mantenga en la parte inferior */
+}
