@@ -3,28 +3,23 @@ import { Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/bienvenida.css";
 
-function BienvenidaChat({ iniciarChat }) {
+function BienvenidaChat() {
   return (
     <Container
-      className="bienvenida-container d-flex justify-content-center align-items-center"
+      className="bienvenida-container d-flex flex-column justify-content-center align-items-center text-center"
       style={{
         maxWidth: '500px',  // Aumentado un poco el tamaño máximo
         padding: '30px',
         marginTop: '50px',
+        height: '50vh',  // Asegura un tamaño constante para el contenedor
       }}
     >
-      <div className="text-center">
-        <h1 className="mb-3">¡Bienvenido al Chatbot Traductor!</h1>
+      <div>
+        <h1 className="mb-3">¡Bienvenido a ChatAmigo</h1>
         <p className="mb-3">
-          Este chatbot puede ayudarte a traducir mensajes de español a inglés y responderá en ambos idiomas.
+          Este chatbot puede ayudarte con preguntas tanto en ingles como en español, haz clic en el menu para dirigirte con el
+          <br/>TE ESTA ESPERANDO!!
         </p>
-        <Button
-          variant="primary"
-          size="lg"
-          onClick={iniciarChat}
-        >
-          Empezar a chatear
-        </Button>
       </div>
     </Container>
   );

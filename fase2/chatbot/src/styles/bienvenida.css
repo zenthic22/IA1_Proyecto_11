@@ -1,42 +1,44 @@
-/* Estilo para el mensaje de bienvenida */
+/* Contenedor principal */
 .bienvenida-container {
-  height: auto; /* Se ajusta al contenido */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Asegura que los elementos estén en columna */
   background-color: #f8f9fa; /* Fondo suave para el contenedor */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  height: 50vh; /* Altura fija para un diseño más consistente */
+  text-align: center; /* Centra el texto */
 }
 
+/* Encabezado */
 h1 {
   font-family: "Montserrat", serif;
   font-weight: 400;
   color: #007bff;
-  font-size: 1.5rem; /* Tamaño ajustado para mayor visibilidad */
+  font-size: 1.5rem; /* Tamaño ajustado */
+  margin-bottom: 20px; /* Espaciado */
 }
 
+/* Párrafo */
 p {
   font-family: "Montserrat", serif;
   font-weight: 400;
   color: #333;
-  font-size: 1rem; /* Un poco más grande para mejorar la legibilidad */
+  font-size: 1rem; /* Mejor legibilidad */
+  margin-bottom: 20px;
 }
 
+/* Botón */
 button {
   font-family: "Montserrat", serif;
   font-weight: 600;
-  margin-top: 15px;
-  padding: 10px 20px; /* Aumentado el tamaño del botón */
-  font-size: 1rem; /* Botón más legible */
+  padding: 10px 20px; /* Botón más grande */
+  font-size: 1rem;
   border-radius: 5px;
-}
-
-/* Animación suave */
-h1, p, button {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease; /* Animación suave */
 }
 
 button:hover {
-  background-color: #0056b3; /* Color de fondo cuando se pasa el cursor */
+  background-color: #0056b3; /* Fondo al pasar el cursor */
 }
