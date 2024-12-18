@@ -1,0 +1,91 @@
+/* Contenedor principal de la información */
+.info-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Caja de información */
+  .info-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .info-box h2 {
+    font-size: 24px;  /* Tamaño de fuente más adecuado */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Tabla con los estudiantes */
+  .info-table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    table-layout: fixed;  /* Hace que las celdas tengan un ancho fijo */
+  }
+  
+  .info-table th, .info-table td {
+    word-wrap: break-word;  /* Permite que los textos largos se ajusten */
+    white-space: normal;  /* Evita que se corte el texto largo */
+  }
+  
+  /* Contenedor de los botones */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Estilo para los botones con imágenes */
+  .info-button {
+    width: 30%;  /* Los botones ocuparán el 30% del contenedor */
+    padding: 8px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estilo para las imágenes dentro de los botones */
+  .button-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Ajuste para pantallas más pequeñas */
+  @media (max-width: 767px) {
+    .info-container {
+      padding: 10px;
+    }
+  
+    .info-box h2 {
+      font-size: 20px;
+    }
+  
+    .info-table th, .info-table td {
+      font-size: 14px;
+    }
+  
+    .info-button {
+      font-size: 12px;
+      padding: 10px;
+      width: 100%;  /* En pantallas pequeñas, los botones ocuparán todo el ancho */
+    }
+  
+    .button-img {
+      width: 30px;
+      height: 30px;
+    }
+  }  

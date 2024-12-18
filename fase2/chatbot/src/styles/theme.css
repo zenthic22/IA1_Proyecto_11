@@ -1,0 +1,47 @@
+/* Estilos para el tema claro */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .light .container {
+    background-color: #f8f9fa; /* Un color de fondo más claro para el contenedor */
+  }
+  
+  /* Estilos para el tema oscuro */
+  body.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  /* Modo oscuro */
+  body.dark .info-box h2 {
+    color: #fff; /* Color blanco para el título en modo oscuro */
+  }
+
+  /* Color del párrafo en modo oscuro */
+  body.dark .bienvenida-container p {
+    color: #fff; /* Color blanco para el párrafo en modo oscuro */
+  }
+
+  .dark .container {
+    background-color: #333333; /* Fondo oscuro para el contenedor */
+  }
+  
+  /* Botones y otros elementos */
+  button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  button.link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button.link:hover {
+    color: #007bff; /* Color para los botones al pasar el mouse */
+  }
+  
+  /* Otros estilos personalizados */  

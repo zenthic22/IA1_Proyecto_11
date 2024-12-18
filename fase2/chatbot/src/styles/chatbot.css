@@ -1,69 +1,64 @@
 /* Contenedor principal del chatbot */
 .chat-container {
-  background-color: #f8f9fa;
-  border-radius: 10px;
+  background-color: #f8f9fa; /* Fondo claro del contenedor */
+  border-radius: 15px; /* Bordes redondeados */
   padding: 20px;
-  max-width: 600px;  /* Ancho ajustado */
-  margin: 0 auto;    /* Centrado en la pantalla */
-  height: auto;      /* Eliminar altura fija para que se ajuste al contenido */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Ancho máximo ajustado */
+  margin: 20px auto;
+  height: auto; /* Ajuste automático según el contenido */
   display: flex;
   flex-direction: column;
-  margin-top: 20px;  /* Espacio superior */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-/* Estilo del cuerpo de la tarjeta */
+/* Estilo del cuerpo de la tarjeta (donde van las conversaciones) */
 .card-body {
   flex-grow: 1;
-  padding: 15px;
+  padding: 20px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("../assets/chat-bg.jpg"); /* Fondo de imagen para las conversaciones */
+  background-size: cover; /* La imagen cubre todo el espacio */
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra interna para el fondo */
   margin-bottom: 20px;
-  min-height: 50vh;  /* Altura mínima ajustada */
-  overflow-y: auto;  /* Permitir scroll solo en el área de los mensajes */
-  max-height: 400px; /* Altura máxima para que los mensajes puedan hacer scroll */
+  min-height: 70vh; /* Altura mínima */
+  overflow-y: auto;
+  max-height: 600px; /* Altura máxima */
+  scroll-behavior: smooth;
 }
 
-/* Estilizado de los mensajes */
+/* Estilizado de las burbujas de conversación */
 .message-bubble {
-  padding: 10px 15px;
-  border-radius: 20px;
-  max-width: 70%;
+  padding: 15px 20px;
+  border-radius: 20px; /* Bordes redondeados */
+  max-width: 75%; /* Limitar el ancho de las burbujas */
   display: inline-block;
   word-wrap: break-word;
-  font-size: 16px;
-  line-height: 1.4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px; /* Tamaño de texto */
+  line-height: 1.5;
+  margin-bottom: 15px;
+  position: relative;
+  animation: slideInFade 0.5s ease-in-out; /* Animación para que aparezcan suavemente */
 }
 
-/* Avatares */
-.chat-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-  opacity: 0; /* Inicialmente oculto */
-  animation: avatarSlideIn 0.6s ease-out forwards; /* Animación de entrada */
+/* Fondo dinámico para mensajes */
+.message-bubble.bg-primary {
+  background-color: rgba(106, 149, 195, 0.8); /* Azul traslúcido */
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
 }
 
-.message-bubble {
-  opacity: 0; /* Inicialmente oculto */
-  animation: slideInFade 0.6s ease-out forwards; /* Animación de aparición */
+.message-bubble.bg-light {
+  background-color: rgba(241, 241, 241, 0.8); /* Blanco traslúcido */
+  color: #000000;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Animación para los avatares */
-@keyframes avatarSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animación para los mensajes */
+/* Animaciones de las burbujas */
 @keyframes slideInFade {
   0% {
     opacity: 0;
@@ -75,38 +70,55 @@
   }
 }
 
-/* Otros estilos */
-.bg-primary {
-  background-color: #007bff;
-  color: white;
+/* Iconos de avatar */
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra predeterminada */
 }
 
-.bg-light {
-  background-color: #f1f1f1;
-  color: black;
+.chat-avatar:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
-/* Inputs y botones */
-.d-flex {
-  display: flex;
-  align-items: center;
-}
-
-.icon-button {
+/* Ícono de enviar */
+.send-icon {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  margin: 0 10px;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.send-icon, .mic-icon {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+.send-icon:hover {
+  transform: scale(1.2) rotate(20deg); /* Rotación y aumento al pasar el cursor */
+}
+
+/* Estilos de la caja de entrada */
+input[type="text"] {
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+button {
+  border-radius: 50%;
+  padding: 10px;
 }
 
 /* Scroll de los mensajes */
-.card-body {
-  display: flex;
-  flex-direction: column-reverse; /* Hace que el scroll se mantenga en la parte inferior */
+.card-body::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 123, 255, 0.6); /* Color de la barra */
+  border-radius: 4px;
 }
