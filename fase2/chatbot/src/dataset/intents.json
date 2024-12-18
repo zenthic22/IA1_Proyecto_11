@@ -1,0 +1,142 @@
+{
+    "intents": [
+      {
+        "tag": "saludo_es",
+        "patterns": [
+          "¡Hola!",
+          "¿Cómo estás?",
+          "Buenas tardes",
+          "Hola, ¿qué tal?",
+          "Hey!",
+          "¡Qué tal!"
+        ],
+        "responses": [
+          "¡Hola! ¿En qué puedo ayudarte?",
+          "¡Hola! ¿Cómo puedo asistirte hoy?",
+          "¡Hola! ¿En qué te puedo ayudar?"
+        ]
+      },
+      {
+        "tag": "saludo_en",
+        "patterns": [
+          "Hello",
+          "Hi",
+          "How are you?",
+          "Good morning",
+          "Hey there"
+        ],
+        "responses": [
+          "Hi! How can I assist you today?",
+          "Hello! How can I help you?",
+          "Hey! How can I help you?"
+        ]
+      },
+      {
+        "tag": "goodbye_es",
+        "patterns": [
+          "Adiós",
+          "Hasta luego",
+          "Nos vemos",
+          "Bye"
+        ],
+        "responses": [
+          "¡Hasta luego!",
+          "¡Adiós! Que tengas un buen día.",
+          "¡Nos vemos pronto!"
+        ]
+      },
+      {
+        "tag": "goodbye_en",
+        "patterns": [
+          "Goodbye",
+          "See you later",
+          "Take care",
+          "Farewell"
+        ],
+        "responses": [
+          "Goodbye! Have a great day.",
+          "See you soon!",
+          "Take care!"
+        ]
+      },
+      {
+        "tag": "gracias_es",
+        "patterns": [
+          "Gracias",
+          "Muchas gracias",
+          "Te agradezco"
+        ],
+        "responses": [
+          "¡De nada!",
+          "¡Con gusto!",
+          "¡Es un placer ayudarte!"
+        ]
+      },
+      {
+        "tag": "gracias_en",
+        "patterns": [
+          "Thank you",
+          "Thanks",
+          "I appreciate it"
+        ],
+        "responses": [
+          "You're welcome!",
+          "No problem, happy to help!",
+          "Anytime!"
+        ]
+      },
+      {
+        "tag": "informacion_es",
+        "patterns": [
+          "¿Qué es la inteligencia artificial?",
+          "¿Qué es IA?",
+          "¿Qué es un chatbot?"
+        ],
+        "responses": [
+          "La inteligencia artificial (IA) es un área de la informática que se centra en crear máquinas que pueden realizar tareas que requieren inteligencia humana.",
+          "La IA es una rama de la ciencia de la computación que permite a las máquinas imitar comportamientos humanos."
+        ]
+      },
+      {
+        "tag": "informacion_en",
+        "patterns": [
+          "What is artificial intelligence?",
+          "Tell me about AI",
+          "What does AI mean?",
+          "Explain AI",
+          "What is a chatbot?"
+        ],
+        "responses": [
+          "Artificial intelligence (AI) is the simulation of human intelligence in machines. It allows them to perform tasks that typically require human intelligence.",
+          "AI refers to the ability of machines to learn, reason, and perform tasks that normally require human intelligence."
+        ]
+      },
+      {
+        "tag": "ayuda_es",
+        "patterns": [
+          "¿Puedes ayudarme?",
+          "Necesito ayuda",
+          "¿Me puedes asistir?"
+        ],
+        "responses": [
+          "Claro, ¿cómo puedo ayudarte?",
+          "Por supuesto, ¿en qué necesitas ayuda?",
+          "¡Estoy aquí para ayudarte! ¿Qué necesitas?"
+        ]
+      },
+      {
+        "tag": "ayuda_en",
+        "patterns": [
+          "Can you help me?",
+          "I need help",
+          "I need assistance",
+          "Can you assist me?"
+        ],
+        "responses": [
+          "Of course! How can I assist you today?",
+          "I'm here to help! What do you need assistance with?",
+          "How can I help you?"
+        ]
+      }
+    ]
+}  
