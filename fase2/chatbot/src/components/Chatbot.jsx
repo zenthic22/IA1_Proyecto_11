@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import "../styles/chatbot.css";  // Asegúrate de que el CSS esté en este archivo.
 import userImg from "../assets/jugador.png";
@@ -6,8 +6,12 @@ import botImg from "../assets/inteligencia-artificial.png";
 import sendImg from "../assets/enviar.png";
 import micImg from "../assets/microfono.png";
 import translateImg from "../assets/traducir.png";
+import * as tf from '@tensorflow/tfjs';
 
-function Chatbot() {
+const modelJsonUrl = 'fase2\chatbot\src\assets\model.json';  // Cambia esta URL a donde estén tus archivos JSON
+const tokenizerJsonUrl = 'fase2\chatbot\src\assets\tokenizer.json';  // Cambia esta URL a donde estén tus archivos JSON
+
+const Chatbot = () => {
   const [mensajeEspanol, setMensajeEspanol] = useState("");
   const [mensajeIngles, setMensajeIngles] = useState("");
   const [mensajes, setMensajes] = useState([]);
@@ -15,6 +19,7 @@ function Chatbot() {
   const [audioUrl, setAudioUrl] = useState(null);
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
+  const [model, setModel] = useState(null);
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -44,7 +49,7 @@ function Chatbot() {
     setIsRecording(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const mensaje = mensajeEspanol || mensajeIngles;
 
@@ -56,9 +61,71 @@ function Chatbot() {
   };
 
   const translateMessage = () => {
-    setMensajeIngles(mensajeEspanol); // Simulación de traducción
+    // Simulación de traducción (puedes implementar una API de traducción real si lo deseas)
+    setMensajeIngles(mensajeEspanol);
     setMensajeEspanol("");
   };
+
+  const textsToSequences = (texts) => {
+    return texts.map(text => {
+      const words = text.toLowerCase().trim().split(" ");
+      return words.map(word => wordIndex[word] || 0);
+    });
+  };
+
+  const padSequences = (sequences, maxLength, paddingType = 'pre', truncatingType = 'pre', paddingValue = 0) => {
+    return sequences.map(seq => {
+      if (seq.length > maxLength) {
+        if (truncatingType === 'pre') {
+          seq = seq.slice(seq.length - maxLength);
+        } else {
+          seq = seq.slice(0, maxLength);
+        }
+      }
+
+      if (seq.length < maxLength) {
+        const paddingLength = maxLength - seq.length;
+        const paddingArray = new Array(paddingLength).fill(paddingValue);
+
+        if (paddingType === 'pre') {
+          seq = [...paddingArray, ...seq];
+        } else {
+          seq = [...seq, ...paddingArray];
+        }
+      }
+
+      return seq;
+    });
+  };
+
+  const loadModel = async () => {
+    try {
+      const response = await fetch(modelJsonUrl);
+      const modelJson = await response.json();
+      const loadedModel = await tf.loadLayersModel(tf.io.fromMemory(modelJson));
+      setModel(loadedModel);
+    } catch (error) {
+      console.error("Error loading model:", error);
+    }
+  };
+
+  const analyzeInput = async () => {
+    if (model) {
+      let user_input = mensajeEspanol.toLowerCase();
+      let sequences = textsToSequences([user_input]);
+      sequences = padSequences(sequences, 5, 'pre', 'pre', 0);
+
+      // Predicción del modelo
+      const prediction = model.predict(tf.tensor2d(sequences, [1, 5]));
+      const predictedIndex = prediction.argMax(1).dataSync()[0];
+      // Aquí puedes manejar el resultado de la predicción según tus necesidades
+      console.log(predictedIndex); // Esto es solo un ejemplo
+    }
+  };
+
+  useEffect(() => {
+    loadModel();
+  }, []);
 
   return (
     <Container className="chat-container">
@@ -112,13 +179,7 @@ function Chatbot() {
               value={mensajeIngles}
               readOnly
             />
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="d-flex justify-content-between">
-            <Button variant="link" onClick={handleSubmit}>
+            <Button variant="link" onClick={analyzeInput}>
               <img src={sendImg} alt="Enviar" className="send-icon" />
             </Button>
             <Button
@@ -132,6 +193,6 @@ function Chatbot() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Chatbot;
