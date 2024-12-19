@@ -1,396 +1,454 @@
 {
-    "intents": [
-      {
-        "tag": "saludo_es",
-        "patterns": [
-          "¡Hola!",
-          "¿Cómo estás?",
-          "Buenas tardes",
-          "Hola, ¿qué tal?",
-          "Hey!",
-          "¡Qué tal!"
-        ],
-        "responses": [
-          "¡Hola! ¿En qué puedo ayudarte?",
-          "¡Hola! ¿Cómo puedo asistirte hoy?",
-          "¡Hola! ¿En qué te puedo ayudar?"
-        ]
-      },
-      {
-        "tag": "saludo_en",
-        "patterns": [
-          "Hello",
-          "Hi",
-          "How are you?",
-          "Good morning",
-          "Hey there"
-        ],
-        "responses": [
-          "Hi! How can I assist you today?",
-          "Hello! How can I help you?",
-          "Hey! How can I help you?"
-        ]
-      },
-      {
-        "tag": "goodbye_es",
-        "patterns": [
-          "Adiós",
-          "Hasta luego",
-          "Nos vemos",
-          "Bye"
-        ],
-        "responses": [
-          "¡Hasta luego!",
-          "¡Adiós! Que tengas un buen día.",
-          "¡Nos vemos pronto!"
-        ]
-      },
-      {
-        "tag": "goodbye_en",
-        "patterns": [
-          "Goodbye",
-          "See you later",
-          "Take care",
-          "Farewell"
-        ],
-        "responses": [
-          "Goodbye! Have a great day.",
-          "See you soon!",
-          "Take care!"
-        ]
-      },
-      {
-        "tag": "gracias_es",
-        "patterns": [
-          "Gracias",
-          "Muchas gracias",
-          "Te agradezco"
-        ],
-        "responses": [
-          "¡De nada!",
-          "¡Con gusto!",
-          "¡Es un placer ayudarte!"
-        ]
-      },
-      {
-        "tag": "gracias_en",
-        "patterns": [
-          "Thank you",
-          "Thanks",
-          "I appreciate it"
-        ],
-        "responses": [
-          "You're welcome!",
-          "No problem, happy to help!",
-          "Anytime!"
-        ]
-      },
-      {
-        "tag": "informacion_es",
-        "patterns": [
-          "¿Qué es la inteligencia artificial?",
-          "¿Qué es IA?",
-          "¿Qué es un chatbot?"
-        ],
-        "responses": [
-          "La inteligencia artificial (IA) es un área de la informática que se centra en crear máquinas que pueden realizar tareas que requieren inteligencia humana.",
-          "La IA es una rama de la ciencia de la computación que permite a las máquinas imitar comportamientos humanos."
-        ]
-      },
-      {
-        "tag": "informacion_en",
-        "patterns": [
-          "What is artificial intelligence?",
-          "Tell me about AI",
-          "What does AI mean?",
-          "Explain AI",
-          "What is a chatbot?"
-        ],
-        "responses": [
-          "Artificial intelligence (AI) is the simulation of human intelligence in machines. It allows them to perform tasks that typically require human intelligence.",
-          "AI refers to the ability of machines to learn, reason, and perform tasks that normally require human intelligence."
-        ]
-      },
-      {
-        "tag": "ayuda_es",
-        "patterns": [
-          "¿Puedes ayudarme?",
-          "Necesito ayuda",
-          "¿Me puedes asistir?"
-        ],
-        "responses": [
-          "Claro, ¿cómo puedo ayudarte?",
-          "Por supuesto, ¿en qué necesitas ayuda?",
-          "¡Estoy aquí para ayudarte! ¿Qué necesitas?"
-        ]
-      },
-      {
-        "tag": "ayuda_en",
-        "patterns": [
-          "Can you help me?",
-          "I need help",
-          "I need assistance",
-          "Can you assist me?"
-        ],
-        "responses": [
-          "Of course! How can I assist you today?",
-          "I'm here to help! What do you need assistance with?",
-          "How can I help you?"
-        ]
-      },
-      {
-        "tag": "chiste_es",
-        "patterns": [
-          "Dime un chiste",
-          "¿Puedes contarme un chiste?",
-          "Hazme reír",
-          "Cuéntame algo gracioso"
-        ],
-        "responses": [
-          "¿Por qué los matemáticos odian el otoño? Porque las hojas se caen.",
-          "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
-          "¿Por qué las computadoras nunca se broncean? Porque siempre trabajan en la nube.",
-          "¿Qué le dice un bit al otro bit? Nos vemos en el bus.",
-          "¿Por qué la escoba está feliz? Porque va barriendo con todo.",
-          "¿Por qué el libro de matemáticas estaba triste? ¡Porque tenía muchos problemas!",
-          "¿Qué hace un perro con un taladro? ¡Taladrando!",
-          "¿Por qué los peces no juegan al escondite? Porque siempre se encuentran en el agua.",
-          "¿Cómo se despide un químico? ¡Átomo luego!",
-          "¿Qué le dice una impresora a otra? ¿Esa hoja es tuya o es una copia?",
-          "¿Por qué el semáforo no habla? Porque está cambiando.",
-          "¿Cómo se llama el pez más divertido? ¡El pez payaso!",
-          "¿Qué hace un pájaro en la panadería? ¡Pi-pi-pi!",
-          "¿Qué dijo un cable al otro? ¡Somos una conexión perfecta!",
-          "¿Por qué los programas de computadora son malos para el gimnasio? Porque siempre tienen bugs."
-        ]
-      },
-      {
-        "tag": "chiste_en",
-        "patterns": [
-          "Tell me a joke",
-          "Can you tell me a joke?",
-          "Make me laugh",
-          "Tell me something funny"
-        ],
-        "responses": [
-          "Why do mathematicians hate autumn? Because the leaves are falling.",
-          "What does a bee do in the gym? Buzz!",
-          "Why do computers never tan? Because they always work in the cloud.",
-          "What does one bit say to another bit? See you on the bus.",
-          "Why is the broom happy? Because it sweeps everything away.",
-          "Why was the math book sad? Because it had a lot of problems!",
-          "What does a dog do with a drill? Drilling!",
-          "Why don't fish play hide and seek? Because they always meet in the water.",
-          "How does a chemist say goodbye? Atom later!",
-          "What does one printer say to another? Is that sheet of paper yours or is it a copy?",
-          "Why doesn't the traffic light talk? Because it's changing.",
-          "What is the name of the funniest fish? The clown fish!",
-          "What is a bird doing in the bakery? Pee-pee-pee!",
-          "What did one cable say to the other? We are a perfect connection!",
-          "Why are computer programs bad for the gym? Because they always have bugs."
-        ]
-      },
-      {
-        "tag": "pelicula_es",
-        "patterns": [
-          "Recomiéndame películas",
-          "Háblame de películas famosas",
-          "¿Cuáles son las mejores películas?",
-          "Dame información sobre películas populares",
-          "¿Qué películas debería ver?"
-        ],
-        "responses": [
-          "Si te gustan las aventuras, te recomiendo 'Indiana Jones', una de las franquicias más icónicas de acción y aventura.",
-          "Si prefieres la ciencia ficción, no te puedes perder 'Star Wars', que revolucionó el cine y sigue siendo una saga legendaria.",
-          "En el cine de terror, 'El Exorcista' es una de las películas más aterradoras de todos los tiempos.",
-          "Para una película de superhéroes, 'Avengers: Endgame' es un épico cierre para el universo Marvel.",
-          "Si te interesan las historias dramáticas, 'La Lista de Schindler' es una poderosa película sobre el Holocausto.",
-          "Si eres fanático de la comedia, 'La Vida de Brian' de Monty Python es una de las más divertidas de todos los tiempos.",
-          "En el género de animación, 'El Rey León' es una obra maestra de Disney que sigue siendo popular a través de los años.",
-          "Si te gustan las películas de suspenso, 'El Sexto Sentido' de M. Night Shyamalan tiene un giro final inolvidable.",
-          "La película 'Titanic' se convirtió en un clásico romántico y es una de las más taquilleras de todos los tiempos.",
-          "En el cine de terror psicológico, 'El Resplandor' de Stanley Kubrick es una obra maestra con una atmósfera única.",
-          "Para un thriller de acción, 'Inception' de Christopher Nolan es un juego mental visualmente impresionante.",
-          "En el género de fantasía, 'El Señor de los Anillos' es una trilogía épica que ha dejado una huella en el cine moderno.",
-          "Si prefieres una película de acción, 'Mad Max: Fury Road' es un espectáculo visual con un ritmo frenético.",
-          "¿Buscas algo más específico? Puedo recomendarte películas por género: drama, terror, comedia, ciencia ficción, etc."
-        ]
-      },
-      {
-        "tag": "pelicula_en",
-        "patterns": [
-          "Recommend movies to me",
-          "Tell me about famous movies",
-          "What are the best movies?",
-          "Give me information about popular movies",
-          "What movies should I watch?"
-        ],
-        "responses": [
-          "If you like adventures, I recommend 'Indiana Jones', one of the most iconic action-adventure franchises.",
-          "If you prefer science fiction, you can't miss 'Star Wars', which revolutionized cinema and remains a legendary saga.",
-          "In horror cinema, 'The Exorcist' is one of the scariest movies of all time.",
-          "For a superhero movie, 'Avengers: Endgame' is an epic conclusion to the Marvel universe.",
-          "If you're interested in dramatic stories, 'Schindler's List' is a powerful film about the Holocaust.",
-          "If you're a fan of comedy, Monty Python's 'Life of Brian' is one of the funniest of all time.",
-          "In the animation genre, 'The Lion King' is a Disney masterpiece that remains popular through the years.",
-          "If you like thrillers, M. Night Shyamalan's 'The Sixth Sense' has an unforgettable final twist.",
-          "The film 'Titanic' became a romantic classic and is one of the highest-grossing films of all time.",
-          "In psychological horror cinema, Stanley Kubrick's 'The Shining' is a masterpiece with a unique atmosphere.",
-          "For an action thriller, Christopher Nolan's 'Inception' is a visually stunning mind game.",
-          "In the fantasy genre, 'The Lord of the Rings' is an epic trilogy that has left a mark on modern cinema.",
-          "If you prefer an action film, 'Mad Max: Fury Road' is a visual spectacle with a frenetic pace.",
-          "Looking for something more specific? I can recommend movies by genre: drama, horror, comedy, sci-fi, etc."
-        ]
-      },
-      {
-        "tag": "flor_es",
-        "patterns": [
-          "Háblame de flores",
-          "¿Cuáles son las flores más populares?",
-          "Recomiéndame algunas flores bonitas",
-          "¿Qué flores son ideales para un jardín?",
-          "Cuéntame sobre flores de colores"
-        ],
-        "responses": [
-          "Las rosas son una de las flores más populares, conocidas por su belleza y variedad de colores. Son símbolos de amor y pasión.",
-          "Los girasoles son flores grandes y brillantes que siguen al sol. Son símbolos de felicidad y lealtad.",
-          "Las tulipanes son muy apreciadas por su simplicidad y colores vibrantes. Son populares en primavera.",
-          "Las orquídeas son flores elegantes y exóticas, a menudo asociadas con el lujo y la belleza refinada.",
-          "Las margaritas son flores sencillas pero encantadoras, con pétalos blancos y un centro amarillo. Simbolizan la pureza y la inocencia.",
-          "Los lirios son flores fragantes y hermosas, conocidas por su elegancia. Se asocian con la renovación y la pureza.",
-          "Las peonías son flores grandes y coloridas, muy apreciadas en jardines debido a su belleza y su aroma dulce.",
-          "Los tulipanes vienen en una variedad de colores, incluidos rojo, rosa, blanco, y amarillo, y son muy populares en jardines durante la primavera.",
-          "Las violetas son pequeñas flores delicadas con un aroma sutil, a menudo asociadas con la modestia y la lealtad.",
-          "Las azucenas son flores grandes y fragantes que se encuentran comúnmente en tonos de blanco, amarillo y naranja, conocidas por su belleza y elegancia.",
-          "Las lavandas tienen un aroma encantador y se utilizan tanto en jardines como en aceites esenciales. Son conocidas por sus propiedades relajantes.",
-          "Las lilas son flores con tonos de morado y blanco, que florecen en primavera. Son símbolos de la belleza y el primer amor.",
-          "Si te gustan las flores para interiores, las violetas africanas son una excelente opción, conocidas por sus colores vibrantes y fáciles de cuidar.",
-          "Los crisantemos son flores populares en otoño, con una gran variedad de colores y formas, y son símbolos de longevidad y salud."
-        ]
-      },
-      {
-        "tag": "flor_en",
-        "patterns": [
-          "Tell me about flowers",
-          "What are the most popular flowers?",
-          "Recommend me some pretty flowers",
-          "What flowers are ideal for a garden?",
-          "Tell me about colorful flowers"
-        ],
-        "responses": [
-          "Roses are one of the most popular flowers, known for their beauty and variety of colors. They are symbols of love and passion.",
-          "Sunflowers are large, bright flowers that follow the sun. They are symbols of happiness and loyalty.",
-          "Tulips are highly prized for their simplicity and vibrant colors. They are popular in spring.",
-          "Orchids are elegant and exotic flowers, often associated with luxury and refined beauty.",
-          "Daisies are simple yet lovely flowers, with white petals and a yellow center. They symbolize purity and innocence.",
-          "Lilies are fragrant and beautiful flowers, known for their elegance. They are associated with renewal and purity.",
-          "Peonies are large, colorful flowers, highly prized in gardens because of their beauty and sweet scent.",
-          "Tulips come in a variety of colors, including red, pink, white, and yellow, and are very popular in gardens during spring.",
-          "Violets are delicate little flowers with a subtle scent, Often associated with modesty and loyalty.",
-          "Lilies are large, fragrant flowers commonly found in shades of white, yellow, and orange, known for their beauty and elegance.",
-          "Lavenders have a lovely scent and are used in both gardens and essential oils. They are known for their relaxing properties.",
-          "Lilacs are flowers with shades of purple and white, which bloom in spring. They are symbols of beauty and first love.",
-          "If you like indoor flowers, African violets are a great choice, known for their vibrant colors and easy care.",
-          "Chrysanthemums are popular fall flowers, with a wide variety of colors and shapes, and are symbols of longevity and health."
-        ]
-      },
-      {
-        "tag": "color_es",
-        "patterns": [
-          "Háblame de colores",
-          "¿Cuáles son los colores más comunes?",
-          "Dime sobre los colores y su significado",
-          "¿Qué simboliza el color rojo?",
-          "¿Qué colores combinan bien?"
-        ],
-        "responses": [
-          "El color rojo es asociado con la pasión, el amor y la energía. También puede representar peligro o advertencia.",
-          "El color azul simboliza la calma, la serenidad y la confianza. Es un color popular en el diseño de interiores y ropa.",
-          "El color verde está relacionado con la naturaleza, el crecimiento y la renovación. Es un color que transmite equilibrio y frescura.",
-          "El color amarillo es brillante y alegre, asociado con la felicidad, la creatividad y la luz del sol.",
-          "El color negro es elegante y sofisticado, pero también puede representar oscuridad o misterio.",
-          "El blanco es un color que simboliza pureza, paz y simplicidad. Es comúnmente utilizado en bodas y celebraciones.",
-          "El color morado está relacionado con la realeza, el lujo y la espiritualidad. También simboliza la creatividad y la sabiduría.",
-          "El color naranja combina la energía del rojo y la alegría del amarillo, asociado con el entusiasmo, la vitalidad y la creatividad.",
-          "El color rosa es un color suave y romántico, relacionado con el amor, la dulzura y la ternura.",
-          "El color marrón es un color terroso que simboliza la estabilidad, la confiabilidad y la naturaleza.",
-          "El color gris es neutral y puede simbolizar equilibrio, profesionalismo y elegancia. A veces se asocia con la tristeza.",
-          "El color turquesa se asocia con la tranquilidad, la frescura y la serenidad. Es un color que combina el azul y el verde.",
-          "El color plateado simboliza sofisticación, modernidad y elegancia. Se utiliza a menudo para representar tecnología y lujo.",
-          "El color dorado es un color de lujo, riqueza y éxito. A menudo se asocia con la opulencia y el logro.",
-          "En cuanto a combinaciones, los colores complementarios como el azul y el naranja, o el rojo y el verde, crean contrastes vibrantes.",
-          "Colores como el blanco y el negro pueden combinarse fácilmente y crear un look elegante y atemporal. También puedes combinar colores como el azul y el gris para un estilo más profesional."
-        ]
-      },
-      {
-        "tag": "color_en",
-        "patterns": [
-          "Tell me about colors",
-          "What are the most common colors?",
-          "Tell me about colors and their meaning",
-          "What does the color red symbolize?",
-          "What colors go well together?"
-        ],
-        "responses": [
-          "The color red is associated with passion, love and energy. It can also represent danger or warning.",
-          "The color blue symbolizes calm, serenity and confidence. It is a popular color in interior design and clothing.",
-          "The color green is related to nature, growth and renewal. It is a color that conveys balance and freshness.",
-          "The color yellow is bright and cheerful, associated with happiness, creativity and sunlight.",
-          "The color black is elegant and sophisticated, but can also represent darkness or mystery.",
-          "White is a color that symbolizes purity, peace and simplicity. It is commonly used in weddings and celebrations.",
-          "The color purple is related to royalty, luxury and spirituality. It also symbolizes creativity and wisdom.",
-          "The color orange combines the energy of red and the joy of yellow, associated with enthusiasm, vitality and creativity.",
-          "The color pink is a soft and romantic color, related to love, sweetness and tenderness.",
-          "The color brown is a color that symbolizes Earthy color that symbolizes stability, reliability, and nature.",
-          "The color gray is neutral and can symbolize balance, professionalism, and elegance. It is sometimes associated with sadness.",
-          "The color turquoise is associated with tranquility, freshness, and serenity. It is a color that combines blue and green.",
-          "The color silver symbolizes sophistication, modernity, and elegance. It is often used to represent technology and luxury.",
-          "The color gold is a color of luxury, wealth, and success. It is often associated with opulence and achievement.",
-          "As for combinations, complementary colors like blue and orange, or red and green, create vibrant contrasts.",
-          "Colors like black and white can easily be combined and create an elegant and timeless look. You can also combine colors like blue and gray for a more professional style."
-        ]
-      },
-      {
-        "tag": "maquillaje_es",
-        "patterns": [
-          "Háblame de maquillaje",
-          "¿Cómo puedo maquillarme?",
-          "Recomiéndame tips de maquillaje",
-          "¿Qué productos de maquillaje son esenciales?",
-          "¿Cómo puedo hacer un maquillaje natural?"
-        ],
-        "responses": [
-          "El maquillaje es una forma de arte que permite resaltar las características faciales y expresar la creatividad. Aquí tienes algunos consejos para diferentes tipos de maquillaje:",
-          "Si buscas un maquillaje natural, opta por bases ligeras, correctores para disimular imperfecciones, y sombras neutras. Un toque de iluminador en puntos estratégicos y un bálsamo labial para un look fresco.",
-          "Para un maquillaje de noche, puedes elegir tonos más intensos en los ojos, como sombras oscuras o ahumadas, y un labial de color vibrante. Asegúrate de aplicar varias capas de máscara para un acabado dramático.",
-          "Algunos productos esenciales en un set básico de maquillaje son: base o BB cream, corrector, polvo compacto, sombras neutras, máscara de pestañas, delineador, rubor y un labial.",
-          "Si quieres un maquillaje duradero, es importante aplicar un primer antes de la base, usar productos en polvo para sellar el maquillaje y un fijador para mantenerlo todo en su lugar durante el día.",
-          "El 'contouring' o esculpido es una técnica popular para definir los pómulos, la nariz y la mandíbula. Utiliza un bronzer o polvo oscuro para sombrear las áreas que quieras reducir y un iluminador para resaltar las áreas que quieras enfatizar.",
-          "Para un maquillaje de ojos impactante, puedes probar un look de 'smokey eyes', que se logra difuminando sombras oscuras en el párpado móvil y aplicando un delineado en la línea de agua para intensificar la mirada.",
-          "Si tienes piel grasa, elige productos mate que controlen el brillo. Para piel seca, busca fórmulas hidratantes y bases con acabado luminoso.",
-          "Los tonos de labios pueden variar dependiendo de la ocasión: los tonos nude son ideales para el día a día, mientras que los rojos o burdeos aportan elegancia para la noche."
-        ]
-      },
-      {
-        "tag": "maquillaje_en",
-        "patterns": [   
-          "Tell me about makeup",
-          "How can I apply makeup?",
-          "Recommend makeup tips",
-          "What makeup products are essential?",
-          "How can I do natural makeup?"
-        ],
-        "responses": [
-          "Makeup is an art form that allows you to highlight your facial features and express your creativity. Here are some tips for different types of makeup:",
-          "If you're looking for a natural makeup look, go for light foundations, concealers to hide imperfections, and neutral eyeshadows. A touch of highlighter in strategic spots and a lip balm for a fresh look.",
-          "For an evening makeup look, you can choose more intense shades on the eyes, such as dark or smoky eyeshadows, and a vibrant lipstick. Make sure to apply several layers of mascara for a dramatic finish.",
-          "Some essential products in a basic makeup set are: foundation or BB cream, concealer, compact powder, neutral eyeshadows, mascara, eyeliner, blush, and a lipstick.",
-          "If you want long-lasting makeup, it's important to apply a primer before foundation, use powder products to seal the makeup, and a setting spray to keep everything in place throughout the day.",
-          "Contouring or sculpting is a popular technique to define the eyes. cheekbones, nose and jawline. Use a bronzer or dark powder to shade the areas you want to reduce and a highlighter to highlight the areas you want to emphasize.",
-          "For a striking eye makeup, you can try a 'smokey eyes' look, which is achieved by blending dark shadows on the mobile eyelid and applying a liner on the waterline to intensify the look.",
-          "If you have oily skin, choose matte products that control shine. For dry skin, look for moisturizing formulas and foundations with a luminous finish.",
-          "Lip shades can vary depending on the occasion: nude shades are ideal for day to day, while reds or burgundies add elegance for the night."
-        ]
-      }
+  "intents": [
+    {
+      "tag": "saludo_es",
+      "patterns": [
+        "¡Hola!",
+        "¿Cómo estás?",
+        "Buenas tardes",
+        "Hola, ¿qué tal?",
+        "Hey!",
+        "¡Qué tal!"
+      ],
+      "responses": [
+        "¡Hola! ¿En qué puedo ayudarte?",
+        "¡Hola! ¿Cómo puedo asistirte hoy?",
+        "¡Hola! ¿En qué te puedo ayudar?"
+      ]
+    },
+    {
+      "tag": "saludo_en",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "How are you?",
+        "Good morning",
+        "Hey there"
+      ],
+      "responses": [
+        "Hi! How can I assist you today?",
+        "Hello! How can I help you?",
+        "Hey! How can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye_es",
+      "patterns": [
+        "Adiós",
+        "Hasta luego",
+        "Nos vemos",
+        "Bye"
+      ],
+      "responses": [
+        "¡Hasta luego!",
+        "¡Adiós! Que tengas un buen día.",
+        "¡Nos vemos pronto!"
+      ]
+    },
+    {
+      "tag": "goodbye_en",
+      "patterns": [
+        "Goodbye",
+        "See you later",
+        "Take care",
+        "Farewell"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you soon!",
+        "Take care!"
+      ]
+    },
+    {
+      "tag": "gracias_es",
+      "patterns": [
+        "Gracias",
+        "Muchas gracias",
+        "Te agradezco"
+      ],
+      "responses": [
+        "¡De nada!",
+        "¡Con gusto!",
+        "¡Es un placer ayudarte!"
+      ]
+    },
+    {
+      "tag": "gracias_en",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "I appreciate it"
+      ],
+      "responses": [
+        "You're welcome!",
+        "No problem, happy to help!",
+        "Anytime!"
+      ]
+    },
+    {
+      "tag": "informacion_es",
+      "patterns": [
+        "¿Qué es la inteligencia artificial?",
+        "¿Qué es IA?",
+        "¿Qué es un chatbot?"
+      ],
+      "responses": [
+        "La inteligencia artificial (IA) es un área de la informática que se centra en crear máquinas que pueden realizar tareas que requieren inteligencia humana.",
+        "La IA es una rama de la ciencia de la computación que permite a las máquinas imitar comportamientos humanos."
+      ]
+    },
+    {
+      "tag": "informacion_en",
+      "patterns": [
+        "What is artificial intelligence?",
+        "Tell me about AI",
+        "What does AI mean?",
+        "Explain AI",
+        "What is a chatbot?"
+      ],
+      "responses": [
+        "Artificial intelligence (AI) is the simulation of human intelligence in machines. It allows them to perform tasks that typically require human intelligence.",
+        "AI refers to the ability of machines to learn, reason, and perform tasks that normally require human intelligence."
+      ]
+    },
+    {
+      "tag": "ayuda_es",
+      "patterns": [
+        "¿Puedes ayudarme?",
+        "Necesito ayuda",
+        "¿Me puedes asistir?"
+      ],
+      "responses": [
+        "Claro, ¿cómo puedo ayudarte?",
+        "Por supuesto, ¿en qué necesitas ayuda?",
+        "¡Estoy aquí para ayudarte! ¿Qué necesitas?"
+      ]
+    },
+    {
+      "tag": "ayuda_en",
+      "patterns": [
+        "Can you help me?",
+        "I need help",
+        "I need assistance",
+        "Can you assist me?"
+      ],
+      "responses": [
+        "Of course! How can I assist you today?",
+        "I'm here to help! What do you need assistance with?",
+        "How can I help you?"
+      ]
+    },
+    {
+      "tag": "chiste_es",
+      "patterns": [
+        "Dime un chiste",
+        "¿Puedes contarme un chiste?",
+        "Hazme reír",
+        "Cuéntame algo gracioso"
+      ],
+      "responses": [
+        "¿Por qué los matemáticos odian el otoño? Porque las hojas se caen.",
+        "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
+        "¿Por qué las computadoras nunca se broncean? Porque siempre trabajan en la nube.",
+        "¿Qué le dice un bit al otro bit? Nos vemos en el bus.",
+        "¿Por qué la escoba está feliz? Porque va barriendo con todo.",
+        "¿Por qué el libro de matemáticas estaba triste? ¡Porque tenía muchos problemas!",
+        "¿Qué hace un perro con un taladro? ¡Taladrando!",
+        "¿Por qué los peces no juegan al escondite? Porque siempre se encuentran en el agua.",
+        "¿Cómo se despide un químico? ¡Átomo luego!",
+        "¿Qué le dice una impresora a otra? ¿Esa hoja es tuya o es una copia?",
+        "¿Por qué el semáforo no habla? Porque está cambiando.",
+        "¿Cómo se llama el pez más divertido? ¡El pez payaso!",
+        "¿Qué hace un pájaro en la panadería? ¡Pi-pi-pi!",
+        "¿Qué dijo un cable al otro? ¡Somos una conexión perfecta!",
+        "¿Por qué los programas de computadora son malos para el gimnasio? Porque siempre tienen bugs."
+      ]
+    },
+    {
+      "tag": "chiste_en",
+      "patterns": [
+        "Tell me a joke",
+        "Can you tell me a joke?",
+        "Make me laugh",
+        "Tell me something funny"
+      ],
+      "responses": [
+        "Why do mathematicians hate autumn? Because the leaves are falling.",
+        "What does a bee do in the gym? Buzz!",
+        "Why do computers never tan? Because they always work in the cloud.",
+        "What does one bit say to another bit? See you on the bus.",
+        "Why is the broom happy? Because it sweeps everything away.",
+        "Why was the math book sad? Because it had a lot of problems!",
+        "What does a dog do with a drill? Drilling!",
+        "Why don't fish play hide and seek? Because they always meet in the water.",
+        "How does a chemist say goodbye? Atom later!",
+        "What does one printer say to another? Is that sheet of paper yours or is it a copy?",
+        "Why doesn't the traffic light talk? Because it's changing.",
+        "What is the name of the funniest fish? The clown fish!",
+        "What is a bird doing in the bakery? Pee-pee-pee!",
+        "What did one cable say to the other? We are a perfect connection!",
+        "Why are computer programs bad for the gym? Because they always have bugs."
+      ]
+    },
+    {
+      "tag": "joke_es",
+      "patterns": [
+        "Dime un chiste",
+        "¿Puedes contarme un chiste?",
+        "Hazme reír",
+        "Cuéntame algo gracioso"
+      ],
+      "responses": [
+        "¿Por qué los matemáticos odian el otoño? Porque las hojas se caen.",
+        "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!",
+        "¿Por qué las computadoras nunca se broncean? Porque siempre trabajan en la nube.",
+        "¿Qué le dice un bit al otro bit? Nos vemos en el bus.",
+        "¿Por qué la escoba está feliz? Porque va barriendo con todo.",
+        "¿Por qué el libro de matemáticas estaba triste? ¡Porque tenía muchos problemas!",
+        "¿Qué hace un perro con un taladro? ¡Taladrando!",
+        "¿Por qué los peces no juegan al escondite? Porque siempre se encuentran en el agua.",
+        "¿Cómo se despide un químico? ¡Átomo luego!",
+        "¿Qué le dice una impresora a otra? ¿Esa hoja es tuya o es una copia?",
+        "¿Por qué el semáforo no habla? Porque está cambiando.",
+        "¿Cómo se llama el pez más divertido? ¡El pez payaso!",
+        "¿Qué hace un pájaro en la panadería? ¡Pi-pi-pi!",
+        "¿Qué dijo un cable al otro? ¡Somos una conexión perfecta!",
+        "¿Por qué los programas de computadora son malos para el gimnasio? Porque siempre tienen bugs."
+      ]
+    },
+    {
+      "tag": "joke_en",
+      "patterns": [
+        "Tell me a joke",
+        "Can you tell me a joke?",
+        "Make me laugh",
+        "Tell me something funny"
+      ],
+      "responses": [
+        "Why do mathematicians hate autumn? Because the leaves are falling.",
+        "What does a bee do in the gym? Buzz!",
+        "Why do computers never tan? Because they always work in the cloud.",
+        "What does one bit say to another bit? See you on the bus.",
+        "Why is the broom happy? Because it sweeps everything away.",
+        "Why was the math book sad? Because it had a lot of problems!",
+        "What does a dog do with a drill? Drilling!",
+        "Why don't fish play hide and seek? Because they always meet in the water.",
+        "How does a chemist say goodbye? Atom later!",
+        "What does one printer say to another? Is that sheet of paper yours or is it a copy?",
+        "Why doesn't the traffic light talk? Because it's changing.",
+        "What is the name of the funniest fish? The clown fish!",
+        "What is a bird doing in the bakery? Pee-pee-pee!",
+        "What did one cable say to the other? We are a perfect connection!",
+        "Why are computer programs bad for the gym? Because they always have bugs."
+      ]
+    },
+    {
+      "tag": "pelicula_es",
+      "patterns": [
+        "Recomiéndame películas",
+        "Háblame de películas famosas",
+        "¿Cuáles son las mejores películas?",
+        "Dame información sobre películas populares",
+        "¿Qué películas debería ver?"
+      ],
+      "responses": [
+        "Si te gustan las aventuras, te recomiendo 'Indiana Jones', una de las franquicias más icónicas de acción y aventura.",
+        "Si prefieres la ciencia ficción, no te puedes perder 'Star Wars', que revolucionó el cine y sigue siendo una saga legendaria.",
+        "En el cine de terror, 'El Exorcista' es una de las películas más aterradoras de todos los tiempos.",
+        "Para una película de superhéroes, 'Avengers: Endgame' es un épico cierre para el universo Marvel.",
+        "Si te interesan las historias dramáticas, 'La Lista de Schindler' es una poderosa película sobre el Holocausto.",
+        "Si eres fanático de la comedia, 'La Vida de Brian' de Monty Python es una de las más divertidas de todos los tiempos.",
+        "En el género de animación, 'El Rey León' es una obra maestra de Disney que sigue siendo popular a través de los años.",
+        "Si te gustan las películas de suspenso, 'El Sexto Sentido' de M. Night Shyamalan tiene un giro final inolvidable.",
+        "La película 'Titanic' se convirtió en un clásico romántico y es una de las más taquilleras de todos los tiempos.",
+        "En el cine de terror psicológico, 'El Resplandor' de Stanley Kubrick es una obra maestra con una atmósfera única.",
+        "Para un thriller de acción, 'Inception' de Christopher Nolan es un juego mental visualmente impresionante.",
+        "En el género de fantasía, 'El Señor de los Anillos' es una trilogía épica que ha dejado una huella en el cine moderno.",
+        "Si prefieres una película de acción, 'Mad Max: Fury Road' es un espectáculo visual con un ritmo frenético.",
+        "¿Buscas algo más específico? Puedo recomendarte películas por género: drama, terror, comedia, ciencia ficción, etc."
+      ]
+    },
+    {
+      "tag": "pelicula_en",
+      "patterns": [
+        "Recommend movies to me",
+        "Tell me about famous movies",
+        "What are the best movies?",
+        "Give me information about popular movies",
+        "What movies should I watch?"
+      ],
+      "responses": [
+        "If you like adventures, I recommend 'Indiana Jones', one of the most iconic action-adventure franchises.",
+        "If you prefer science fiction, you can't miss 'Star Wars', which revolutionized cinema and remains a legendary saga.",
+        "In horror cinema, 'The Exorcist' is one of the scariest movies of all time.",
+        "For a superhero movie, 'Avengers: Endgame' is an epic conclusion to the Marvel universe.",
+        "If you're interested in dramatic stories, 'Schindler's List' is a powerful film about the Holocaust.",
+        "If you're a fan of comedy, Monty Python's 'Life of Brian' is one of the funniest of all time.",
+        "In the animation genre, 'The Lion King' is a Disney masterpiece that remains popular through the years.",
+        "If you like thrillers, M. Night Shyamalan's 'The Sixth Sense' has an unforgettable final twist.",
+        "The film 'Titanic' became a romantic classic and is one of the highest-grossing films of all time.",
+        "In psychological horror cinema, Stanley Kubrick's 'The Shining' is a masterpiece with a unique atmosphere.",
+        "For an action thriller, Christopher Nolan's 'Inception' is a visually stunning mind game.",
+        "In the fantasy genre, 'The Lord of the Rings' is an epic trilogy that has left a mark on modern cinema.",
+        "If you prefer an action film, 'Mad Max: Fury Road' is a visual spectacle with a frenetic pace.",
+        "Looking for something more specific? I can recommend movies by genre: drama, horror, comedy, sci-fi, etc."
+      ]
+    },
+    {
+      "tag": "movie_es",
+      "patterns": [
+        "Recomiéndame películas",
+        "Háblame de películas famosas",
+        "¿Cuáles son las mejores películas?",
+        "Dame información sobre películas populares",
+        "¿Qué películas debería ver?"
+      ],
+      "responses": [
+        "Si te gustan las aventuras, te recomiendo 'Indiana Jones', una de las franquicias más icónicas de acción y aventura.",
+        "Si prefieres la ciencia ficción, no te puedes perder 'Star Wars', que revolucionó el cine y sigue siendo una saga legendaria.",
+        "En el cine de terror, 'El Exorcista' es una de las películas más aterradoras de todos los tiempos.",
+        "Para una película de superhéroes, 'Avengers: Endgame' es un épico cierre para el universo Marvel.",
+        "Si te interesan las historias dramáticas, 'La Lista de Schindler' es una poderosa película sobre el Holocausto.",
+        "Si eres fanático de la comedia, 'La Vida de Brian' de Monty Python es una de las más divertidas de todos los tiempos.",
+        "En el género de animación, 'El Rey León' es una obra maestra de Disney que sigue siendo popular a través de los años.",
+        "Si te gustan las películas de suspenso, 'El Sexto Sentido' de M. Night Shyamalan tiene un giro final inolvidable.",
+        "La película 'Titanic' se convirtió en un clásico romántico y es una de las más taquilleras de todos los tiempos.",
+        "En el cine de terror psicológico, 'El Resplandor' de Stanley Kubrick es una obra maestra con una atmósfera única.",
+        "Para un thriller de acción, 'Inception' de Christopher Nolan es un juego mental visualmente impresionante.",
+        "En el género de fantasía, 'El Señor de los Anillos' es una trilogía épica que ha dejado una huella en el cine moderno.",
+        "Si prefieres una película de acción, 'Mad Max: Fury Road' es un espectáculo visual con un ritmo frenético.",
+        "¿Buscas algo más específico? Puedo recomendarte películas por género: drama, terror, comedia, ciencia ficción, etc."
+      ]
+    },
+    {
+      "tag": "movie_en",
+      "patterns": [
+        "Recommend movies to me",
+        "Tell me about famous movies",
+        "What are the best movies?",
+        "Give me information about popular movies",
+        "What movies should I watch?"
+      ],
+      "responses": [
+        "If you like adventures, I recommend 'Indiana Jones', one of the most iconic action-adventure franchises.",
+        "If you prefer science fiction, you can't miss 'Star Wars', which revolutionized cinema and remains a legendary saga.",
+        "In horror cinema, 'The Exorcist' is one of the scariest movies of all time.",
+        "For a superhero movie, 'Avengers: Endgame' is an epic conclusion to the Marvel universe.",
+        "If you're interested in dramatic stories, 'Schindler's List' is a powerful film about the Holocaust.",
+        "If you're a fan of comedy, Monty Python's 'Life of Brian' is one of the funniest of all time.",
+        "In the animation genre, 'The Lion King' is a Disney masterpiece that remains popular through the years.",
+        "If you like thrillers, M. Night Shyamalan's 'The Sixth Sense' has an unforgettable final twist.",
+        "The film 'Titanic' became a romantic classic and is one of the highest-grossing films of all time.",
+        "In psychological horror cinema, Stanley Kubrick's 'The Shining' is a masterpiece with a unique atmosphere.",
+        "For an action thriller, Christopher Nolan's 'Inception' is a visually stunning mind game.",
+        "In the fantasy genre, 'The Lord of the Rings' is an epic trilogy that has left a mark on modern cinema.",
+        "If you prefer an action film, 'Mad Max: Fury Road' is a visual spectacle with a frenetic pace.",
+        "Looking for something more specific? I can recommend movies by genre: drama, horror, comedy, sci-fi, etc."
+      ]
+    },
+    {
+      "tag": "flor_es",
+      "patterns": [
+        "Háblame de flores",
+        "¿Cuáles son las flores más populares?",
+        "Recomiéndame algunas flores bonitas",
+        "¿Qué flores son ideales para un jardín?",
+        "Cuéntame sobre flores de colores"
+      ],
+      "responses": [
+        "Las rosas son una de las flores más populares, conocidas por su belleza y variedad de colores. Son símbolos de amor y pasión.",
+        "Los girasoles son flores grandes y brillantes que siguen al sol. Son símbolos de felicidad y lealtad.",
+        "Las tulipanes son muy apreciadas por su simplicidad y colores vibrantes. Son populares en primavera.",
+        "Las orquídeas son flores elegantes y exóticas, a menudo asociadas con el lujo y la belleza refinada.",
+        "Las margaritas son flores sencillas pero encantadoras, con pétalos blancos y un centro amarillo. Simbolizan la pureza y la inocencia.",
+        "Los lirios son flores fragantes y hermosas, conocidas por su elegancia. Se asocian con la renovación y la pureza.",
+        "Las peonías son flores grandes y coloridas, muy apreciadas en jardines debido a su belleza y su aroma dulce.",
+        "Los tulipanes vienen en una variedad de colores, incluidos rojo, rosa, blanco, y amarillo, y son muy populares en jardines durante la primavera.",
+        "Las violetas son pequeñas flores delicadas con un aroma sutil, a menudo asociadas con la modestia y la lealtad.",
+        "Las azucenas son flores grandes y fragantes que se encuentran comúnmente en tonos de blanco, amarillo y naranja, conocidas por su belleza y elegancia.",
+        "Las lavandas tienen un aroma encantador y se utilizan tanto en jardines como en aceites esenciales. Son conocidas por sus propiedades relajantes.",
+        "Las lilas son flores con tonos de morado y blanco, que florecen en primavera. Son símbolos de la belleza y el primer amor.",
+        "Si te gustan las flores para interiores, las violetas africanas son una excelente opción, conocidas por sus colores vibrantes y fáciles de cuidar.",
+        "Los crisantemos son flores populares en otoño, con una gran variedad de colores y formas, y son símbolos de longevidad y salud."
+      ]
+    },
+    {
+      "tag": "flor_en",
+      "patterns": [
+        "Tell me about flowers",
+        "What are the most popular flowers?",
+        "Recommend me some pretty flowers",
+        "What flowers are ideal for a garden?",
+        "Tell me about colorful flowers"
+      ],
+      "responses": [
+        "Roses are one of the most popular flowers, known for their beauty and variety of colors. They are symbols of love and passion.",
+        "Sunflowers are large, bright flowers that follow the sun. They are symbols of happiness and loyalty.",
+        "Tulips are highly prized for their simplicity and vibrant colors. They are popular in spring.",
+        "Orchids are elegant and exotic flowers, often associated with luxury and refined beauty.",
+        "Daisies are simple yet lovely flowers, with white petals and a yellow center. They symbolize purity and innocence.",
+        "Lilies are fragrant and beautiful flowers, known for their elegance. They are associated with renewal and purity.",
+        "Peonies are large, colorful flowers, highly prized in gardens because of their beauty and sweet scent.",
+        "Tulips come in a variety of colors, including red, pink, white, and yellow, and are very popular in gardens during spring.",
+        "Violets are delicate little flowers with a subtle scent, Often associated with modesty and loyalty.",
+        "Lilies are large, fragrant flowers commonly found in shades of white, yellow, and orange, known for their beauty and elegance.",
+        "Lavenders have a lovely scent and are used in both gardens and essential oils. They are known for their relaxing properties.",
+        "Lilacs are flowers with shades of purple and white, which bloom in spring. They are symbols of beauty and first love.",
+        "If you like indoor flowers, African violets are a great choice, known for their vibrant colors and easy care.",
+        "Chrysanthemums are popular fall flowers, with a wide variety of colors and shapes, and are symbols of longevity and health."
+      ]
+    },
+    {
+      "tag": "flower_es",
+      "patterns": [
+        "Háblame de flores",
+        "¿Cuáles son las flores más populares?",
+        "Recomiéndame algunas flores bonitas",
+        "¿Qué flores son ideales para un jardín?",
+        "Cuéntame sobre flores de colores"
+      ],
+      "responses": [
+        "Las rosas son una de las flores más populares, conocidas por su belleza y variedad de colores. Son símbolos de amor y pasión.",
+        "Los girasoles son flores grandes y brillantes que siguen al sol. Son símbolos de felicidad y lealtad.",
+        "Las tulipanes son muy apreciadas por su simplicidad y colores vibrantes. Son populares en primavera.",
+        "Las orquídeas son flores elegantes y exóticas, a menudo asociadas con el lujo y la belleza refinada.",
+        "Las margaritas son flores sencillas pero encantadoras, con pétalos blancos y un centro amarillo. Simbolizan la pureza y la inocencia.",
+        "Los lirios son flores fragantes y hermosas, conocidas por su elegancia. Se asocian con la renovación y la pureza.",
+        "Las peonías son flores grandes y coloridas, muy apreciadas en jardines debido a su belleza y su aroma dulce.",
+        "Los tulipanes vienen en una variedad de colores, incluidos rojo, rosa, blanco, y amarillo, y son muy populares en jardines durante la primavera.",
+        "Las violetas son pequeñas flores delicadas con un aroma sutil, a menudo asociadas con la modestia y la lealtad.",
+        "Las azucenas son flores grandes y fragantes que se encuentran comúnmente en tonos de blanco, amarillo y naranja, conocidas por su belleza y elegancia.",
+        "Las lavandas tienen un aroma encantador y se utilizan tanto en jardines como en aceites esenciales. Son conocidas por sus propiedades relajantes.",
+        "Las lilas son flores con tonos de morado y blanco, que florecen en primavera. Son símbolos de la belleza y el primer amor.",
+        "Si te gustan las flores para interiores, las violetas africanas son una excelente opción, conocidas por sus colores vibrantes y fáciles de cuidar.",
+        "Los crisantemos son flores populares en otoño, con una gran variedad de colores y formas, y son símbolos de longevidad y salud."
+      ]
+    },
+    {
+      "tag": "flower_en",
+      "patterns": [
+        "Tell me about flowers",
+        "What are the most popular flowers?",
+        "Recommend me some pretty flowers",
+        "What flowers are ideal for a garden?",
+        "Tell me about colorful flowers"
+      ],
+      "responses": [
+        "Roses are one of the most popular flowers, known for their beauty and variety of colors. They are symbols of love and passion.",
+        "Sunflowers are large, bright flowers that follow the sun. They are symbols of happiness and loyalty.",
+        "Tulips are highly prized for their simplicity and vibrant colors. They are popular in spring.",
+        "Orchids are elegant and exotic flowers, often associated with luxury and refined beauty.",
+        "Daisies are simple yet lovely flowers, with white petals and a yellow center. They symbolize purity and innocence.",
+        "Lilies are fragrant and beautiful flowers, known for their elegance. They are associated with renewal and purity.",
+        "Peonies are large, colorful flowers, highly prized in gardens because of their beauty and sweet scent.",
+        "Tulips come in a variety of colors, including red, pink, white, and yellow, and are very popular in gardens during spring.",
+        "Violets are delicate little flowers with a subtle scent, Often associated with modesty and loyalty.",
+        "Lilies are large, fragrant flowers commonly found in shades of white, yellow, and orange, known for their beauty and elegance.",
+        "Lavenders have a lovely scent and are used in both gardens and essential oils. They are known for their relaxing properties.",
+        "Lilacs are flowers with shades of purple and white, which bloom in spring. They are symbols of beauty and first love.",
+        "If you like indoor flowers, African violets are a great choice, known for their vibrant colors and easy care.",
+        "Chrysanthemums are popular fall flowers, with a wide variety of colors and shapes, and are symbols of longevity and health."
+      ]
+    }
   ]
 }
