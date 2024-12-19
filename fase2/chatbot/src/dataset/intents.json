@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "intents": [
       {
         "tag": "saludo_es",
@@ -590,133 +589,629 @@
           "If you have oily skin, choose matte products that control shine. For dry skin, look for moisturizing formulas and foundations with a luminous finish.",
           "Lip shades can vary depending on the occasion: nude shades are ideal for day to day, while reds or burgundies add elegance for the night."
         ]
+      },
+      {
+        "tag": "contabilidad_es",
+        "patterns": [
+          "Háblame de contabilidad",
+          "¿Qué es la contabilidad?",
+          "¿Cuáles son los principios de la contabilidad?",
+          "¿Qué es un balance general?",
+          "Explícame qué es el libro mayor",
+          "¿Cómo se hace un estado de resultados?"
+        ],
+        "responses": [
+          "La contabilidad es la disciplina que se encarga de estudiar, medir y analizar el patrimonio y la situación económica de una empresa u organización. A través de ella, se lleva un registro sistemático de las transacciones financieras.",
+          "Algunos principios fundamentales de la contabilidad incluyen: el principio de la entidad económica, el principio de la continuidad, el principio de la uniformidad y el principio de la prudencia.",
+          "Un balance general es un estado financiero que muestra la situación económica de una empresa en un momento específico. Se divide en tres partes: activos, pasivos y patrimonio neto.",
+          "El libro mayor es un registro contable en el cual se anotan todas las transacciones financieras de una empresa, organizadas por cuentas. Cada cuenta tiene su propio registro, lo que permite un análisis detallado de cada categoría.",
+          "El estado de resultados es un informe financiero que muestra los ingresos, costos y gastos de una empresa durante un periodo de tiempo determinado. Ayuda a determinar la rentabilidad de la empresa en ese periodo.",
+          "Los estados financieros más comunes incluyen el balance general, el estado de resultados y el estado de flujos de efectivo. Estos informes permiten a los interesados conocer la salud financiera de una empresa.",
+          "Un activo es todo aquello que posee un valor económico para la empresa, como el dinero en efectivo, los equipos, las propiedades y las cuentas por cobrar. Los pasivos son las deudas y obligaciones de la empresa, y el patrimonio neto es la diferencia entre los activos y los pasivos, lo que representa el valor residual de la empresa.",
+          "En contabilidad, las cuentas se dividen en diferentes categorías como activos, pasivos, ingresos, gastos y patrimonio. Cada transacción afecta una o más de estas cuentas, y se registra en los libros contables de acuerdo con el principio de la partida doble.",
+          "El ciclo contable es el proceso completo de registro, clasificación y resumen de las transacciones financieras de una empresa. Este ciclo incluye la recopilación de documentos, el registro en los libros contables, la elaboración de los estados financieros y la auditoría."
+        ]
+      },
+      {
+        "tag": "contabilidad_en",
+        "patterns": [
+          "Tell me about accounting",
+          "What is accounting?",
+          "What are the principles of accounting?",
+          "What is a balance sheet?",
+          "Explain to me what the general ledger is",
+          "How do you make an income statement?"
+        ],
+        "responses": [
+          "Accounting is the discipline that is responsible for studying, measuring and analyzing the assets and economic situation of a company or organization. Through it, a systematic record of financial transactions is kept.",
+          "Some fundamental principles of accounting include: the principle of the economic entity, the principle of continuity, the principle of uniformity and the principle of prudence.",
+          "A balance sheet is a financial statement that shows the economic situation of a company at a specific time. It is divided into three parts: assets, liabilities and net worth.",
+          "The general ledger is an accounting record in which all the financial transactions of a company are recorded, organized by accounts. Each account has its own record, which allows a detailed analysis of each category.",
+          "The income statement is a financial report that shows the income, costs and expenses of a company during a given period of time. It helps determine the profitability of the company in that period.",
+          "The most common financial statements include the balance sheet, the income statement and the cash flow statement. These reports allow stakeholders to understand the financial health of a company.",
+          "An asset is anything that has an economic value to the company, such as cash, equipment, property, and accounts receivable. Liabilities are the debts and obligations of the company, and net worth is the difference between assets and liabilities, which represents the residual value of the company.",
+          "In accounting, accounts are divided into different categories such as assets, liabilities, income, expenses, and equity. Each transaction affects one or more of these accounts, and is recorded in the accounting books according to the double-entry principle.",
+          "The accounting cycle is the complete process of recording, classifying, and summarizing the financial transactions of a company. This cycle includes collecting documents, recording them in the accounting books, preparing financial statements, and auditing."
+        ]
+      },
+      {
+        "tag": "accounting_es",
+        "patterns": [
+          "Háblame de contabilidad",
+          "¿Qué es la contabilidad?",
+          "¿Cuáles son los principios de la contabilidad?",
+          "¿Qué es un balance general?",
+          "Explícame qué es el libro mayor",
+          "¿Cómo se hace un estado de resultados?"
+        ],
+        "responses": [
+          "La contabilidad es la disciplina que se encarga de estudiar, medir y analizar el patrimonio y la situación económica de una empresa u organización. A través de ella, se lleva un registro sistemático de las transacciones financieras.",
+          "Algunos principios fundamentales de la contabilidad incluyen: el principio de la entidad económica, el principio de la continuidad, el principio de la uniformidad y el principio de la prudencia.",
+          "Un balance general es un estado financiero que muestra la situación económica de una empresa en un momento específico. Se divide en tres partes: activos, pasivos y patrimonio neto.",
+          "El libro mayor es un registro contable en el cual se anotan todas las transacciones financieras de una empresa, organizadas por cuentas. Cada cuenta tiene su propio registro, lo que permite un análisis detallado de cada categoría.",
+          "El estado de resultados es un informe financiero que muestra los ingresos, costos y gastos de una empresa durante un periodo de tiempo determinado. Ayuda a determinar la rentabilidad de la empresa en ese periodo.",
+          "Los estados financieros más comunes incluyen el balance general, el estado de resultados y el estado de flujos de efectivo. Estos informes permiten a los interesados conocer la salud financiera de una empresa.",
+          "Un activo es todo aquello que posee un valor económico para la empresa, como el dinero en efectivo, los equipos, las propiedades y las cuentas por cobrar. Los pasivos son las deudas y obligaciones de la empresa, y el patrimonio neto es la diferencia entre los activos y los pasivos, lo que representa el valor residual de la empresa.",
+          "En contabilidad, las cuentas se dividen en diferentes categorías como activos, pasivos, ingresos, gastos y patrimonio. Cada transacción afecta una o más de estas cuentas, y se registra en los libros contables de acuerdo con el principio de la partida doble.",
+          "El ciclo contable es el proceso completo de registro, clasificación y resumen de las transacciones financieras de una empresa. Este ciclo incluye la recopilación de documentos, el registro en los libros contables, la elaboración de los estados financieros y la auditoría."
+        ]
+      },
+      {
+        "tag": "accounting_en",
+        "patterns": [
+          "Tell me about accounting",
+          "What is accounting?",
+          "What are the principles of accounting?",
+          "What is a balance sheet?",
+          "Explain to me what the general ledger is",
+          "How do you make an income statement?"
+        ],
+        "responses": [
+          "Accounting is the discipline that is responsible for studying, measuring and analyzing the assets and economic situation of a company or organization. Through it, a systematic record of financial transactions is kept.",
+          "Some fundamental principles of accounting include: the principle of the economic entity, the principle of continuity, the principle of uniformity and the principle of prudence.",
+          "A balance sheet is a financial statement that shows the economic situation of a company at a specific time. It is divided into three parts: assets, liabilities and net worth.",
+          "The general ledger is an accounting record in which all the financial transactions of a company are recorded, organized by accounts. Each account has its own record, which allows a detailed analysis of each category.",
+          "The income statement is a financial report that shows the income, costs and expenses of a company during a given period of time. It helps determine the profitability of the company in that period.",
+          "The most common financial statements include the balance sheet, the income statement and the cash flow statement. These reports allow stakeholders to understand the financial health of a company.",
+          "An asset is anything that has an economic value to the company, such as cash, equipment, property, and accounts receivable. Liabilities are the debts and obligations of the company, and net worth is the difference between assets and liabilities, which represents the residual value of the company.",
+          "In accounting, accounts are divided into different categories such as assets, liabilities, income, expenses, and equity. Each transaction affects one or more of these accounts, and is recorded in the accounting books according to the double-entry principle.",
+          "The accounting cycle is the complete process of recording, classifying, and summarizing the financial transactions of a company. This cycle includes collecting documents, recording them in the accounting books, preparing financial statements, and auditing."
+        ]
+      },
+      {
+        "tag": "deporte_es",
+        "patterns": [
+          "Háblame de deportes",
+          "¿Cuáles son los deportes más populares?",
+          "¿Qué deportes se practican en los Juegos Olímpicos?",
+          "¿Cuáles son los deportes más antiguos?",
+          "¿Qué deportes se juegan en equipo?"
+        ],
+        "responses": [
+          "Aquí tienes información sobre algunos de los deportes más populares y sus características:",
+          "'Fútbol' es el deporte más popular del mundo, jugado en equipos de 11 jugadores, cuyo objetivo es meter el balón en la portería contraria. Es especialmente popular en Europa, América Latina y África.",
+          "'Baloncesto' es otro deporte muy popular, jugado por dos equipos de cinco jugadores, donde el objetivo es encestar el balón en el aro del equipo contrario. Es muy común en Estados Unidos y Europa.",
+          "'Béisbol' es un deporte que se juega con un bate y una pelota, con dos equipos de nueve jugadores cada uno. Es muy popular en países como Estados Unidos, Japón y Cuba.",
+          "'Tenis' es un deporte que se juega entre dos jugadores o dos equipos de dos jugadores. Se juega con una raqueta y una pelota, y el objetivo es golpear la pelota para que pase sobre una red y caiga en el campo contrario.",
+          "'Atletismo' abarca una serie de disciplinas como carreras, saltos y lanzamientos. Es uno de los deportes más antiguos y se practica en las competiciones de los Juegos Olímpicos.",
+          "'Natación' es otro deporte antiguo que se practica en piscinas o en aguas abiertas. Los nadadores compiten en diferentes estilos como libre, espalda, pecho y mariposa.",
+          "'Fútbol Americano' es muy popular en Estados Unidos, donde los equipos luchan por avanzar el balón a través del campo mientras evitan que el equipo contrario lo haga.",
+          "'Ciclismo' es un deporte que se puede practicar en carretera, montaña o pista, y es conocido por eventos importantes como el Tour de Francia.",
+          "'Boxeo' es un deporte de combate en el que dos participantes se enfrentan usando guantes y luchan en un ring. Es un deporte popular en muchas partes del mundo, especialmente en América Latina y los EE. UU.",
+          "'Rugby' es un deporte de equipo originado en Inglaterra, en el cual dos equipos compiten por llevar el balón hacia la zona de gol del contrario, sin utilizar una pelota redonda como en el fútbol."
+        ]
+      },
+      {
+        "tag": "deporte_en",
+        "patterns": [
+          "Tell me about sports",
+          "What are the most popular sports?",
+          "What sports are played in the Olympic Games?",
+          "What are the oldest sports?",
+          "What sports are played in teams?"
+        ],
+        "responses": [
+          "Here is some information about some of the most popular sports and their characteristics:",
+          "'Soccer' is the most popular sport in the world, played by teams of 11 players, whose objective is to get the ball into the opposing team's goal. It is especially popular in Europe, Latin America and Africa.",
+          "'Basketball' is another very popular sport, played by two teams of five players, where the objective is to shoot the ball into the opposing team's hoop. It is very common in the United States and Europe.",
+          "'Baseball' is a sport played with a bat and ball, with two teams of nine players each. It is very popular in countries such as the United States, Japan and Cuba.",
+          "'Tennis' is a sport played between two players or two teams of two players. It is played with a racket and a ball, and the objective is to hit the ball so that it passes over a net and lands in the opposing field.",
+          "'Athletics' covers a number of disciplines such as running, jumping and throwing. It is one of the oldest sports and is practiced in competitions at the Olympic Games.",
+          "'Swimming' is another ancient sport that is practiced in pools or open water. Swimmers compete in different styles such as freestyle, backstroke, breaststroke and butterfly.",
+          "'American football' is very popular in the United States, where teams fight to advance the ball across the field while preventing the opposing team from doing so.",
+          "'Cycling' is a sport that can be practiced on the road, mountain or track, and is known for major events such as the Tour de France.",
+          "'Boxing' is a combat sport in which two participants face each other using gloves and fight in a ring. It is a popular sport in many parts of the world, especially in Latin America and the USA.",
+          "'Rugby' is a team sport originated in England, in which two teams compete to get the ball into the opponent's goal area, without using a round ball as in soccer."
+        ]
+      },
+      {
+        "tag": "sport_es",
+        "patterns": [
+          "Háblame de deportes",
+          "¿Cuáles son los deportes más populares?",
+          "¿Qué deportes se practican en los Juegos Olímpicos?",
+          "¿Cuáles son los deportes más antiguos?",
+          "¿Qué deportes se juegan en equipo?"
+        ],
+        "responses": [
+          "Aquí tienes información sobre algunos de los deportes más populares y sus características:",
+          "'Fútbol' es el deporte más popular del mundo, jugado en equipos de 11 jugadores, cuyo objetivo es meter el balón en la portería contraria. Es especialmente popular en Europa, América Latina y África.",
+          "'Baloncesto' es otro deporte muy popular, jugado por dos equipos de cinco jugadores, donde el objetivo es encestar el balón en el aro del equipo contrario. Es muy común en Estados Unidos y Europa.",
+          "'Béisbol' es un deporte que se juega con un bate y una pelota, con dos equipos de nueve jugadores cada uno. Es muy popular en países como Estados Unidos, Japón y Cuba.",
+          "'Tenis' es un deporte que se juega entre dos jugadores o dos equipos de dos jugadores. Se juega con una raqueta y una pelota, y el objetivo es golpear la pelota para que pase sobre una red y caiga en el campo contrario.",
+          "'Atletismo' abarca una serie de disciplinas como carreras, saltos y lanzamientos. Es uno de los deportes más antiguos y se practica en las competiciones de los Juegos Olímpicos.",
+          "'Natación' es otro deporte antiguo que se practica en piscinas o en aguas abiertas. Los nadadores compiten en diferentes estilos como libre, espalda, pecho y mariposa.",
+          "'Fútbol Americano' es muy popular en Estados Unidos, donde los equipos luchan por avanzar el balón a través del campo mientras evitan que el equipo contrario lo haga.",
+          "'Ciclismo' es un deporte que se puede practicar en carretera, montaña o pista, y es conocido por eventos importantes como el Tour de Francia.",
+          "'Boxeo' es un deporte de combate en el que dos participantes se enfrentan usando guantes y luchan en un ring. Es un deporte popular en muchas partes del mundo, especialmente en América Latina y los EE. UU.",
+          "'Rugby' es un deporte de equipo originado en Inglaterra, en el cual dos equipos compiten por llevar el balón hacia la zona de gol del contrario, sin utilizar una pelota redonda como en el fútbol."
+        ]
+      },
+      {
+        "tag": "sport_en",
+        "patterns": [
+          "Tell me about sports",
+          "What are the most popular sports?",
+          "What sports are played in the Olympic Games?",
+          "What are the oldest sports?",
+          "What sports are played in teams?"
+        ],
+        "responses": [
+          "Here is some information about some of the most popular sports and their characteristics:",
+          "'Soccer' is the most popular sport in the world, played by teams of 11 players, whose objective is to get the ball into the opposing team's goal. It is especially popular in Europe, Latin America and Africa.",
+          "'Basketball' is another very popular sport, played by two teams of five players, where the objective is to shoot the ball into the opposing team's hoop. It is very common in the United States and Europe.",
+          "'Baseball' is a sport played with a bat and ball, with two teams of nine players each. It is very popular in countries such as the United States, Japan and Cuba.",
+          "'Tennis' is a sport played between two players or two teams of two players. It is played with a racket and a ball, and the objective is to hit the ball so that it passes over a net and lands in the opposing field.",
+          "'Athletics' covers a number of disciplines such as running, jumping and throwing. It is one of the oldest sports and is practiced in competitions at the Olympic Games.",
+          "'Swimming' is another ancient sport that is practiced in pools or open water. Swimmers compete in different styles such as freestyle, backstroke, breaststroke and butterfly.",
+          "'American football' is very popular in the United States, where teams fight to advance the ball across the field while preventing the opposing team from doing so.",
+          "'Cycling' is a sport that can be practiced on the road, mountain or track, and is known for major events such as the Tour de France.",
+          "'Boxing' is a combat sport in which two participants face each other using gloves and fight in a ring. It is a popular sport in many parts of the world, especially in Latin America and the USA.",
+          "'Rugby' is a team sport originated in England, in which two teams compete to get the ball into the opponent's goal area, without using a round ball as in soccer."
+        ]
+      },
+      {
+        "tag": "futbol_es",
+        "patterns": [
+          "Háblame de fútbol",
+          "¿Cuáles son los mejores equipos de fútbol?",
+          "¿Qué competiciones de fútbol existen?",
+          "¿Quiénes son los jugadores más famosos del fútbol?",
+          "¿Cuál es la historia del fútbol?"
+        ],
+        "responses": [
+          "El fútbol es el deporte más popular del mundo, jugado en equipos de 11 jugadores. El objetivo es marcar más goles que el equipo contrario en un campo rectangular con dos porterías.",
+          "Algunos de los equipos más destacados en la historia del fútbol son:",
+          "'Real Madrid': Considerado uno de los clubes más grandes y exitosos del mundo, con numerosas victorias en la Liga de Campeones de la UEFA y La Liga.",
+          "'FC Barcelona': Otro gigante del fútbol español, conocido por su estilo de juego tiki-taka y por ser el club que ha visto a leyendas como Lionel Messi.",
+          "'Manchester United': Uno de los clubes más exitosos en la historia del fútbol inglés, con múltiples títulos de la Premier League y la Liga de Campeones de la UEFA.",
+          "'Bayern Munich': El club más exitoso de Alemania, con una gran cantidad de títulos nacionales e internacionales.",
+          "'Juventus': Un club de fútbol italiano con una gran tradición en la Serie A y en competiciones internacionales.",
+          "'Paris Saint-Germain (PSG)': Un equipo francés que ha crecido rápidamente en popularidad y éxito gracias a la inversión de grandes figuras como Neymar y Messi.",
+          "Las competiciones más importantes en el fútbol incluyen:",
+          "'La Copa del Mundo de la FIFA': El torneo internacional más prestigioso, jugado cada cuatro años, donde compiten selecciones nacionales de todo el mundo.",
+          "'La Liga de Campeones de la UEFA': La competición de clubes más importante de Europa, que reúne a los mejores equipos de fútbol del continente.",
+          "'La Copa América': El torneo de selecciones más importante de América Latina, que reúne a países de la región.",
+          "'La Copa Africana de Naciones': El torneo más importante de fútbol de selecciones en África.",
+          "'La Premier League': La liga de fútbol más famosa de Inglaterra, conocida por su alta competitividad.",
+          "'La Liga': La liga española, que ha sido hogar de jugadores legendarios como Cristiano Ronaldo, Lionel Messi y muchos otros.",
+          "'Serie A': La liga de fútbol profesional de Italia, famosa por equipos como Juventus, AC Milan e Inter de Milán.",
+          "Algunos de los jugadores más famosos en la historia del fútbol incluyen:",
+          "'Pelé': Considerado uno de los mejores futbolistas de todos los tiempos, quien ganó tres Copas del Mundo con Brasil.",
+          "'Diego Maradona': Famoso por su habilidad y su famoso gol de la 'Mano de Dios' en la Copa del Mundo de 1986.",
+          "'Lionel Messi': Considerado por muchos como uno de los mejores jugadores de todos los tiempos, ganador de múltiples Balones de Oro.",
+          "'Cristiano Ronaldo': Otro de los grandes futbolistas de la historia, conocido por su increíble capacidad física y sus logros con equipos como el Manchester United, Real Madrid y Juventus.",
+          "'Zinedine Zidane': Famoso por su clase en el campo y por su éxito como entrenador del Real Madrid.",
+          "'Neymar': Uno de los futbolistas más talentosos de la generación actual, conocido por su habilidad técnica y su paso por el Barcelona y el PSG."
+        ]
+      },
+      {
+        "tag": "futbol_en",
+        "patterns": [
+          "Tell me about football",
+          "What are the best football teams?",
+          "What football competitions are there?",
+          "Who are the most famous football players?",
+          "What is the history of football?"
+        ],
+        "responses": [
+          "Football is the most popular sport in the world, played in teams of 11 players. The objective is to score more goals than the opposing team on a rectangular field with two goals.",
+          "Some of the most notable teams in football history are:",
+          "'Real Madrid': Considered one of the biggest and most successful clubs in the world, with numerous UEFA Champions League and La Liga victories.",
+          "'FC Barcelona': Another giant of Spanish football, known for its tiki-taka style of play and for being the club that has seen legends such as Lionel Messi.",
+          "'Manchester United': One of the most successful clubs in English football history, with multiple Premier League and UEFA Champions League titles.",
+          "'Bayern Munich': The most successful club in Germany, with a wealth of national and international titles.",
+          "'Juventus': An Italian football club with a great tradition in Serie A and international competitions.",
+          "'Paris Saint-Germain (PSG)': A French team that has grown rapidly in popularity and success thanks to the investment of big names like Neymar and Messi.",
+          "The most important competitions in football include:",
+          "'FIFA World Cup': The most prestigious international tournament, played every four years, where national teams from around the world compete.",
+          "'UEFA Champions League': The most important club competition in Europe, bringing together the best football teams on the continent.",
+          "'Copa America': The most important national team tournament in Latin America, bringing together countries from the region.",
+          "'Africa Cup of Nations': The most important national team football tournament in Africa.",
+          "'Premier League': The most famous football league in England, known for its high competitiveness.",
+          "'La Liga': The Spanish league, which has been home to legendary players like Cristiano Ronaldo, Lionel Messi and many others.",
+          "'Serie A': The professional football league in Italy, famous for teams like Juventus, AC Milan, and Inter Milan.",
+          "Some of the most famous players in football history include:",
+          "'Pelé': Considered one of the greatest footballers of all time, who won three World Cups with Brazil.",
+          "'Diego Maradona': Famous for his skill and his famous 'Hand of God' goal at the 1986 World Cup.",
+          "'Lionel Messi': Considered by many to be one of the greatest players of all time, winner of multiple Ballon d'Or awards.",
+          "'Cristiano Ronaldo': Another of the great footballers in history, known for his incredible physical ability and his achievements with teams like Manchester United, Real Madrid, and Juventus.",
+          "'Zinedine Zidane': Famous for his class on the field and for his success as manager of Real Madrid.",
+          "'Neymar': One of the most talented footballers of the current generation, known for his technical ability and his time with Barcelona and PSG."
+        ]
+      },
+      {
+        "tag": "soccer_es",
+        "patterns": [
+          "Háblame de fútbol",
+          "¿Cuáles son los mejores equipos de fútbol?",
+          "¿Qué competiciones de fútbol existen?",
+          "¿Quiénes son los jugadores más famosos del fútbol?",
+          "¿Cuál es la historia del fútbol?"
+        ],
+        "responses": [
+          "El fútbol es el deporte más popular del mundo, jugado en equipos de 11 jugadores. El objetivo es marcar más goles que el equipo contrario en un campo rectangular con dos porterías.",
+          "Algunos de los equipos más destacados en la historia del fútbol son:",
+          "'Real Madrid': Considerado uno de los clubes más grandes y exitosos del mundo, con numerosas victorias en la Liga de Campeones de la UEFA y La Liga.",
+          "'FC Barcelona': Otro gigante del fútbol español, conocido por su estilo de juego tiki-taka y por ser el club que ha visto a leyendas como Lionel Messi.",
+          "'Manchester United': Uno de los clubes más exitosos en la historia del fútbol inglés, con múltiples títulos de la Premier League y la Liga de Campeones de la UEFA.",
+          "'Bayern Munich': El club más exitoso de Alemania, con una gran cantidad de títulos nacionales e internacionales.",
+          "'Juventus': Un club de fútbol italiano con una gran tradición en la Serie A y en competiciones internacionales.",
+          "'Paris Saint-Germain (PSG)': Un equipo francés que ha crecido rápidamente en popularidad y éxito gracias a la inversión de grandes figuras como Neymar y Messi.",
+          "Las competiciones más importantes en el fútbol incluyen:",
+          "'La Copa del Mundo de la FIFA': El torneo internacional más prestigioso, jugado cada cuatro años, donde compiten selecciones nacionales de todo el mundo.",
+          "'La Liga de Campeones de la UEFA': La competición de clubes más importante de Europa, que reúne a los mejores equipos de fútbol del continente.",
+          "'La Copa América': El torneo de selecciones más importante de América Latina, que reúne a países de la región.",
+          "'La Copa Africana de Naciones': El torneo más importante de fútbol de selecciones en África.",
+          "'La Premier League': La liga de fútbol más famosa de Inglaterra, conocida por su alta competitividad.",
+          "'La Liga': La liga española, que ha sido hogar de jugadores legendarios como Cristiano Ronaldo, Lionel Messi y muchos otros.",
+          "'Serie A': La liga de fútbol profesional de Italia, famosa por equipos como Juventus, AC Milan e Inter de Milán.",
+          "Algunos de los jugadores más famosos en la historia del fútbol incluyen:",
+          "'Pelé': Considerado uno de los mejores futbolistas de todos los tiempos, quien ganó tres Copas del Mundo con Brasil.",
+          "'Diego Maradona': Famoso por su habilidad y su famoso gol de la 'Mano de Dios' en la Copa del Mundo de 1986.",
+          "'Lionel Messi': Considerado por muchos como uno de los mejores jugadores de todos los tiempos, ganador de múltiples Balones de Oro.",
+          "'Cristiano Ronaldo': Otro de los grandes futbolistas de la historia, conocido por su increíble capacidad física y sus logros con equipos como el Manchester United, Real Madrid y Juventus.",
+          "'Zinedine Zidane': Famoso por su clase en el campo y por su éxito como entrenador del Real Madrid.",
+          "'Neymar': Uno de los futbolistas más talentosos de la generación actual, conocido por su habilidad técnica y su paso por el Barcelona y el PSG."
+        ]
+      },
+      {
+        "tag": "soccer_en",
+        "patterns": [
+          "Tell me about football",
+          "What are the best football teams?",
+          "What football competitions are there?",
+          "Who are the most famous football players?",
+          "What is the history of football?"
+        ],
+        "responses": [
+          "Football is the most popular sport in the world, played in teams of 11 players. The objective is to score more goals than the opposing team on a rectangular field with two goals.",
+          "Some of the most notable teams in football history are:",
+          "'Real Madrid': Considered one of the biggest and most successful clubs in the world, with numerous UEFA Champions League and La Liga victories.",
+          "'FC Barcelona': Another giant of Spanish football, known for its tiki-taka style of play and for being the club that has seen legends such as Lionel Messi.",
+          "'Manchester United': One of the most successful clubs in English football history, with multiple Premier League and UEFA Champions League titles.",
+          "'Bayern Munich': The most successful club in Germany, with a wealth of national and international titles.",
+          "'Juventus': An Italian football club with a great tradition in Serie A and international competitions.",
+          "'Paris Saint-Germain (PSG)': A French team that has grown rapidly in popularity and success thanks to the investment of big names like Neymar and Messi.",
+          "The most important competitions in football include:",
+          "'FIFA World Cup': The most prestigious international tournament, played every four years, where national teams from around the world compete.",
+          "'UEFA Champions League': The most important club competition in Europe, bringing together the best football teams on the continent.",
+          "'Copa America': The most important national team tournament in Latin America, bringing together countries from the region.",
+          "'Africa Cup of Nations': The most important national team football tournament in Africa.",
+          "'Premier League': The most famous football league in England, known for its high competitiveness.",
+          "'La Liga': The Spanish league, which has been home to legendary players like Cristiano Ronaldo, Lionel Messi and many others.",
+          "'Serie A': The professional football league in Italy, famous for teams like Juventus, AC Milan, and Inter Milan.",
+          "Some of the most famous players in football history include:",
+          "'Pelé': Considered one of the greatest footballers of all time, who won three World Cups with Brazil.",
+          "'Diego Maradona': Famous for his skill and his famous 'Hand of God' goal at the 1986 World Cup.",
+          "'Lionel Messi': Considered by many to be one of the greatest players of all time, winner of multiple Ballon d'Or awards.",
+          "'Cristiano Ronaldo': Another of the great footballers in history, known for his incredible physical ability and his achievements with teams like Manchester United, Real Madrid, and Juventus.",
+          "'Zinedine Zidane': Famous for his class on the field and for his success as manager of Real Madrid.",
+          "'Neymar': One of the most talented footballers of the current generation, known for his technical ability and his time with Barcelona and PSG."
+        ]
+      },
+      {
+        "tag": "animal_es",
+        "patterns": [
+          "Háblame de animales",
+          "¿Cuáles son los animales más peligrosos?",
+          "¿Qué animales viven en la selva?",
+          "¿Cuáles son los animales más grandes del mundo?",
+          "¿Cuáles son los animales marinos más interesantes?"
+        ],
+        "responses": [
+          "Los animales son seres vivos que habitan en diversos ecosistemas, y existen miles de especies en todo el mundo. Aquí tienes algunos ejemplos de animales populares y sus características:",
+          "'León': El león es conocido como el 'rey de la selva'. Es un gran felino que vive en las sabanas de África y es conocido por su melena y su poderosa caza en manada.",
+          "'Elefante': Los elefantes son los mamíferos terrestres más grandes. Tienen una memoria increíble y son conocidos por su inteligencia y su trompa.",
+          "'Ballena Azul': Este es el animal más grande del planeta, con una longitud de hasta 30 metros. Las ballenas azules viven en los océanos y se alimentan principalmente de kril.",
+          "'Cocodrilo': Los cocodrilos son reptiles que viven en ríos, lagos y pantanos. Son conocidos por su tamaño y su feroz naturaleza, siendo uno de los depredadores más antiguos de la Tierra.",
+          "'Águila': Las águilas son aves rapaces que se encuentran en todo el mundo. Son famosas por su aguda visión y su capacidad para cazar presas desde grandes alturas.",
+          "'Jirafa': La jirafa es el animal terrestre más alto del mundo, conocida por su largo cuello y su capacidad para comer hojas altas de los árboles en la sabana africana.",
+          "'Panda': Los pandas son conocidos por su apariencia adorable, pero también son animales muy fuertes. Se alimentan principalmente de bambú y viven en las montañas de China.",
+          "'Tigre': El tigre es otro gran felino que habita en Asia. Es famoso por sus rayas y su agilidad en la caza.",
+          "'Cebra': Las cebras son animales sociales que viven en grupos llamados manadas. Son conocidas por sus rayas blancas y negras que las hacen únicas entre los herbívoros.",
+          "'Koala': El koala es un marsupial que vive en los árboles de eucalipto en Australia. Son conocidos por su aspecto tierno y por pasar la mayor parte de su vida durmiendo.",
+          "'Delfín': Los delfines son mamíferos marinos que viven en los océanos. Son conocidos por su inteligencia y su naturaleza juguetona.",
+          "Los animales tienen diferentes hábitats según su especie, como la selva, la sabana, los océanos y las montañas. También algunos, como los camellos, están adaptados para vivir en lugares áridos como el desierto."
+        ]
+      },
+      {
+        "tag": "animal_en",
+        "patterns": [
+          "Tell me about animals",
+          "What are the most dangerous animals?",
+          "What animals live in the jungle?",
+          "What are the largest animals in the world?",
+          "What are the most interesting marine animals?"
+        ],
+        "responses": [
+          "Animals are living beings that inhabit diverse ecosystems, and there are thousands of species around the world. Here are some examples of popular animals and their characteristics:",
+          "'Lion': The lion is known as the 'king of the jungle'. It is a large cat that lives in the savannahs of Africa and is known for its mane and powerful pack hunting.",
+          "'Elephant': Elephants are the largest land mammals. They have incredible memory and are known for their intelligence and trunk.",
+          "'Blue Whale': This is the largest animal on the planet, reaching up to 30 meters in length. Blue whales live in the oceans and feed primarily on krill.",
+          "'Crocodile': Crocodiles are reptiles that live in rivers, lakes, and swamps. They are known for their size and ferocious nature, being one of the oldest predators on Earth.",
+          "'Eagle': Eagles are birds of prey found all over the world. They are famous for their keen vision and ability to hunt prey from great heights.",
+          "'Giraffe': The giraffe is the tallest land animal in the world, known for its long neck and ability to eat leaves high up in the trees of the African savannah.",
+          "'Panda': Pandas are known for their adorable appearance, but they are also very strong animals. They feed primarily on bamboo and live in the mountains of China.",
+          "'Tiger': The tiger is another big cat that lives in Asia. It is famous for its stripes and agility in hunting.",
+          "'Zebra': Zebras are social animals that live in groups called herds. They are known for their black and white stripes that make them unique among herbivores.",
+          "'Koala': The koala is a marsupial that lives in eucalyptus trees in Australia. They are known for their cute appearance and for spending most of their lives sleeping.",
+          "'Dolphin': Dolphins are marine mammals that live in the oceans. They are known for their intelligence and playful nature.",
+          "Animals have different habitats depending on their species, such as the jungle, the savannah, the oceans and the mountains. Some, like camels, are also adapted to live in arid places like the desert."
+        ]
+      },
+      {
+        "tag": "computadora_es",
+        "patterns": [
+          "Háblame de computadoras",
+          "¿Cuáles son los componentes principales de una computadora?",
+          "¿Qué tipos de computadoras existen?",
+          "¿Cuál es la historia de las computadoras?",
+          "¿Cuáles son las computadoras más potentes del mundo?"
+        ],
+        "responses": [
+          "Las computadoras son máquinas electrónicas que procesan datos y realizan cálculos de manera rápida y precisa. Están compuestas por varios componentes esenciales:",
+          "'CPU (Unidad Central de Procesamiento)': La CPU es el cerebro de la computadora, responsable de ejecutar las instrucciones de los programas y coordinar las operaciones del sistema.",
+          "'Memoria RAM (Memoria de Acceso Aleatorio)': La RAM es la memoria temporal que la computadora utiliza para almacenar datos y programas que se están ejecutando en el momento.",
+          "'Disco duro (HDD) o unidad de estado sólido (SSD)': Son los dispositivos de almacenamiento donde se guardan los datos y programas. Los SSD son más rápidos que los HDD.",
+          "'Placa base (Motherboard)': La placa base es la tarjeta principal que conecta todos los componentes de la computadora, permitiendo que se comuniquen entre sí.",
+          "'Tarjeta gráfica (GPU)': La GPU es responsable de procesar los gráficos y las imágenes en una computadora, especialmente importante para juegos y aplicaciones de diseño gráfico.",
+          "'Fuente de alimentación': La fuente de alimentación convierte la corriente eléctrica para que pueda ser utilizada por la computadora.",
+          "Existen varios tipos de computadoras, que varían en tamaño, capacidad y uso:",
+          "'Computadoras de escritorio': Son las computadoras tradicionales, que suelen tener un monitor, una torre y periféricos como teclado y ratón. Son populares para el uso doméstico y oficinas.",
+          "'Portátiles': Son computadoras compactas y portátiles, que incluyen una pantalla y un teclado integrados. Las laptops y las ultrabooks son ejemplos comunes.",
+          "'Supercomputadoras': Son las computadoras más potentes del mundo, utilizadas para tareas de alto rendimiento, como la investigación científica y el modelado climático. Ejemplos incluyen la 'Fugaku' en Japón.",
+          "'Tabletas': Son dispositivos móviles que combinan la funcionalidad de una computadora con la portabilidad de un teléfono inteligente. Funcionan con pantallas táctiles y son populares para navegar por Internet y ver videos.",
+          "'Estaciones de trabajo': Son computadoras diseñadas para tareas profesionales de alto rendimiento, como diseño gráfico, modelado 3D y programación de software.",
+          "'Computadoras embebidas': Son sistemas computacionales dedicados a realizar tareas específicas, como en automóviles, electrodomésticos y dispositivos electrónicos.",
+          "La historia de las computadoras comenzó con las primeras máquinas de calcular, como la máquina analítica de Charles Babbage. Sin embargo, las computadoras modernas comenzaron a tomar forma en el siglo XX:",
+          "La 'ENIAC' (Electronic Numerical Integrator and Computer), desarrollada en la década de 1940, fue una de las primeras computadoras electrónicas de propósito general.",
+          "La evolución de los microprocesadores en la década de 1970 permitió la creación de computadoras personales como la 'Apple I' y la 'Commodore PET', que trajeron las computadoras a los hogares y oficinas.",
+          "En los últimos años, las computadoras han evolucionado con la aparición de la inteligencia artificial, la computación cuántica y avances en la miniaturización de los componentes.",
+          "Las computadoras más potentes del mundo se utilizan para tareas complejas como simulaciones científicas, inteligencia artificial y predicción meteorológica. Un ejemplo es la 'Fugaku', que se considera la supercomputadora más rápida del mundo."
+        ]
+      },
+      {
+        "tag": "computadora_en",
+        "patterns": [
+          "Tell me about computers",
+          "What are the main components of a computer?",
+          "What types of computers are there?",
+          "What is the history of computers?",
+          "What are the most powerful computers in the world?"
+        ],
+        "responses": [
+          "Computers are electronic machines that process data and perform calculations quickly and accurately. They are made up of several essential components:",
+          "'CPU (Central Processing Unit)': The CPU is the brain of the computer, responsible for executing program instructions and coordinating system operations.",
+          "'RAM (Random Access Memory)': RAM is the temporary memory that the computer uses to store data and programs that are currently running.",
+          "'Hard disk (HDD) or solid state drive (SSD)': These are the storage devices where data and programs are stored. SSDs are faster than HDDs.",
+          "'Motherboard': The motherboard is the main card that connects all the components of the computer, allowing them to communicate with each other.",
+          "'Graphics card (GPU)': The GPU is responsible for processing graphics and images on a computer, especially important for games and graphic design applications.",
+          "'Source of 'Power supply': The power supply converts electrical current so that it can be used by the computer.",
+          "There are several types of computers, varying in size, capacity, and use:",
+          "'Desktop computers': These are traditional computers, typically featuring a monitor, a case, and peripherals such as a keyboard and mouse. They are popular for home and office use.",
+          "'Notebooks': These are compact, portable computers, featuring a built-in display and keyboard. Laptops and ultrabooks are common examples.",
+          "'Supercomputers': These are the world's most powerful computers, used for high-performance tasks such as scientific research and climate modeling. Examples include the 'Fugaku' in Japan.",
+          "'Tablets': These are mobile devices that combine the functionality of a computer with the portability of a smartphone. They operate with touch screens and are popular for surfing the Internet and watching videos.",
+          "'Workstations': These are computers designed for high-performance professional tasks, such as graphic design, 3D modeling, and software programming.",
+          "'Embedded computers': These are computer systems dedicated to performing specific tasks, such as in automobiles, household appliances, and electronic devices.",
+          "The history of computers began with the first calculating machines, such as Charles Babbage's Analytical Engine. However, modern computers began to take shape in the 20th century:",
+          "The 'ENIAC' (Electronic Numerical Integrator and Computer), developed in the 1940s, was one of the first general-purpose electronic computers.",
+          "The evolution of microprocessors in the 1970s allowed the creation of personal computers such as the 'Apple I' and the 'Commodore PET', which brought computers into homes and offices.",
+          "In recent years, computers have evolved with the emergence of artificial intelligence, quantum computing, and advances in the miniaturization of components.",
+          "The most powerful computers in the world are used for complex tasks such as scientific simulations, artificial intelligence, and weather prediction. One example is the 'Fugaku', which is considered the fastest supercomputer in the world."
+        ]
+      },
+      {
+        "tag": "computer_es",
+        "patterns": [
+          "Háblame de computadoras",
+          "¿Cuáles son los componentes principales de una computadora?",
+          "¿Qué tipos de computadoras existen?",
+          "¿Cuál es la historia de las computadoras?",
+          "¿Cuáles son las computadoras más potentes del mundo?"
+        ],
+        "responses": [
+          "Las computadoras son máquinas electrónicas que procesan datos y realizan cálculos de manera rápida y precisa. Están compuestas por varios componentes esenciales:",
+          "'CPU (Unidad Central de Procesamiento)': La CPU es el cerebro de la computadora, responsable de ejecutar las instrucciones de los programas y coordinar las operaciones del sistema.",
+          "'Memoria RAM (Memoria de Acceso Aleatorio)': La RAM es la memoria temporal que la computadora utiliza para almacenar datos y programas que se están ejecutando en el momento.",
+          "'Disco duro (HDD) o unidad de estado sólido (SSD)': Son los dispositivos de almacenamiento donde se guardan los datos y programas. Los SSD son más rápidos que los HDD.",
+          "'Placa base (Motherboard)': La placa base es la tarjeta principal que conecta todos los componentes de la computadora, permitiendo que se comuniquen entre sí.",
+          "'Tarjeta gráfica (GPU)': La GPU es responsable de procesar los gráficos y las imágenes en una computadora, especialmente importante para juegos y aplicaciones de diseño gráfico.",
+          "'Fuente de alimentación': La fuente de alimentación convierte la corriente eléctrica para que pueda ser utilizada por la computadora.",
+          "Existen varios tipos de computadoras, que varían en tamaño, capacidad y uso:",
+          "'Computadoras de escritorio': Son las computadoras tradicionales, que suelen tener un monitor, una torre y periféricos como teclado y ratón. Son populares para el uso doméstico y oficinas.",
+          "'Portátiles': Son computadoras compactas y portátiles, que incluyen una pantalla y un teclado integrados. Las laptops y las ultrabooks son ejemplos comunes.",
+          "'Supercomputadoras': Son las computadoras más potentes del mundo, utilizadas para tareas de alto rendimiento, como la investigación científica y el modelado climático. Ejemplos incluyen la 'Fugaku' en Japón.",
+          "'Tabletas': Son dispositivos móviles que combinan la funcionalidad de una computadora con la portabilidad de un teléfono inteligente. Funcionan con pantallas táctiles y son populares para navegar por Internet y ver videos.",
+          "'Estaciones de trabajo': Son computadoras diseñadas para tareas profesionales de alto rendimiento, como diseño gráfico, modelado 3D y programación de software.",
+          "'Computadoras embebidas': Son sistemas computacionales dedicados a realizar tareas específicas, como en automóviles, electrodomésticos y dispositivos electrónicos.",
+          "La historia de las computadoras comenzó con las primeras máquinas de calcular, como la máquina analítica de Charles Babbage. Sin embargo, las computadoras modernas comenzaron a tomar forma en el siglo XX:",
+          "La 'ENIAC' (Electronic Numerical Integrator and Computer), desarrollada en la década de 1940, fue una de las primeras computadoras electrónicas de propósito general.",
+          "La evolución de los microprocesadores en la década de 1970 permitió la creación de computadoras personales como la 'Apple I' y la 'Commodore PET', que trajeron las computadoras a los hogares y oficinas.",
+          "En los últimos años, las computadoras han evolucionado con la aparición de la inteligencia artificial, la computación cuántica y avances en la miniaturización de los componentes.",
+          "Las computadoras más potentes del mundo se utilizan para tareas complejas como simulaciones científicas, inteligencia artificial y predicción meteorológica. Un ejemplo es la 'Fugaku', que se considera la supercomputadora más rápida del mundo."
+        ]
+      },
+      {
+        "tag": "computer_en",
+        "patterns": [
+          "Tell me about computers",
+          "What are the main components of a computer?",
+          "What types of computers are there?",
+          "What is the history of computers?",
+          "What are the most powerful computers in the world?"
+        ],
+        "responses": [
+          "Computers are electronic machines that process data and perform calculations quickly and accurately. They are made up of several essential components:",
+          "'CPU (Central Processing Unit)': The CPU is the brain of the computer, responsible for executing program instructions and coordinating system operations.",
+          "'RAM (Random Access Memory)': RAM is the temporary memory that the computer uses to store data and programs that are currently running.",
+          "'Hard disk (HDD) or solid state drive (SSD)': These are the storage devices where data and programs are stored. SSDs are faster than HDDs.",
+          "'Motherboard': The motherboard is the main card that connects all the components of the computer, allowing them to communicate with each other.",
+          "'Graphics card (GPU)': The GPU is responsible for processing graphics and images on a computer, especially important for games and graphic design applications.",
+          "'Source of 'Power supply': The power supply converts electrical current so that it can be used by the computer.",
+          "There are several types of computers, varying in size, capacity, and use:",
+          "'Desktop computers': These are traditional computers, typically featuring a monitor, a case, and peripherals such as a keyboard and mouse. They are popular for home and office use.",
+          "'Notebooks': These are compact, portable computers, featuring a built-in display and keyboard. Laptops and ultrabooks are common examples.",
+          "'Supercomputers': These are the world's most powerful computers, used for high-performance tasks such as scientific research and climate modeling. Examples include the 'Fugaku' in Japan.",
+          "'Tablets': These are mobile devices that combine the functionality of a computer with the portability of a smartphone. They operate with touch screens and are popular for surfing the Internet and watching videos.",
+          "'Workstations': These are computers designed for high-performance professional tasks, such as graphic design, 3D modeling, and software programming.",
+          "'Embedded computers': These are computer systems dedicated to performing specific tasks, such as in automobiles, household appliances, and electronic devices.",
+          "The history of computers began with the first calculating machines, such as Charles Babbage's Analytical Engine. However, modern computers began to take shape in the 20th century:",
+          "The 'ENIAC' (Electronic Numerical Integrator and Computer), developed in the 1940s, was one of the first general-purpose electronic computers.",
+          "The evolution of microprocessors in the 1970s allowed the creation of personal computers such as the 'Apple I' and the 'Commodore PET', which brought computers into homes and offices.",
+          "In recent years, computers have evolved with the emergence of artificial intelligence, quantum computing, and advances in the miniaturization of components.",
+          "The most powerful computers in the world are used for complex tasks such as scientific simulations, artificial intelligence, and weather prediction. One example is the 'Fugaku', which is considered the fastest supercomputer in the world."
+        ]
+      },
+      {
+        "tag": "idioma_es",
+        "patterns": [
+          "Háblame de idiomas",
+          "¿Cuáles son los idiomas más hablados del mundo?",
+          "¿Cuántos idiomas existen en el mundo?",
+          "¿Cuál es el idioma más difícil de aprender?",
+          "¿Cuáles son los idiomas más populares para aprender?"
+        ],
+        "responses": [
+          "Los idiomas son sistemas de comunicación compuestos por palabras, signos o símbolos que las personas utilizan para intercambiar ideas. Existen miles de idiomas en todo el mundo, cada uno con su propia estructura y características.",
+          "'Mandarín': Es el idioma más hablado del mundo, con más de mil millones de hablantes, principalmente en China, Taiwán y Singapur.",
+          "'Español': El español es el segundo idioma más hablado, con aproximadamente 460 millones de hablantes nativos, especialmente en países de América Latina y España.",
+          "'Inglés': Aunque tiene menos hablantes nativos que el español, el inglés es el idioma más hablado a nivel global debido a su papel como lengua internacional en negocios, ciencia y cultura. Tiene más de 370 millones de hablantes nativos.",
+          "'Hindi': El hindi es hablado por más de 340 millones de personas, principalmente en la India y en algunas zonas de Pakistán.",
+          "'Árabe': El árabe es hablado por más de 310 millones de personas en países de África y Medio Oriente.",
+          "'Francés': El francés es hablado por aproximadamente 280 millones de personas en varios países, y es una lengua oficial en muchas organizaciones internacionales.",
+          "'Ruso': El ruso tiene alrededor de 260 millones de hablantes, principalmente en Rusia y en países de la antigua Unión Soviética.",
+          "En total, se estima que hay más de 7,000 idiomas diferentes en el mundo, aunque muchos están en peligro de extinción debido a la globalización y la adopción de idiomas más dominantes.",
+          "La dificultad de aprender un idioma depende de varios factores, como la similitud con el idioma nativo, la gramática, la pronunciación y la disponibilidad de recursos para aprenderlo. Algunos idiomas que son comúnmente considerados difíciles incluyen:",
+          "'Chino Mandarín': Debido a su sistema de escritura logográfico y sus tonos, el mandarín es considerado uno de los idiomas más difíciles para los hablantes nativos de idiomas indoeuropeos.",
+          "'Árabe': El árabe es complejo debido a su escritura de derecha a izquierda, su gramática compleja y sus sonidos únicos.",
+          "'Japonés': El japonés tiene tres sistemas de escritura (hiragana, katakana y kanji) y una gramática que difiere mucho de la de los idiomas occidentales.",
+          "Algunos de los idiomas más populares para aprender incluyen:",
+          "'Inglés': Debido a su uso global y su importancia en el mundo de los negocios, la ciencia y la tecnología.",
+          "'Español': Como el segundo idioma más hablado, el español es popular entre quienes buscan aprender un idioma con muchos hablantes nativos.",
+          "'Francés': Es un idioma muy solicitado por su importancia cultural, histórica y económica, especialmente en Europa y África.",
+          "'Alemán': Como idioma de la economía europea, el alemán es útil para aquellos interesados en trabajar o estudiar en países de habla alemana.",
+          "'Mandarín': El mandarín está ganando popularidad debido al crecimiento económico de China y la influencia cultural que tiene en el mundo.",
+          "Cada idioma tiene su propio conjunto de reglas y estructuras, lo que lo hace único y fascinante para quienes se aventuran en su aprendizaje. El dominio de varios idiomas puede abrir muchas puertas, tanto a nivel profesional como personal."
+        ]
+      },
+      {
+        "tag": "idioma_en",
+        "patterns": [
+          "Tell me about languages",
+          "What are the most spoken languages ​​in the world?",
+          "How many languages ​​are there in the world?",
+          "What is the most difficult language to learn?",
+          "What are the most popular languages ​​to learn?"
+        ],
+        "responses": [
+          "Languages ​​are communication systems made up of words, signs, or symbols that people use to exchange ideas. There are thousands of languages ​​around the world, each with its own structure and characteristics.",
+          "'Mandarin': It is the most widely spoken language in the world, with over a billion speakers, mainly in China, Taiwan, and Singapore.",
+          "'Spanish': Spanish is the second most widely spoken language, with approximately 460 million native speakers, especially in Latin American countries and Spain.",
+          "'English': Although it has fewer native speakers than Spanish, English is the most widely spoken language globally due to its role as an international language in business, science, and culture. It has over 370 million native speakers.",
+          "'Hindi': Hindi is spoken by over 340 million people, mainly in India and parts of Pakistan.",
+          "'Arabic': Arabic is spoken by over 310 million people in countries in Africa and the Middle East.",
+          "'French': French is spoken by approximately 280 million people in several countries, and is an official language in many international organizations.",
+          "'Russian': Russian has around 260 million speakers, mainly in Russia and countries of the former Soviet Union.",
+          "In total, it is estimated that there are more than 7,000 different languages ​​in the world, although many are in danger of extinction due to globalization and the adoption of more dominant languages.",
+          "The difficulty of learning a language depends on several factors, such as similarity to the native language, grammar, pronunciation, and the availability of resources to learn it. Some languages ​​that are commonly considered difficult include:",
+          "'Mandarin Chinese': Due to its logographic writing system and tones, Mandarin is considered one of the most difficult languages ​​for native speakers of Indo-European languages.",
+          "'Arabic': Arabic is complex due to its right-to-left script, complex grammar, and unique sounds.",
+          "'Japanese': Japanese has three writing systems (hiragana, katakana, and kanji) and grammar that differs greatly from that of Western languages.",
+          "Some of the most popular languages ​​to learn include:",
+          "'English': Due to its global use and importance in the world of business, science, and technology.",
+          "'Spanish': As the second most widely spoken language, Spanish is popular among those looking to learn a language with many native speakers.",
+          "'French': It is a highly sought-after language due to its cultural, historical, and economic importance, especially in Europe and Africa.",
+          "'German': As the language of the European economy, German is useful for those interested in working or studying in German-speaking countries.",
+          "'Mandarin': Mandarin is gaining popularity due to China's economic growth and the cultural influence it has on the world.",
+          "Each language has its own set of rules and structures, making it unique and fascinating for those who venture into learning it. Mastery of multiple languages ​​can open many doors, both professionally and personally."
+        ]
+      },
+      {
+        "tag": "languag_es",
+        "patterns": [
+          "Háblame de idiomas",
+          "¿Cuáles son los idiomas más hablados del mundo?",
+          "¿Cuántos idiomas existen en el mundo?",
+          "¿Cuál es el idioma más difícil de aprender?",
+          "¿Cuáles son los idiomas más populares para aprender?"
+        ],
+        "responses": [
+          "Los idiomas son sistemas de comunicación compuestos por palabras, signos o símbolos que las personas utilizan para intercambiar ideas. Existen miles de idiomas en todo el mundo, cada uno con su propia estructura y características.",
+          "'Mandarín': Es el idioma más hablado del mundo, con más de mil millones de hablantes, principalmente en China, Taiwán y Singapur.",
+          "'Español': El español es el segundo idioma más hablado, con aproximadamente 460 millones de hablantes nativos, especialmente en países de América Latina y España.",
+          "'Inglés': Aunque tiene menos hablantes nativos que el español, el inglés es el idioma más hablado a nivel global debido a su papel como lengua internacional en negocios, ciencia y cultura. Tiene más de 370 millones de hablantes nativos.",
+          "'Hindi': El hindi es hablado por más de 340 millones de personas, principalmente en la India y en algunas zonas de Pakistán.",
+          "'Árabe': El árabe es hablado por más de 310 millones de personas en países de África y Medio Oriente.",
+          "'Francés': El francés es hablado por aproximadamente 280 millones de personas en varios países, y es una lengua oficial en muchas organizaciones internacionales.",
+          "'Ruso': El ruso tiene alrededor de 260 millones de hablantes, principalmente en Rusia y en países de la antigua Unión Soviética.",
+          "En total, se estima que hay más de 7,000 idiomas diferentes en el mundo, aunque muchos están en peligro de extinción debido a la globalización y la adopción de idiomas más dominantes.",
+          "La dificultad de aprender un idioma depende de varios factores, como la similitud con el idioma nativo, la gramática, la pronunciación y la disponibilidad de recursos para aprenderlo. Algunos idiomas que son comúnmente considerados difíciles incluyen:",
+          "'Chino Mandarín': Debido a su sistema de escritura logográfico y sus tonos, el mandarín es considerado uno de los idiomas más difíciles para los hablantes nativos de idiomas indoeuropeos.",
+          "'Árabe': El árabe es complejo debido a su escritura de derecha a izquierda, su gramática compleja y sus sonidos únicos.",
+          "'Japonés': El japonés tiene tres sistemas de escritura (hiragana, katakana y kanji) y una gramática que difiere mucho de la de los idiomas occidentales.",
+          "Algunos de los idiomas más populares para aprender incluyen:",
+          "'Inglés': Debido a su uso global y su importancia en el mundo de los negocios, la ciencia y la tecnología.",
+          "'Español': Como el segundo idioma más hablado, el español es popular entre quienes buscan aprender un idioma con muchos hablantes nativos.",
+          "'Francés': Es un idioma muy solicitado por su importancia cultural, histórica y económica, especialmente en Europa y África.",
+          "'Alemán': Como idioma de la economía europea, el alemán es útil para aquellos interesados en trabajar o estudiar en países de habla alemana.",
+          "'Mandarín': El mandarín está ganando popularidad debido al crecimiento económico de China y la influencia cultural que tiene en el mundo.",
+          "Cada idioma tiene su propio conjunto de reglas y estructuras, lo que lo hace único y fascinante para quienes se aventuran en su aprendizaje. El dominio de varios idiomas puede abrir muchas puertas, tanto a nivel profesional como personal."
+        ]
+      },
+      {
+        "tag": "languag_en",
+        "patterns": [
+          "Tell me about languages",
+          "What are the most spoken languages ​​in the world?",
+          "How many languages ​​are there in the world?",
+          "What is the most difficult language to learn?",
+          "What are the most popular languages ​​to learn?"
+        ],
+        "responses": [
+          "Languages ​​are communication systems made up of words, signs, or symbols that people use to exchange ideas. There are thousands of languages ​​around the world, each with its own structure and characteristics.",
+          "'Mandarin': It is the most widely spoken language in the world, with over a billion speakers, mainly in China, Taiwan, and Singapore.",
+          "'Spanish': Spanish is the second most widely spoken language, with approximately 460 million native speakers, especially in Latin American countries and Spain.",
+          "'English': Although it has fewer native speakers than Spanish, English is the most widely spoken language globally due to its role as an international language in business, science, and culture. It has over 370 million native speakers.",
+          "'Hindi': Hindi is spoken by over 340 million people, mainly in India and parts of Pakistan.",
+          "'Arabic': Arabic is spoken by over 310 million people in countries in Africa and the Middle East.",
+          "'French': French is spoken by approximately 280 million people in several countries, and is an official language in many international organizations.",
+          "'Russian': Russian has around 260 million speakers, mainly in Russia and countries of the former Soviet Union.",
+          "In total, it is estimated that there are more than 7,000 different languages ​​in the world, although many are in danger of extinction due to globalization and the adoption of more dominant languages.",
+          "The difficulty of learning a language depends on several factors, such as similarity to the native language, grammar, pronunciation, and the availability of resources to learn it. Some languages ​​that are commonly considered difficult include:",
+          "'Mandarin Chinese': Due to its logographic writing system and tones, Mandarin is considered one of the most difficult languages ​​for native speakers of Indo-European languages.",
+          "'Arabic': Arabic is complex due to its right-to-left script, complex grammar, and unique sounds.",
+          "'Japanese': Japanese has three writing systems (hiragana, katakana, and kanji) and grammar that differs greatly from that of Western languages.",
+          "Some of the most popular languages ​​to learn include:",
+          "'English': Due to its global use and importance in the world of business, science, and technology.",
+          "'Spanish': As the second most widely spoken language, Spanish is popular among those looking to learn a language with many native speakers.",
+          "'French': It is a highly sought-after language due to its cultural, historical, and economic importance, especially in Europe and Africa.",
+          "'German': As the language of the European economy, German is useful for those interested in working or studying in German-speaking countries.",
+          "'Mandarin': Mandarin is gaining popularity due to China's economic growth and the cultural influence it has on the world.",
+          "Each language has its own set of rules and structures, making it unique and fascinating for those who venture into learning it. Mastery of multiple languages ​​can open many doors, both professionally and personally."
+        ]
       }
-  ]
+
+    ]
 }  
-=======
-  "intents": [
-    {
-      "tag": "saludo_es",
-      "patterns": [
-        "¡Hola!", "¿Cómo estás?", "Buenas tardes", "Hola, ¿qué tal?", "¡Qué tal!", "¿Qué pasa?", "¡Hey!", "¿Cómo va todo?"
-      ],
-      "responses": [
-        "¡Hola! ¿En qué puedo ayudarte?",
-        "¡Hola! ¿Cómo puedo asistirte hoy?",
-        "¡Hola! ¿En qué te puedo ayudar?",
-        "¡Qué tal! ¿Cómo estás?",
-        "¡Hola! ¿Qué tal? ¿Cómo va todo?"
-      ]
-    },
-    {
-      "tag": "saludo_en",
-      "patterns": [
-        "Hello", "Hi", "How are you?", "Good morning", "Hey there", "What's up?", "How's it going?"
-      ],
-      "responses": [
-        "Hi! How can I assist you today?",
-        "Hello! How can I help you?",
-        "Hey! How can I help you?",
-        "Hello there! How’s everything?",
-        "Hey! How’s it going?"
-      ]
-    },
-    {
-      "tag": "goodbye_es",
-      "patterns": [
-        "Adiós", "Hasta luego", "Nos vemos", "Chao", "Hasta pronto", "Nos vemos luego"
-      ],
-      "responses": [
-        "¡Hasta luego!",
-        "¡Adiós! Que tengas un buen día.",
-        "¡Nos vemos pronto!",
-        "¡Cuídate! Hasta luego.",
-        "¡Chao! ¡Que tengas un excelente día!"
-      ]
-    },
-    {
-      "tag": "goodbye_en",
-      "patterns": [
-        "Goodbye", "See you later", "Take care", "Farewell", "Bye", "Catch you later"
-      ],
-      "responses": [
-        "Goodbye! Have a great day.",
-        "See you soon!",
-        "Take care!",
-        "Bye! Have a good one.",
-        "Catch you later!"
-      ]
-    },
-    {
-      "tag": "gracias_es",
-      "patterns": [
-        "Gracias", "Muchas gracias", "Te agradezco", "Mil gracias", "Gracias de verdad"
-      ],
-      "responses": [
-        "¡De nada!",
-        "¡Con gusto!",
-        "¡Es un placer ayudarte!",
-        "¡A ti por preguntar!",
-        "¡Con mucho gusto!"
-      ]
-    },
-    {
-      "tag": "gracias_en",
-      "patterns": [
-        "Thank you", "Thanks", "I appreciate it", "Many thanks", "Thanks a lot"
-      ],
-      "responses": [
-        "You're welcome!",
-        "No problem, happy to help!",
-        "Anytime!",
-        "You're welcome! Glad I could assist.",
-        "My pleasure!"
-      ]
-    },
-    {
-      "tag": "ia_informacion_es",
-      "patterns": [
-        "¿Qué es la inteligencia artificial?", "¿Qué es IA?", "¿Cómo funciona la inteligencia artificial?", "Dime más sobre IA", "Háblame de la inteligencia artificial"
-      ],
-      "responses": [
-        "La inteligencia artificial (IA) es un área de la informática que se centra en crear máquinas que pueden realizar tareas que requieren inteligencia humana.",
-        "La IA es una rama de la ciencia de la computación que permite a las máquinas imitar comportamientos humanos.",
-        "La inteligencia artificial es la simulación de procesos de inteligencia humana mediante máquinas."
-      ]
-    },
-    {
-      "tag": "ia_informacion_en",
-      "patterns": [
-        "What is artificial intelligence?", "Tell me about AI", "What does AI mean?", "Explain AI", "How does AI work?"
-      ],
-      "responses": [
-        "Artificial intelligence (AI) is the simulation of human intelligence in machines. It allows them to perform tasks that typically require human intelligence.",
-        "AI refers to the ability of machines to learn, reason, and perform tasks that normally require human intelligence.",
-        "AI is the science of building machines capable of performing tasks that would normally require human intelligence."
-      ]
-    },
-    {
-      "tag": "chatbot_informacion_es",
-      "patterns": [
-        "¿Qué es un chatbot?", "Explícame qué es un chatbot", "¿Qué significa chatbot?", "Define chatbot"
-      ],
-      "responses": [
-        "Un chatbot es un programa informático diseñado para simular conversaciones con usuarios.",
-        "Un chatbot es una aplicación de inteligencia artificial que puede responder preguntas y mantener conversaciones.",
-        "Un chatbot es un asistente virtual que usa IA para comunicarse con personas de forma automática."
-      ]
-    },
-    {
-      "tag": "chatbot_informacion_en",
-      "patterns": [
-        "What is a chatbot?", "Explain chatbot", "Define chatbot", "Tell me about chatbots"
-      ],
-      "responses": [
-        "A chatbot is a computer program designed to simulate conversations with users.",
-        "A chatbot is an AI application that can answer questions and engage in conversations automatically.",
-        "Chatbots are virtual assistants that use AI to interact with people autonomously."
-      ]
-    }
-  ]
-}
->>>>>>> rama_201807169
