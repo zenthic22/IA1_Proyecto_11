@@ -1,19 +1,17 @@
 import * as tf from '@tensorflow/tfjs';
 import intents from '../dataset/intents.json'; // Ruta al archivo intents.json
 
-// Preprocesar datos
+// Función para tokenizar el texto
 const tokenizer = (text) => {
-  const normalizedText = text
-    .toLowerCase()  // Poner todo en minúsculas
-    .normalize("NFD")  // Normalizar los caracteres con tildes
-    .replace(/[\u0300-\u036f]/g, "")  // Eliminar tildes
-    .replace(/[^\w\s]/gi, "")  // Eliminar signos de puntuación
-    .split(" ");  // Dividir en palabras
-
-  return normalizedText;
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s]/gi, "")
+    .split(" ");
 };
 
-// Función para preparar los datos
+// Preparar los datos del dataset
 const prepareData = (intents) => {
   const words = [];
   const labels = [];
@@ -29,16 +27,16 @@ const prepareData = (intents) => {
     if (!labels.includes(intent.tag)) labels.push(intent.tag);
   });
 
-  // Eliminar palabras duplicadas y construir el vocabulario
+  // Construir vocabulario único
   const uniqueWords = [...new Set(words)];
   const vocab = uniqueWords.reduce((acc, word, index) => ({ ...acc, [word]: index + 1 }), {});
 
-  // Convertir las entradas (patrones) a números
+  // Configurar longitud máxima de entrada
+  const maxInputLength = 20; // Incrementar longitud máxima para manejar frases más largas
   const inputs = data.map((item) =>
-    item.input.map((word) => vocab[word] || 0).concat(new Array(10).fill(0)).slice(0, 10)
+    item.input.map((word) => vocab[word] || 0).concat(new Array(maxInputLength).fill(0)).slice(0, maxInputLength)
   );
 
-  // Convertir las salidas a formato one-hot
   const outputs = data.map((item) => {
     const labelIndex = labels.indexOf(item.output);
     const oneHot = Array(labels.length).fill(0);
@@ -46,20 +44,26 @@ const prepareData = (intents) => {
     return oneHot;
   });
 
-  return { inputs, outputs, vocab, labels };
+  return { inputs, outputs, vocab, labels, maxInputLength };
 };
 
-// Preparar los datos antes de entrenar el modelo
-const { inputs, outputs, vocab, labels } = prepareData(intents);
+// Preparar datos globales
+const { inputs, outputs, vocab, labels, maxInputLength } = prepareData(intents);
 
-// Crear el modelo de red neuronal
+// Crear y compilar el modelo
 const model = tf.sequential();
-model.add(tf.layers.dense({ inputShape: [10], units: 8, activation: 'relu' }));
+model.add(tf.layers.dense({ inputShape: [maxInputLength], units: 16, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 16, activation: 'relu' }));
 model.add(tf.layers.dense({ units: labels.length, activation: 'softmax' }));
-model.compile({ optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'] });
+model.compile({
+  optimizer: 'adam',
+  loss: 'categoricalCrossentropy',
+  metrics: ['accuracy'],
+});
 
 let isTraining = false;
 
+// Función para entrenar el modelo
 export const trainModel = async () => {
   if (isTraining) {
     console.warn("El modelo ya está en proceso de entrenamiento.");
@@ -74,8 +78,8 @@ export const trainModel = async () => {
 
     console.log("Entrenando el modelo...");
     await model.fit(xs, ys, {
-      epochs: 500, // Puedes ajustar este número
-      batchSize: 5,
+      epochs: 1000,
+      batchSize: 8,
     });
 
     console.log("Modelo entrenado");
@@ -86,37 +90,40 @@ export const trainModel = async () => {
   }
 };
 
-// Función para obtener la respuesta basada en el tag
-export const getResponse = (tag) => {
-  const intent = intents.intents.find(i => i.tag === tag);
-  if (intent) {
-    const response = intent.responses[0];  // Seleccionamos siempre la primera respuesta del array de respuestas
-    return response;
-  }
-  return "No estoy seguro, ¿puedes hacer otra pregunta?";
-};
-
-// Función de predicción
-export const predict = (text) => {
+// Función para predecir y obtener la respuesta
+export const predict = async (text) => {
   const tokenizedText = tokenizer(text);
   const input = tokenizedText
     .map((word) => vocab[word] || 0)
-    .concat(new Array(10).fill(0))
-    .slice(0, 10);
+    .concat(new Array(maxInputLength).fill(0))
+    .slice(0, maxInputLength);
 
-  const prediction = model.predict(tf.tensor2d([input]));
+  const tensorInput = tf.tensor2d([input]);
+  const prediction = model.predict(tensorInput);
+  const probabilities = await prediction.data();
   const predictedIndex = prediction.argMax(-1).dataSync()[0];
+  const maxProbability = Math.max(...probabilities);
 
-  // Obtener el tag predicho
-  const label = labels[predictedIndex];
-  const intent = intents.intents.find(intent => intent.tag === label);
+  console.log('Probabilidades:', probabilities);
 
-  // Devolver siempre la respuesta basada en la intención
-  if (intent) {
-    const response = intent.responses[0];  // Usamos la primera respuesta del array
-    return response;
+  if (maxProbability < 0.5) {
+    return "Lo siento, no estoy seguro de entenderte. ¿Puedes reformular tu pregunta?";
   }
 
-  // Si no se encuentra un intent, devolver una respuesta genérica
+  const label = labels[predictedIndex];
+  const intent = intents.intents.find((i) => i.tag === label);
+
+  if (intent) {
+    // Elegir una respuesta aleatoria
+    const randomResponseIndex = Math.floor(Math.random() * intent.responses.length);
+    return intent.responses[randomResponseIndex];
+  }
+
   return "No estoy seguro, ¿puedes hacer otra pregunta?";
+};
+
+// Función para cargar y entrenar el modelo
+export const loadModel = async () => {
+  await trainModel(); // Entrenar el modelo antes de usarlo
+  console.log("Modelo cargado y listo para usar.");
 };

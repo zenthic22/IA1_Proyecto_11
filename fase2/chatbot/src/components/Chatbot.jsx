@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import "../styles/chatbot.css";  // Asegúrate de que el CSS esté en este archivo.
+import "../styles/chatbot.css"; // Asegúrate de que el CSS esté en este archivo.
 import userImg from "../assets/jugador.png";
 import botImg from "../assets/inteligencia-artificial.png";
 import sendImg from "../assets/enviar.png";
-import { predict, trainModel } from '../utils/loadModel';  // Asegúrate de importar correctamente
+import { predict, trainModel } from '../utils/loadModel'; // Asegúrate de importar correctamente
 
 function Chatbot() {
   const [mensaje, setMensaje] = useState(""); // Estado para el mensaje del usuario
@@ -13,21 +13,31 @@ function Chatbot() {
   const [entrenando, setEntrenando] = useState(false); // Estado para mostrar que el modelo está entrenando
 
   // Función que maneja el envío de mensajes
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
     if (mensaje) {
       // Añadir el mensaje del usuario al estado de mensajes
-      setMensajes([...mensajes, { texto: mensaje, usuario: true }]);
-
-      // Obtener la respuesta del bot usando la función 'predict'
-      const respuestaBot = predict(mensaje); // Llamamos a 'predict' para obtener la respuesta
-
-      // Añadir la respuesta del bot al estado de mensajes
       setMensajes((prevMensajes) => [
         ...prevMensajes,
-        { texto: respuestaBot, usuario: false },
+        { texto: mensaje, usuario: true },
       ]);
+
+      try {
+        // Obtener la respuesta del bot usando la función 'predict'
+        const respuestaBot = await predict(mensaje); // Asegúrate de esperar a la Promesa
+        // Añadir la respuesta del bot al estado de mensajes
+        setMensajes((prevMensajes) => [
+          ...prevMensajes,
+          { texto: respuestaBot, usuario: false },
+        ]);
+      } catch (error) {
+        console.error("Error al obtener la respuesta del bot:", error);
+        setMensajes((prevMensajes) => [
+          ...prevMensajes,
+          { texto: "Ocurrió un error al procesar tu mensaje.", usuario: false },
+        ]);
+      }
 
       setMensaje(""); // Limpiar el campo de entrada
     }
@@ -37,8 +47,12 @@ function Chatbot() {
   useEffect(() => {
     const entrenarModelo = async () => {
       setEntrenando(true);
-      await trainModel();
-      setModeloEntrenado(true); // Una vez entrenado el modelo, cambiar el estado
+      try {
+        await trainModel();
+        setModeloEntrenado(true); // Una vez entrenado el modelo, cambiar el estado
+      } catch (error) {
+        console.error("Error al entrenar el modelo:", error);
+      }
       setEntrenando(false);
     };
 
@@ -68,7 +82,9 @@ function Chatbot() {
                 {mensajes.map((msg, index) => (
                   <div
                     key={index}
-                    className={`d-flex ${msg.usuario ? "justify-content-end" : "justify-content-start"}`}
+                    className={`d-flex ${
+                      msg.usuario ? "justify-content-end" : "justify-content-start"
+                    }`}
                   >
                     <img
                       src={msg.usuario ? userImg : botImg}
@@ -76,7 +92,9 @@ function Chatbot() {
                       className="chat-avatar animated-avatar"
                     />
                     <div
-                      className={`message-bubble ${msg.usuario ? "bg-primary" : "bg-light"} animated-message`}
+                      className={`message-bubble ${
+                        msg.usuario ? "bg-primary" : "bg-light"
+                      } animated-message`}
                     >
                       {msg.texto}
                     </div>
@@ -101,7 +119,7 @@ function Chatbot() {
               variant="link"
               onClick={handleSubmit}
               style={{ marginLeft: "10px" }}
-              disabled={!modeloEntrenado}  // Desactivar el botón hasta que el modelo esté entrenado
+              disabled={!modeloEntrenado} // Desactivar el botón hasta que el modelo esté entrenado
             >
               <img src={sendImg} alt="Enviar" className="send-icon" />
             </Button>
