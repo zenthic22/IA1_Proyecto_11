@@ -1,104 +1,49 @@
 import React, { useState, useEffect } from "react";
-import * as tf from '@tensorflow/tfjs';
-import { loadModelAndTokenizer } from "../utils/loadModel";  // Importar la función
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import "../styles/chatbot.css";
+import "../styles/chatbot.css";  // Asegúrate de que el CSS esté en este archivo.
 import userImg from "../assets/jugador.png";
 import botImg from "../assets/inteligencia-artificial.png";
 import sendImg from "../assets/enviar.png";
+import { predict, trainModel } from '../utils/loadModel';  // Asegúrate de importar correctamente
 
 function Chatbot() {
-  const [mensaje, setMensaje] = useState("");
-  const [mensajes, setMensajes] = useState([]);
-  const [model, setModel] = useState(null);
-  const [wordIndex, setWordIndex] = useState(null);
-  const [labelEncoder, setLabelEncoder] = useState(null);
-  const [responses, setResponses] = useState({});
+  const [mensaje, setMensaje] = useState(""); // Estado para el mensaje del usuario
+  const [mensajes, setMensajes] = useState([]); // Estado para almacenar los mensajes del chat
+  const [modeloEntrenado, setModeloEntrenado] = useState(false); // Estado para saber si el modelo está entrenado
+  const [entrenando, setEntrenando] = useState(false); // Estado para mostrar que el modelo está entrenando
 
+  // Función que maneja el envío de mensajes
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    if (mensaje) {
+      // Añadir el mensaje del usuario al estado de mensajes
+      setMensajes([...mensajes, { texto: mensaje, usuario: true }]);
+
+      // Obtener la respuesta del bot usando la función 'predict'
+      const respuestaBot = predict(mensaje); // Llamamos a 'predict' para obtener la respuesta
+
+      // Añadir la respuesta del bot al estado de mensajes
+      setMensajes((prevMensajes) => [
+        ...prevMensajes,
+        { texto: respuestaBot, usuario: false },
+      ]);
+
+      setMensaje(""); // Limpiar el campo de entrada
+    }
+  };
+
+  // Llamar a la función de entrenamiento del modelo al cargar el componente
   useEffect(() => {
-    const cargarRecursos = async () => {
-      const resources = await loadModelAndTokenizer();
-      if (resources) {
-        setModel(resources.model);
-        setWordIndex(resources.wordIndex);
-        setLabelEncoder(resources.labelEncoder);
-      }
+    const entrenarModelo = async () => {
+      setEntrenando(true);
+      await trainModel();
+      setModeloEntrenado(true); // Una vez entrenado el modelo, cambiar el estado
+      setEntrenando(false);
     };
 
-    cargarRecursos();
+    entrenarModelo(); // Iniciar el proceso de entrenamiento
   }, []);
-
-  const textsToSequences = (texts) => {
-    if (!wordIndex) return [];
-    return texts.map((text) => {
-      const words = text.toLowerCase().trim().split(" ");
-      return words.map((word) => wordIndex[word] || 0);
-    });
-  };
-
-  const padSequences = (sequences, maxLength, paddingType = 'pre', truncatingType = 'pre', paddingValue = 0) => {
-    return sequences.map(seq => {
-      if (seq.length > maxLength) {
-        if (truncatingType === 'pre') {
-          seq = seq.slice(seq.length - maxLength);
-        } else {
-          seq = seq.slice(0, maxLength);
-        }
-      }
-
-      if (seq.length < maxLength) {
-        const paddingLength = maxLength - seq.length;
-        const paddingArray = new Array(paddingLength).fill(paddingValue);
-
-        if (paddingType === 'pre') {
-          seq = [...paddingArray, ...seq];
-        } else {
-          seq = [...seq, ...paddingArray];
-        }
-      }
-
-      return seq;
-    });
-  };
-
-  const procesarMensaje = async (mensajeUsuario) => {
-    if (!model || !wordIndex || !labelEncoder) {
-      return "Cargando modelo...";
-    }
-
-    // Preprocesar el mensaje del usuario
-    const sequences = textsToSequences([mensajeUsuario]);
-    const maxLength = model.input.shape[1];  // Longitud máxima de entrada esperada por el modelo
-    const paddedSequences = padSequences(sequences, maxLength);
-
-    // Crear tensor de entrada para el modelo
-    const inputTensor = tf.tensor2d(paddedSequences);
-
-    // Predecir con el modelo
-    const prediction = model.predict(inputTensor);
-    const predictedIndex = prediction.argMax(1).dataSync()[0];
-
-    // Decodificar la etiqueta predicha
-    const tagPredicho = labelEncoder[predictedIndex];
-
-    // Obtener una respuesta correspondiente (deberías tener estas respuestas de alguna fuente)
-    const respuestas = responses[tagPredicho];
-    if (respuestas) {
-      return respuestas[Math.floor(Math.random() * respuestas.length)];
-    } else {
-      return "Lo siento, no entiendo tu mensaje.";
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (mensaje) {
-      setMensajes([...mensajes, { texto: mensaje, usuario: true }]);
-      const respuesta = await procesarMensaje(mensaje);
-      setMensajes((prev) => [...prev, { texto: respuesta, usuario: false }]);
-      setMensaje("");
-    }
-  };
 
   return (
     <Container className="chat-container">
@@ -107,22 +52,31 @@ function Chatbot() {
           <Card>
             <Card.Body className="card-body">
               <div>
+                {/* Mostrar mensaje sobre el estado del modelo */}
+                {modeloEntrenado && (
+                  <div className="alert alert-success" role="alert">
+                    El modelo está entrenado y listo para usarse.
+                  </div>
+                )}
+                {entrenando && (
+                  <div className="alert alert-info" role="alert">
+                    El modelo se está entrenando, por favor espera...
+                  </div>
+                )}
+
+                {/* Mostrar los mensajes del chat */}
                 {mensajes.map((msg, index) => (
                   <div
                     key={index}
-                    className={`d-flex ${
-                      msg.usuario ? "justify-content-end" : "justify-content-start"
-                    }`}
+                    className={`d-flex ${msg.usuario ? "justify-content-end" : "justify-content-start"}`}
                   >
                     <img
                       src={msg.usuario ? userImg : botImg}
                       alt="Avatar"
-                      className={`chat-avatar animated-avatar`}
+                      className="chat-avatar animated-avatar"
                     />
                     <div
-                      className={`message-bubble ${
-                        msg.usuario ? "bg-primary" : "bg-light"
-                      } animated-message`}
+                      className={`message-bubble ${msg.usuario ? "bg-primary" : "bg-light"} animated-message`}
                     >
                       {msg.texto}
                     </div>
@@ -147,6 +101,7 @@ function Chatbot() {
               variant="link"
               onClick={handleSubmit}
               style={{ marginLeft: "10px" }}
+              disabled={!modeloEntrenado}  // Desactivar el botón hasta que el modelo esté entrenado
             >
               <img src={sendImg} alt="Enviar" className="send-icon" />
             </Button>

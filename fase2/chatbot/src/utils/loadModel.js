@@ -1,75 +1,122 @@
 import * as tf from '@tensorflow/tfjs';
-import * as fs from 'fs';
+import intents from '../dataset/intents.json'; // Ruta al archivo intents.json
 
-const modelJsonPath = 'C:\\Users\\Natal\\OneDrive\\Documentos\\Inteligencia Artificial\\Laboratorio\\IA1_Proyecto_11\\fase2\\chatbot\\public\\modelo\\model.json';
-const tokenizerJsonPath = 'C:\\Users\\Natal\\OneDrive\\Documentos\\Inteligencia Artificial\\Laboratorio\\IA1_Proyecto_11\\fase2\\chatbot\\public\\modelo\\tokenizer.json';
-const intentsJsonPath = 'C:\\Users\\Natal\\OneDrive\\Documentos\\Inteligencia Artificial\\Laboratorio\\IA1_Proyecto_11\\fase2\\chatbot\\public\\dataset\\intents.json'; // Corregido
+// Preprocesar datos
+const tokenizer = (text) => {
+  const normalizedText = text
+    .toLowerCase()  // Poner todo en minúsculas
+    .normalize("NFD")  // Normalizar los caracteres con tildes
+    .replace(/[\u0300-\u036f]/g, "")  // Eliminar tildes
+    .replace(/[^\w\s]/gi, "")  // Eliminar signos de puntuación
+    .split(" ");  // Dividir en palabras
 
-const modelJson = JSON.parse(fs.readFileSync(modelJsonPath));
-const tokenizerJson = JSON.parse(fs.readFileSync(tokenizerJsonPath));
-const intents = JSON.parse(fs.readFileSync(intentsJsonPath));
+  return normalizedText;
+};
 
-// Cargar el modelo
-const model = await tf.loadLayersModel(tf.io.fromMemory(modelJson));
-console.log(model.summary());
+// Función para preparar los datos
+const prepareData = (intents) => {
+  const words = [];
+  const labels = [];
+  const data = [];
 
-const wordIndex = JSON.parse(tokenizerJson['config']['word_index']);
+  intents.intents.forEach((intent) => {
+    intent.patterns.forEach((pattern) => {
+      const tokenizedPattern = tokenizer(pattern);
+      words.push(...tokenizedPattern);
+      data.push({ input: tokenizedPattern, output: intent.tag });
+    });
 
-function textsToSequences(texts) {
-  return texts.map(text => {
-    const words = text.toLowerCase().trim().split(" ");
-    return words.map(word => wordIndex[word] || 0);
+    if (!labels.includes(intent.tag)) labels.push(intent.tag);
   });
-}
 
-function padSequences(sequences, maxLength, paddingType = 'pre', truncatingType = 'pre', paddingValue = 0) {
-  return sequences.map(seq => {
-    if (seq.length > maxLength) {
-      if (truncatingType === 'pre') {
-        seq = seq.slice(seq.length - maxLength);
-      } else {
-        seq = seq.slice(0, maxLength);
-      }
-    }
+  // Eliminar palabras duplicadas y construir el vocabulario
+  const uniqueWords = [...new Set(words)];
+  const vocab = uniqueWords.reduce((acc, word, index) => ({ ...acc, [word]: index + 1 }), {});
 
-    if (seq.length < maxLength) {
-      const paddingLength = maxLength - seq.length;
-      const paddingArray = new Array(paddingLength).fill(paddingValue);
+  // Convertir las entradas (patrones) a números
+  const inputs = data.map((item) =>
+    item.input.map((word) => vocab[word] || 0).concat(new Array(10).fill(0)).slice(0, 10)
+  );
 
-      if (paddingType === 'pre') {
-        seq = [...paddingArray, ...seq];
-      } else {
-        seq = [...seq, ...paddingArray];
-      }
-    }
-
-    return seq;
+  // Convertir las salidas a formato one-hot
+  const outputs = data.map((item) => {
+    const labelIndex = labels.indexOf(item.output);
+    const oneHot = Array(labels.length).fill(0);
+    oneHot[labelIndex] = 1;
+    return oneHot;
   });
-}
 
-const getChatbotResponse = async (user_input) => {
-  // Convertir el mensaje del usuario en secuencias
-  let sequences = textsToSequences([user_input]);
-  sequences = padSequences(sequences, 9, 'pre', 'pre', 0); 
+  return { inputs, outputs, vocab, labels };
+};
 
-  // Predecir la respuesta usando el modelo
-  const predictions = model.predict(tf.tensor2d(sequences, [1, 9]));
-  const responseIndex = predictions.argMax(1).dataSync()[0]; 
+// Preparar los datos antes de entrenar el modelo
+const { inputs, outputs, vocab, labels } = prepareData(intents);
 
-  // Encontrar el intent correspondiente
-  for (const intent of intents.intents) {
-    if (intent.patterns.map(pattern => pattern.toLowerCase()).includes(user_input.toLowerCase())) {
-      return intent.responses[responseIndex % intent.responses.length]; 
-    }
+// Crear el modelo de red neuronal
+const model = tf.sequential();
+model.add(tf.layers.dense({ inputShape: [10], units: 8, activation: 'relu' }));
+model.add(tf.layers.dense({ units: labels.length, activation: 'softmax' }));
+model.compile({ optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'] });
+
+let isTraining = false;
+
+export const trainModel = async () => {
+  if (isTraining) {
+    console.warn("El modelo ya está en proceso de entrenamiento.");
+    return;
   }
 
-  return "Lo siento, no entiendo tu mensaje.";
+  isTraining = true;
+
+  try {
+    const xs = tf.tensor2d(inputs);
+    const ys = tf.tensor2d(outputs);
+
+    console.log("Entrenando el modelo...");
+    await model.fit(xs, ys, {
+      epochs: 500, // Puedes ajustar este número
+      batchSize: 5,
+    });
+
+    console.log("Modelo entrenado");
+  } catch (error) {
+    console.error("Error durante el entrenamiento:", error);
+  } finally {
+    isTraining = false;
+  }
 };
 
-const main = async () => {
-  const user_input = "Hi"; // Mensaje del usuario
-  const response = await getChatbotResponse(user_input);
-  console.log(response); // Imprimir la respuesta del chatbot
+// Función para obtener la respuesta basada en el tag
+export const getResponse = (tag) => {
+  const intent = intents.intents.find(i => i.tag === tag);
+  if (intent) {
+    const response = intent.responses[0];  // Seleccionamos siempre la primera respuesta del array de respuestas
+    return response;
+  }
+  return "No estoy seguro, ¿puedes hacer otra pregunta?";
 };
 
-main();
+// Función de predicción
+export const predict = (text) => {
+  const tokenizedText = tokenizer(text);
+  const input = tokenizedText
+    .map((word) => vocab[word] || 0)
+    .concat(new Array(10).fill(0))
+    .slice(0, 10);
+
+  const prediction = model.predict(tf.tensor2d([input]));
+  const predictedIndex = prediction.argMax(-1).dataSync()[0];
+
+  // Obtener el tag predicho
+  const label = labels[predictedIndex];
+  const intent = intents.intents.find(intent => intent.tag === label);
+
+  // Devolver siempre la respuesta basada en la intención
+  if (intent) {
+    const response = intent.responses[0];  // Usamos la primera respuesta del array
+    return response;
+  }
+
+  // Si no se encuentra un intent, devolver una respuesta genérica
+  return "No estoy seguro, ¿puedes hacer otra pregunta?";
+};
