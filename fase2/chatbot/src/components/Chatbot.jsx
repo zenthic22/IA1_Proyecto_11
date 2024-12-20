@@ -4,46 +4,43 @@ import "../styles/chatbot.css";  // Asegúrate de que el CSS esté en este archi
 import userImg from "../assets/jugador.png";
 import botImg from "../assets/inteligencia-artificial.png";
 import sendImg from "../assets/enviar.png";
-import { predict, trainModel } from '../utils/loadModel';  // Asegúrate de importar correctamente
+
+// Importa la función `initialize` y `predict` desde tu archivo JS donde cargas el modelo y otros datos
+import { initialize, predict } from "../utils/modelTrain";
 
 function Chatbot() {
-  const [mensaje, setMensaje] = useState(""); // Estado para el mensaje del usuario
-  const [mensajes, setMensajes] = useState([]); // Estado para almacenar los mensajes del chat
-  const [modeloEntrenado, setModeloEntrenado] = useState(false); // Estado para saber si el modelo está entrenado
-  const [entrenando, setEntrenando] = useState(false); // Estado para mostrar que el modelo está entrenando
+  const [mensaje, setMensaje] = useState(""); // Usamos un solo estado para el mensaje
+  const [mensajes, setMensajes] = useState([]); // Estado para los mensajes del chatbot
+  const [loading, setLoading] = useState(true); // Estado para indicar que los datos están cargando
 
-  // Función que maneja el envío de mensajes
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+  // Cargar los datos necesarios al inicio del componente
+  useEffect(() => {
+    const loadData = async () => {
+      await initialize();  // Inicializa el modelo, tokenizer y labelEncoder
+      setLoading(false);  // Cambia el estado a "no cargando" cuando todos los datos estén listos
+    };
+    loadData();
+  }, []);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (mensaje) {
-      // Añadir el mensaje del usuario al estado de mensajes
+      // Añadir el mensaje del usuario al chat
       setMensajes([...mensajes, { texto: mensaje, usuario: true }]);
+      
+      // Limpiar el campo de entrada después de enviar
+      setMensaje(""); 
 
-      // Obtener la respuesta del bot usando la función 'predict'
-      const respuestaBot = predict(mensaje); // Llamamos a 'predict' para obtener la respuesta
-
-      // Añadir la respuesta del bot al estado de mensajes
-      setMensajes((prevMensajes) => [
-        ...prevMensajes,
-        { texto: respuestaBot, usuario: false },
-      ]);
-
-      setMensaje(""); // Limpiar el campo de entrada
+      // Si los datos ya están cargados, hacer la predicción
+      if (!loading) {
+        const botResponse = await predict(mensaje);  // Obtén la respuesta del bot usando el modelo
+        setMensajes((prevMensajes) => [
+          ...prevMensajes,
+          { texto: botResponse, usuario: false } // Agregar la respuesta del bot al chat
+        ]);
+      }
     }
   };
-
-  // Llamar a la función de entrenamiento del modelo al cargar el componente
-  useEffect(() => {
-    const entrenarModelo = async () => {
-      setEntrenando(true);
-      await trainModel();
-      setModeloEntrenado(true); // Una vez entrenado el modelo, cambiar el estado
-      setEntrenando(false);
-    };
-
-    entrenarModelo(); // Iniciar el proceso de entrenamiento
-  }, []);
 
   return (
     <Container className="chat-container">
@@ -52,19 +49,6 @@ function Chatbot() {
           <Card>
             <Card.Body className="card-body">
               <div>
-                {/* Mostrar mensaje sobre el estado del modelo */}
-                {modeloEntrenado && (
-                  <div className="alert alert-success" role="alert">
-                    El modelo está entrenado y listo para usarse.
-                  </div>
-                )}
-                {entrenando && (
-                  <div className="alert alert-info" role="alert">
-                    El modelo se está entrenando, por favor espera...
-                  </div>
-                )}
-
-                {/* Mostrar los mensajes del chat */}
                 {mensajes.map((msg, index) => (
                   <div
                     key={index}
@@ -95,13 +79,14 @@ function Chatbot() {
               placeholder="Escribe un mensaje..."
               value={mensaje}
               onChange={(e) => setMensaje(e.target.value)}
-              style={{ flex: 1 }}
+              style={{ flex: 1 }} // Hace que el input ocupe el espacio disponible
+              disabled={loading} // Deshabilita el campo mientras los datos se están cargando
             />
             <Button
               variant="link"
               onClick={handleSubmit}
-              style={{ marginLeft: "10px" }}
-              disabled={!modeloEntrenado}  // Desactivar el botón hasta que el modelo esté entrenado
+              style={{ marginLeft: "10px" }} // Botón de enviar al lado derecho
+              disabled={loading} // Deshabilita el botón mientras los datos se están cargando
             >
               <img src={sendImg} alt="Enviar" className="send-icon" />
             </Button>
